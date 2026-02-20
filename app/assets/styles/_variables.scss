@@ -1,0 +1,40 @@
+// Pride-inspired colour palette (slightly softened)
+$color-magenta:   #E6007E;
+$color-orange:    #F5A623;
+$color-yellow:    #FFD166;
+$color-teal:      #06D6A0;
+$color-purple:    #7B2D8E;
+$color-blue:      #118AB2;
+$color-off-white: #FFF8F0;
+$color-dark:      #1D1D1D;
+$color-white:     #FFFFFF;
+
+// Section background tints (pale washes of each pride colour)
+$tint-magenta:  #FFF0F7;
+$tint-orange:   #FFF5E6;
+$tint-yellow:   #FFFBEB;
+$tint-teal:     #ECFDF5;
+$tint-purple:   #F5F0F7;
+$tint-blue:     #EBF8FF;
+
+// Section colour map for alternating backgrounds
+$section-colors: (
+  "magenta": $tint-magenta,
+  "orange":  $tint-orange,
+  "yellow":  $tint-yellow,
+  "teal":    $tint-teal,
+  "purple":  $tint-purple,
+  "blue":    $tint-blue,
+  "white":   $color-white,
+  "off-white": $color-off-white,
+);
+
+// Breakpoints
+$bp-sm:  480px;
+$bp-md:  768px;
+$bp-lg:  1024px;
+$bp-xl:  1280px;
+
+// Layout
+$max-width: 1200px;
+$header-height: 72px;

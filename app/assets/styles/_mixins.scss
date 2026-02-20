@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+@mixin container {
+  width: 100%;
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-inline: 20px;
+
+  @media (min-width: $bp-md) {
+    padding-inline: 40px;
+  }
+}
+
+@mixin section-padding {
+  padding-block: 64px;
+
+  @media (min-width: $bp-md) {
+    padding-block: 96px;
+  }
+}
+
+@mixin responsive($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}

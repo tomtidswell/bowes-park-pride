@@ -1,0 +1,29 @@
+@use "sass:color";
+@use "variables" as *;
+@use "typography" as *;
+
+body {
+  @include body-text("base", "regular");
+  background-color: $color-off-white;
+  color: $color-dark;
+}
+
+h1 { @include heading-text("3xl", "extrabold"); }
+h2 { @include heading-text("2xl", "bold"); }
+h3 { @include heading-text("xl", "bold"); }
+h4 { @include heading-text("lg", "semibold"); }
+
+a {
+  color: $color-teal;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: color.adjust($color-teal, $lightness: -10%);
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
