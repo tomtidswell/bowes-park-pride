@@ -45,9 +45,9 @@
         <div class="footer-col">
           <h4>Newsletter</h4>
           <p>Sign up for event updates and announcements.</p>
-          <div class="newsletter-placeholder">
-            Mailing list signup coming soon
-          </div>
+          <a href="https://preview.mailerlite.io/forms/1823960/179647431588185955/share" target="_blank" rel="noopener noreferrer" class="newsletter-link">
+            Sign Up
+          </a>
         </div>
       </div>
 
@@ -166,14 +166,21 @@ import { Instagram, Facebook, Mail } from 'lucide-vue-next'
   &:hover { color: $color-teal; }
 }
 
-.newsletter-placeholder {
-  @include body-text("sm", "regular");
-  padding: 16px;
-  border-radius: 8px;
-  background: rgba($color-off-white, 0.08);
-  color: rgba($color-off-white, 0.6);
-  text-align: center;
+.newsletter-link {
+  @include body-text("sm", "semibold");
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 50px;
+  background: $color-magenta;
+  color: $color-white;
   margin-top: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba($color-magenta, 0.4);
+    color: $color-white;
+  }
 }
 
 .footer-bottom {

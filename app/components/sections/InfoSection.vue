@@ -1,5 +1,5 @@
 <template>
-  <SectionWrapper id="info" color="blue" wave wave-previous-color="#0D4A4A">
+  <SectionWrapper id="info" color="blue" wave wave-previous-color="#55CDFC">
     <div class="info reveal">
       <h2>Info & FAQ</h2>
       <div class="info-grid">

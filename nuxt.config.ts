@@ -1,46 +1,73 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
 
   app: {
-    baseURL: '/bowes-park-pride/',
+    baseURL: "/bowes-park-pride/",
     head: {
-      htmlAttrs: { lang: 'en' },
-      title: 'Bowes Park Pride — Sunday 5th July 2026',
+      htmlAttrs: { lang: "en" },
+      title: "Bowes Park Pride — Sunday 5th July 2026",
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'A free community pride event on Myddleton Road, Bowes Park, London. Sunday 5th July 2026.' },
-        { property: 'og:title', content: 'Bowes Park Pride — Sunday 5th July 2026' },
-        { property: 'og:description', content: 'A free community pride event on Myddleton Road, Bowes Park, London.' },
-        { property: 'og:type', content: 'website' },
-        { name: 'theme-color', content: '#E6007E' },
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          name: "description",
+          content:
+            "A free community pride event on Myddleton Road, Bowes Park, London. Sunday 5th July 2026.",
+        },
+        {
+          property: "og:title",
+          content: "Bowes Park Pride — Sunday 5th July 2026",
+        },
+        {
+          property: "og:description",
+          content:
+            "A free community pride event on Myddleton Road, Bowes Park, London.",
+        },
+        { property: "og:type", content: "website" },
+        { name: "theme-color", content: "#E6007E" },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/bowes-park-pride/favicon.ico' },
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/bowes-park-pride/favicon-32.png' },
-        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/bowes-park-pride/favicon-16.png' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/bowes-park-pride/apple-touch-icon.png' },
+        {
+          rel: "icon",
+          type: "image/x-icon",
+          href: "/bowes-park-pride/favicon.ico",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "/bowes-park-pride/favicon-32.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/bowes-park-pride/favicon-16.png",
+        },
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/bowes-park-pride/apple-touch-icon.png",
+        },
       ],
     },
   },
 
-  components: [
-    { path: '@/components', pathPrefix: false },
-  ],
+  components: [{ path: "@/components", pathPrefix: false }],
 
-  modules: ['@nuxtjs/google-fonts'],
+  modules: ["@nuxtjs/google-fonts"],
 
   googleFonts: {
     families: {
-      'Bricolage Grotesque': [400, 700, 800],
-      'DM Sans': [400, 500, 600],
+      "Bricolage Grotesque": [400, 700, 800],
+      "DM Sans": [400, 500, 600],
     },
-    display: 'swap',
+    display: "swap",
   },
 
-  css: ['@/assets/styles/global.scss'],
+  css: ["@/assets/styles/global.scss"],
 
   vite: {
     css: {

@@ -72,7 +72,7 @@ import { Heart, Users, Sparkles } from 'lucide-vue-next'
   > p {
     @include body-text("lg", "regular");
     margin-bottom: 20px;
-    color: rgba($color-white, 0.85);
+    color: rgba($color-dark, 0.85);
   }
 }
 
@@ -88,8 +88,7 @@ import { Heart, Users, Sparkles } from 'lucide-vue-next'
   gap: 16px;
   padding: 20px;
   border-radius: 16px;
-  background: rgba($color-white, 0.08);
-  border: 1px solid rgba($color-white, 0.12);
+  background: rgba($color-white, 0.45);
 
   svg {
     color: $color-magenta;
@@ -98,13 +97,13 @@ import { Heart, Users, Sparkles } from 'lucide-vue-next'
   }
 
   h4 {
-    color: $color-white;
+    color: $color-dark;
     margin-bottom: 4px;
   }
 
   p {
     @include body-text("sm", "regular");
-    color: rgba($color-white, 0.7);
+    color: rgba($color-dark, 0.7);
   }
 }
 </style>

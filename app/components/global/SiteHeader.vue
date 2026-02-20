@@ -1,5 +1,12 @@
 <template>
-  <header class="site-header" :class="{ scrolled, 'menu-open': mobileOpen }">
+  <header
+    class="site-header"
+    :class="{
+      scrolled,
+      'menu-open': mobileOpen,
+      sponsors: $route.name === 'sponsors',
+    }"
+  >
     <div class="container header-inner">
       <NuxtLink to="/" class="logo" aria-label="Bowes Park Pride home">
         <img src="/bp-logo.png" alt="Bowes Park Pride" class="logo-img" />
@@ -41,11 +48,11 @@
 
 <script setup lang="ts">
 const navLinks = [
-  { href: '/#about', label: 'About' },
-  { href: '/#lineup', label: 'Lineup' },
-  { href: '/#info', label: 'Info' },
-  { href: '/#get-involved', label: 'Get Involved' },
-  { href: '/sponsors', label: 'Sponsors' },
+  { href: "/#about", label: "About" },
+  { href: "/#lineup", label: "Lineup" },
+  { href: "/#info", label: "Info" },
+  { href: "/#get-involved", label: "Get Involved" },
+  { href: "/sponsors", label: "Sponsors" },
 ]
 
 const mobileOpen = ref(false)
@@ -55,8 +62,8 @@ onMounted(() => {
   const onScroll = () => {
     scrolled.value = window.scrollY > 20
   }
-  window.addEventListener('scroll', onScroll, { passive: true })
-  onUnmounted(() => window.removeEventListener('scroll', onScroll))
+  window.addEventListener("scroll", onScroll, { passive: true })
+  onUnmounted(() => window.removeEventListener("scroll", onScroll))
 })
 </script>
 
@@ -68,7 +75,9 @@ onMounted(() => {
   right: 0;
   z-index: 100;
   background: transparent;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 
   &.scrolled,
   &.menu-open {
@@ -94,10 +103,13 @@ onMounted(() => {
   height: 180px;
   width: auto;
   transform: translateY(72px);
-  transition: height 0.3s ease, transform 0.3s ease;
+  transition:
+    height 0.3s ease,
+    transform 0.3s ease;
 
   .scrolled &,
-  .menu-open & {
+  .menu-open &,
+  .sponsors & {
     height: 44px;
     transform: translateY(0);
   }
@@ -119,7 +131,7 @@ onMounted(() => {
     padding-bottom: 4px;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -152,13 +164,21 @@ onMounted(() => {
     width: 24px;
     height: 2px;
     background: $color-dark;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
   }
 
   &.open {
-    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    span:nth-child(2) { opacity: 0; }
-    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
   }
 }
 
@@ -179,13 +199,17 @@ onMounted(() => {
     color: $color-dark;
     border-bottom: 1px solid rgba($color-dark, 0.08);
 
-    &:last-child { border-bottom: none; }
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .slide-enter-from,

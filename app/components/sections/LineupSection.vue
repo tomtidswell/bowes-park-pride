@@ -1,5 +1,5 @@
 <template>
-  <SectionWrapper id="lineup" color="dark-teal" wave wave-previous-color="#CC0066">
+  <SectionWrapper id="lineup" color="dark-teal" wave wave-previous-color="#FFAFC7">
     <div class="lineup reveal-scale">
       <h2>Lineup</h2>
       <div class="lineup-tba">
@@ -10,7 +10,7 @@
           spoken word, and more. Sign up to our mailing list to be the first to know
           when acts are announced.
         </p>
-        <a href="#footer" class="cta-link">
+        <a href="https://preview.mailerlite.io/forms/1823960/179647431588185955/share" target="_blank" rel="noopener noreferrer" class="cta-link">
           <Mail :size="18" />
           Join the Mailing List
         </a>
@@ -29,7 +29,7 @@ import { Music, Mail } from 'lucide-vue-next'
 
   h2 {
     margin-bottom: 40px;
-    color: $color-white;
+    color: $color-dark;
   }
 }
 
@@ -38,24 +38,23 @@ import { Music, Mail } from 'lucide-vue-next'
   margin-inline: auto;
   padding: 48px 32px;
   border-radius: 20px;
-  background: rgba($color-white, 0.08);
-  border: 1px solid rgba($color-white, 0.12);
+  background: rgba($color-white, 0.45);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 
   svg:first-child {
-    color: $color-teal;
+    color: $color-blue;
   }
 
   h3 {
-    color: $color-white;
+    color: $color-dark;
   }
 
   p {
     @include body-text("base", "regular");
-    color: rgba($color-white, 0.8);
+    color: rgba($color-dark, 0.8);
   }
 }
 
@@ -65,7 +64,7 @@ import { Music, Mail } from 'lucide-vue-next'
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  background: $color-teal;
+  background: $color-dark;
   color: $color-white;
   border-radius: 50px;
   margin-top: 8px;
@@ -73,7 +72,7 @@ import { Music, Mail } from 'lucide-vue-next'
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba($color-teal, 0.4);
+    box-shadow: 0 4px 16px rgba($color-dark, 0.3);
     color: $color-white;
   }
 }

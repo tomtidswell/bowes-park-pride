@@ -1,8 +1,7 @@
 <template>
   <section class="hero">
     <div class="hero-photo" />
-    <div class="hero-bg" />
-    <div class="hero-shimmer" />
+    <!-- <div class="hero-bg" /> -->
     <div class="hero-shapes">
       <svg
         v-for="n in 14"
@@ -18,20 +17,20 @@
       </svg>
     </div>
     <div class="hero-content container">
-      <p class="hero-date">Sunday 5th July 2026 &middot; 10:00–18:00</p>
-      <p class="hero-location">
-        <MapPin :size="18" />
-        Myddleton Road, Bowes Park, London
-      </p>
       <ClientOnly>
         <CountdownTimer />
         <template #fallback>
           <CountdownTimer :placeholder="true" />
         </template>
       </ClientOnly>
+      <p class="hero-date">Sunday 5th July 2026 &middot; 10:00–18:00</p>
+      <p class="hero-location">
+        <MapPin :size="18" />
+        Myddleton Road, Bowes Park, London
+      </p>
     </div>
     <div class="hero-cta-bottom">
-      <NuxtLink to="/#about" class="btn btn-primary">Find Out More</NuxtLink>
+      <NuxtLink to="/#about" class="btn btn-primary">MORE</NuxtLink>
     </div>
     <div class="hero-wave">
       <svg
@@ -41,7 +40,7 @@
       >
         <path
           d="M0 40 C360 80 720 0 1080 40 S1440 80 1440 80 V80 H0Z"
-          fill="#CC0066"
+          fill="#FFAFC7"
         />
       </svg>
     </div>
@@ -66,7 +65,7 @@ import { MapPin } from "lucide-vue-next"
 .hero-photo {
   position: absolute;
   inset: 0;
-  background: url("/street.jpg") center / cover no-repeat;
+  background: url("/street.png") center / cover no-repeat;
 }
 
 .hero-bg {
@@ -84,30 +83,6 @@ import { MapPin } from "lucide-vue-next"
   );
   background-size: 300% 300%;
   animation: gradient-shift 20s ease infinite;
-}
-
-.hero-shimmer {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent 35%,
-    rgba(255, 255, 255, 0.03) 48%,
-    rgba(255, 255, 255, 0.04) 50%,
-    rgba(255, 255, 255, 0.03) 52%,
-    transparent 65%
-  );
-  background-size: 200% 100%;
-  animation: shimmer-sweep 8s ease-in-out infinite;
-}
-
-@keyframes shimmer-sweep {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
 }
 
 // Floating decorative shapes
@@ -381,9 +356,12 @@ import { MapPin } from "lucide-vue-next"
 
 .hero-date {
   @include body-text("lg", "medium");
-  color: rgba(255, 255, 255, 0.9);
+  color: $color-white;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  // background: #e6007e;
+  // padding: 8px 24px;
+  // border-radius: 50px;
 }
 
 .hero-title {
@@ -400,6 +378,9 @@ import { MapPin } from "lucide-vue-next"
   align-items: center;
   gap: 8px;
   color: rgba(255, 255, 255, 0.85);
+  // background: #e6007e;
+  // padding: 8px 24px;
+  // border-radius: 50px;
 }
 
 .hero-cta-bottom {
