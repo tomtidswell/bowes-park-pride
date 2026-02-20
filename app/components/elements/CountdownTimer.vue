@@ -1,19 +1,19 @@
 <template>
   <div class="countdown">
     <div class="countdown-units">
-      <div class="unit">
+      <div class="unit unit-days">
         <span class="number">{{ placeholder ? '\u00A0' : days }}</span>
         <span class="label">days</span>
       </div>
-      <div class="unit">
+      <div class="unit unit-hours">
         <span class="number">{{ placeholder ? '\u00A0' : hours }}</span>
         <span class="label">hours</span>
       </div>
-      <div class="unit">
+      <div class="unit unit-mins">
         <span class="number">{{ placeholder ? '\u00A0' : minutes }}</span>
         <span class="label">mins</span>
       </div>
-      <div class="unit">
+      <div class="unit unit-secs">
         <span class="number">{{ placeholder ? '\u00A0' : seconds }}</span>
         <span class="label">secs</span>
       </div>
@@ -49,15 +49,19 @@ const { days, hours, minutes, seconds, isOver } = useCountdown(eventDate)
   align-items: center;
   min-width: 64px;
   padding: 12px 16px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
   border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
   @media (min-width: $bp-md) {
     min-width: 80px;
     padding: 16px 20px;
   }
 }
+
+.unit-days  { background: $color-magenta; }
+.unit-hours { background: $color-purple; }
+.unit-mins  { background: $color-teal; }
+.unit-secs  { background: $color-orange; }
 
 .number {
   @include heading-text("2xl", "extrabold");

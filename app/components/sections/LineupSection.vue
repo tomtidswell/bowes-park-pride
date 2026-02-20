@@ -1,6 +1,6 @@
 <template>
-  <SectionWrapper id="lineup" color="teal" wave wave-previous-color="#FFF0F7">
-    <div class="lineup reveal">
+  <SectionWrapper id="lineup" color="dark-teal" wave wave-previous-color="#FFF0F7">
+    <div class="lineup reveal-scale">
       <h2>Lineup</h2>
       <div class="lineup-tba">
         <Music :size="48" :stroke-width="1.5" />
@@ -29,7 +29,7 @@ import { Music, Mail } from 'lucide-vue-next'
 
   h2 {
     margin-bottom: 40px;
-    color: color.adjust(#06D6A0, $lightness: -15%);
+    color: $color-white;
   }
 }
 
@@ -38,7 +38,8 @@ import { Music, Mail } from 'lucide-vue-next'
   margin-inline: auto;
   padding: 48px 32px;
   border-radius: 20px;
-  background: rgba($color-white, 0.6);
+  background: rgba($color-white, 0.08);
+  border: 1px solid rgba($color-white, 0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,12 +50,12 @@ import { Music, Mail } from 'lucide-vue-next'
   }
 
   h3 {
-    color: $color-dark;
+    color: $color-white;
   }
 
   p {
     @include body-text("base", "regular");
-    color: rgba($color-dark, 0.8);
+    color: rgba($color-white, 0.8);
   }
 }
 
@@ -72,7 +73,7 @@ import { Music, Mail } from 'lucide-vue-next'
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba($color-teal, 0.3);
+    box-shadow: 0 4px 16px rgba($color-teal, 0.4);
     color: $color-white;
   }
 }

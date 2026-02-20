@@ -20,3 +20,11 @@
 .text-center {
   text-align: center;
 }
+
+.gradient-text {
+  background: linear-gradient(135deg, $color-magenta, $color-purple, $color-blue, $color-teal);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

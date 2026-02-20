@@ -67,12 +67,12 @@ onMounted(() => {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba($color-off-white, 0.85);
-  backdrop-filter: blur(12px);
+  background: transparent;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 
   &.scrolled {
     background: rgba($color-white, 0.95);
+    backdrop-filter: blur(12px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   }
 }
@@ -90,8 +90,15 @@ onMounted(() => {
 }
 
 .logo-img {
-  height: 44px;
+  height: 180px;
   width: auto;
+  transform: translateY(72px);
+  transition: height 0.3s ease, transform 0.3s ease;
+
+  .scrolled & {
+    height: 44px;
+    transform: translateY(0);
+  }
 }
 
 .desktop-nav {
@@ -104,10 +111,15 @@ onMounted(() => {
 
   a {
     @include body-text("sm", "medium");
-    color: $color-dark;
+    color: $color-white;
     text-decoration: none;
     position: relative;
     padding-bottom: 4px;
+    transition: color 0.3s ease;
+
+    .scrolled & {
+      color: $color-dark;
+    }
 
     &::after {
       content: '';
@@ -140,8 +152,12 @@ onMounted(() => {
     display: block;
     width: 24px;
     height: 2px;
-    background: $color-dark;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    background: $color-white;
+    transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+
+    .scrolled & {
+      background: $color-dark;
+    }
   }
 
   &.open {

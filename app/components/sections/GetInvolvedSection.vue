@@ -1,14 +1,14 @@
 <template>
   <SectionWrapper id="get-involved" color="purple" wave wave-previous-color="#EBF8FF">
-    <div class="involved reveal">
-      <h2>Get Involved</h2>
+    <div class="involved reveal-right">
+      <h2 class="gradient-text">Get Involved</h2>
       <p class="intro">
         Bowes Park Pride is made possible by amazing volunteers from our community.
         Whether you can spare a few hours on the day or want to help with planning,
         we'd love to hear from you.
       </p>
       <div class="cards">
-        <div class="card">
+        <div class="card card-magenta">
           <HandHelping :size="32" :stroke-width="1.5" />
           <h4>Volunteer</h4>
           <p>Help us set up, run stalls, manage the stage, or keep the event safe and fun.</p>
@@ -21,7 +21,7 @@
             Sign Up to Volunteer
           </a>
         </div>
-        <div class="card">
+        <div class="card card-teal">
           <Mic :size="32" :stroke-width="1.5" />
           <h4>Perform</h4>
           <p>Musician, DJ, drag artist, or spoken word poet? We want to hear from you.</p>
@@ -29,7 +29,7 @@
             Get in Touch
           </a>
         </div>
-        <div class="card">
+        <div class="card card-orange">
           <Store :size="32" :stroke-width="1.5" />
           <h4>Run a Stall</h4>
           <p>Local business or community group? Book a stall space at the event.</p>
@@ -52,7 +52,6 @@ import { HandHelping, Mic, Store } from 'lucide-vue-next'
 
   h2 {
     margin-bottom: 20px;
-    color: $color-purple;
   }
 }
 
@@ -82,14 +81,11 @@ import { HandHelping, Mic, Store } from 'lucide-vue-next'
   padding: 32px 24px;
   border-radius: 20px;
   background: rgba($color-white, 0.65);
+  border-left: 5px solid transparent;
   transition: transform 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);
-  }
-
-  svg {
-    color: $color-purple;
   }
 
   h4 {
@@ -101,6 +97,21 @@ import { HandHelping, Mic, Store } from 'lucide-vue-next'
     color: rgba($color-dark, 0.75);
     flex: 1;
   }
+}
+
+.card-magenta {
+  border-left-color: $color-magenta;
+  svg { color: $color-magenta; }
+}
+
+.card-teal {
+  border-left-color: $color-teal;
+  svg { color: $color-teal; }
+}
+
+.card-orange {
+  border-left-color: $color-orange;
+  svg { color: $color-orange; }
 }
 
 .card-btn {

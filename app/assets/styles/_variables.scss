@@ -17,6 +17,9 @@ $tint-teal:     #ECFDF5;
 $tint-purple:   #F5F0F7;
 $tint-blue:     #EBF8FF;
 
+// Dark section backgrounds
+$dark-teal: #0D4A4A;
+
 // Section colour map for alternating backgrounds
 $section-colors: (
   "magenta": $tint-magenta,
@@ -27,6 +30,7 @@ $section-colors: (
   "blue":    $tint-blue,
   "white":   $color-white,
   "off-white": $color-off-white,
+  "dark-teal": $dark-teal,
 );
 
 // Breakpoints

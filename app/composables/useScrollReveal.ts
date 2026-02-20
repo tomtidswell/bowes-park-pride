@@ -1,6 +1,7 @@
 export function useScrollReveal() {
   onMounted(() => {
-    const elements = document.querySelectorAll('.reveal')
+    const selectors = '.reveal, .reveal-left, .reveal-right, .reveal-scale'
+    const elements = document.querySelectorAll(selectors)
     if (!elements.length) return
 
     const observer = new IntersectionObserver(
