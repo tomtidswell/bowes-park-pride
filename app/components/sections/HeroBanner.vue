@@ -3,8 +3,7 @@
     <div class="hero-bg" />
     <div class="hero-content container">
       <p class="hero-date">Sunday 5th July 2026</p>
-      <img src="/logo.png" alt="Bowes Park Pride" class="hero-logo" />
-      <h1 class="sr-only">Bowes Park Pride</h1>
+      <h1 class="hero-title">Bowes Park<br />Pride</h1>
       <p class="hero-tagline">Love. Community. Celebration.</p>
       <p class="hero-location">
         <MapPin :size="18" />
@@ -79,10 +78,12 @@ import { MapPin } from 'lucide-vue-next'
   text-transform: uppercase;
 }
 
-.hero-logo {
-  width: clamp(260px, 50vw, 520px);
-  height: auto;
-  filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.2));
+.hero-title {
+  @include heading-text("3xl", "extrabold");
+  color: $color-white;
+  font-size: clamp(3rem, 2.5rem + 4vw, 7rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .hero-tagline {

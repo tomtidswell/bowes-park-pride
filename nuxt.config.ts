@@ -18,7 +18,10 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#E6007E' },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/bowes-park-pride/favicon.svg' },
+        { rel: 'icon', type: 'image/x-icon', href: '/bowes-park-pride/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/bowes-park-pride/favicon-32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/bowes-park-pride/favicon-16.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/bowes-park-pride/apple-touch-icon.png' },
       ],
     },
   },

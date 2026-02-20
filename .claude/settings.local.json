@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:happyvalleypride.co.uk)",
+      "WebFetch(domain:www.mightyhoopla.com)",
+      "WebFetch(domain:www.happyvalleypride.co.uk)",
+      "Bash(git -C /Users/tomtidswell/dev/bowes-park-pride push)"
+    ]
+  }
+}
