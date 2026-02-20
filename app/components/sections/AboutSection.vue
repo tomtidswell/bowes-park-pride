@@ -1,11 +1,7 @@
 <template>
-  <SectionWrapper id="about" color="magenta" wave wave-previous-color="#FFF8F0">
+  <SectionWrapper id="about" color="dark-magenta">
     <div class="about reveal-left">
       <h2 class="gradient-text">What is Bowes Park Pride?</h2>
-
-      <blockquote class="pull-quote">
-        "Everyone deserves to celebrate who they are — right here in our neighbourhood."
-      </blockquote>
 
       <div class="about-layout">
         <div class="about-body">
@@ -61,23 +57,6 @@ import { Heart, Users, Sparkles } from 'lucide-vue-next'
   }
 }
 
-.pull-quote {
-  @include heading-text("xl", "medium");
-  font-style: italic;
-  text-align: center;
-  max-width: 680px;
-  margin-inline: auto;
-  margin-bottom: 48px;
-  padding: 24px 32px;
-  border-left: 4px solid transparent;
-  border-image: linear-gradient(to bottom, $color-magenta, $color-purple, $color-teal) 1;
-  color: rgba($color-dark, 0.85);
-
-  @media (min-width: $bp-md) {
-    text-align: left;
-  }
-}
-
 .about-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -93,7 +72,7 @@ import { Heart, Users, Sparkles } from 'lucide-vue-next'
   > p {
     @include body-text("lg", "regular");
     margin-bottom: 20px;
-    color: rgba($color-dark, 0.85);
+    color: rgba($color-white, 0.85);
   }
 }
 
@@ -109,7 +88,8 @@ import { Heart, Users, Sparkles } from 'lucide-vue-next'
   gap: 16px;
   padding: 20px;
   border-radius: 16px;
-  background: rgba($color-white, 0.6);
+  background: rgba($color-white, 0.08);
+  border: 1px solid rgba($color-white, 0.12);
 
   svg {
     color: $color-magenta;
@@ -118,13 +98,13 @@ import { Heart, Users, Sparkles } from 'lucide-vue-next'
   }
 
   h4 {
-    color: $color-dark;
+    color: $color-white;
     margin-bottom: 4px;
   }
 
   p {
     @include body-text("sm", "regular");
-    color: rgba($color-dark, 0.7);
+    color: rgba($color-white, 0.7);
   }
 }
 </style>

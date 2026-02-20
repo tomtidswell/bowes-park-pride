@@ -1,24 +1,24 @@
 <template>
   <section class="hero">
+    <div class="hero-photo" />
     <div class="hero-bg" />
     <div class="hero-shimmer" />
     <div class="hero-shapes">
-      <svg class="shape shape-circle" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="40" r="38" fill="currentColor" />
-      </svg>
-      <svg class="shape shape-star" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="40,2 50,30 80,30 56,48 64,78 40,58 16,78 24,48 0,30 30,30" fill="currentColor" />
-      </svg>
-      <svg class="shape shape-heart" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 72 C20 52 4 40 4 26 A18 18 0 0 1 40 18 A18 18 0 0 1 76 26 C76 40 60 52 40 72Z" fill="currentColor" />
-      </svg>
-      <svg class="shape shape-ring" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="40" r="34" fill="none" stroke="currentColor" stroke-width="6" />
+      <svg
+        v-for="n in 14"
+        :key="n"
+        :class="`shape shape-heart${n}`"
+        viewBox="0 0 80 80"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M40 72 C20 52 4 40 4 26 A18 18 0 0 1 40 18 A18 18 0 0 1 76 26 C76 40 60 52 40 72Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
     <div class="hero-content container">
-      <p class="hero-date">Sunday 5th July 2026</p>
-      <p class="hero-tagline">Love. Community. Celebration.</p>
+      <p class="hero-date">Sunday 5th July 2026 &middot; 10:00–18:00</p>
       <p class="hero-location">
         <MapPin :size="18" />
         Myddleton Road, Bowes Park, London
@@ -29,22 +29,27 @@
           <CountdownTimer :placeholder="true" />
         </template>
       </ClientOnly>
-      <div class="hero-cta">
-        <NuxtLink to="/#about" class="btn btn-primary">Find Out More</NuxtLink>
-        <NuxtLink to="/#get-involved" class="btn btn-outline">Get Involved</NuxtLink>
-      </div>
+    </div>
+    <div class="hero-cta-bottom">
+      <NuxtLink to="/#about" class="btn btn-primary">Find Out More</NuxtLink>
     </div>
     <div class="hero-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 40 C360 80 720 0 1080 40 S1440 80 1440 80 V80 H0Z" fill="#FFF0F7" />
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 40 C360 80 720 0 1080 40 S1440 80 1440 80 V80 H0Z"
+          fill="#CC0066"
+        />
       </svg>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { MapPin } from 'lucide-vue-next'
-
+import { MapPin } from "lucide-vue-next"
 </script>
 
 <style lang="scss" scoped>
@@ -58,9 +63,16 @@ import { MapPin } from 'lucide-vue-next'
   overflow: hidden;
 }
 
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background: url("/street.jpg") center / cover no-repeat;
+}
+
 .hero-bg {
   position: absolute;
   inset: 0;
+  opacity: 0.25;
   background: linear-gradient(
     135deg,
     $color-magenta,
@@ -71,7 +83,7 @@ import { MapPin } from 'lucide-vue-next'
     $color-magenta
   );
   background-size: 300% 300%;
-  animation: gradient-shift 8s ease infinite;
+  animation: gradient-shift 20s ease infinite;
 }
 
 .hero-shimmer {
@@ -79,19 +91,23 @@ import { MapPin } from 'lucide-vue-next'
   inset: 0;
   background: linear-gradient(
     120deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.12) 45%,
-    rgba(255, 255, 255, 0.18) 50%,
-    rgba(255, 255, 255, 0.12) 55%,
-    transparent 70%
+    transparent 35%,
+    rgba(255, 255, 255, 0.03) 48%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(255, 255, 255, 0.03) 52%,
+    transparent 65%
   );
   background-size: 200% 100%;
-  animation: shimmer-sweep 4s ease-in-out infinite;
+  animation: shimmer-sweep 8s ease-in-out infinite;
 }
 
 @keyframes shimmer-sweep {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 // Floating decorative shapes
@@ -107,78 +123,230 @@ import { MapPin } from 'lucide-vue-next'
   opacity: 0.15;
 }
 
-.shape-circle {
-  width: 60px;
-  height: 60px;
-  top: 15%;
+.shape-heart1 {
+  width: 220px;
+  height: 220px;
+  top: 12%;
   left: 8%;
-  color: $color-yellow;
+  color: $color-magenta;
+  opacity: 0.2;
   animation: float-drift 8s ease-in-out infinite;
 
   @media (min-width: $bp-md) {
-    width: 90px;
-    height: 90px;
+    width: 320px;
+    height: 320px;
   }
 }
 
-.shape-star {
-  width: 50px;
-  height: 50px;
-  top: 20%;
+.shape-heart2 {
+  width: 160px;
+  height: 160px;
+  top: 18%;
   right: 10%;
   color: $color-orange;
-  opacity: 0.2;
-  animation: float-rotate 10s linear infinite;
+  opacity: 0.18;
+  animation: float-drift 10s ease-in-out infinite reverse;
 
   @media (min-width: $bp-md) {
-    width: 70px;
-    height: 70px;
+    width: 240px;
+    height: 240px;
   }
 }
 
-.shape-heart {
-  width: 40px;
-  height: 40px;
-  bottom: 25%;
+.shape-heart3 {
+  width: 140px;
+  height: 140px;
+  bottom: 28%;
   left: 12%;
-  color: $color-magenta;
+  color: $color-purple;
   opacity: 0.2;
-  animation: float-drift 7s ease-in-out infinite reverse;
+  animation: float-drift 7s ease-in-out infinite;
 
   @media (min-width: $bp-md) {
-    width: 60px;
-    height: 60px;
+    width: 200px;
+    height: 200px;
   }
 }
 
-.shape-ring {
-  width: 55px;
-  height: 55px;
-  bottom: 20%;
-  right: 8%;
+.shape-heart4 {
+  width: 180px;
+  height: 180px;
+  top: 45%;
+  right: 6%;
   color: $color-teal;
-  opacity: 0.25;
-  animation: float-rotate 12s linear infinite reverse;
+  opacity: 0.18;
+  animation: float-drift 9s ease-in-out infinite reverse;
 
   @media (min-width: $bp-md) {
-    width: 80px;
-    height: 80px;
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.shape-heart5 {
+  width: 120px;
+  height: 120px;
+  top: 8%;
+  left: 38%;
+  color: $color-yellow;
+  opacity: 0.15;
+  animation: float-drift 11s ease-in-out infinite;
+
+  @media (min-width: $bp-md) {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.shape-heart6 {
+  width: 200px;
+  height: 200px;
+  bottom: 18%;
+  right: 15%;
+  color: $color-blue;
+  opacity: 0.2;
+  animation: float-drift 12s ease-in-out infinite reverse;
+
+  @media (min-width: $bp-md) {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+.shape-heart7 {
+  width: 100px;
+  height: 100px;
+  bottom: 12%;
+  left: 42%;
+  color: $color-magenta;
+  opacity: 0.18;
+  animation: float-drift 9s ease-in-out infinite;
+
+  @media (min-width: $bp-md) {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.shape-heart8 {
+  width: 140px;
+  height: 140px;
+  top: 55%;
+  left: 3%;
+  color: $color-orange;
+  opacity: 0.15;
+  animation: float-drift 10s ease-in-out infinite reverse;
+
+  @media (min-width: $bp-md) {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.shape-heart9 {
+  width: 160px;
+  height: 160px;
+  top: 30%;
+  left: 25%;
+  color: $color-teal;
+  opacity: 0.15;
+  animation: float-drift 11s ease-in-out infinite;
+
+  @media (min-width: $bp-md) {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+.shape-heart10 {
+  width: 120px;
+  height: 120px;
+  top: 5%;
+  right: 30%;
+  color: $color-purple;
+  opacity: 0.18;
+  animation: float-drift 9s ease-in-out infinite reverse;
+
+  @media (min-width: $bp-md) {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.shape-heart11 {
+  width: 190px;
+  height: 190px;
+  bottom: 5%;
+  left: 18%;
+  color: $color-blue;
+  opacity: 0.15;
+  animation: float-drift 13s ease-in-out infinite;
+
+  @media (min-width: $bp-md) {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+.shape-heart12 {
+  width: 110px;
+  height: 110px;
+  top: 65%;
+  right: 28%;
+  color: $color-yellow;
+  opacity: 0.18;
+  animation: float-drift 8s ease-in-out infinite reverse;
+
+  @media (min-width: $bp-md) {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+.shape-heart13 {
+  width: 170px;
+  height: 170px;
+  top: 35%;
+  left: 50%;
+  color: $color-magenta;
+  opacity: 0.12;
+  animation: float-drift 14s ease-in-out infinite;
+
+  @media (min-width: $bp-md) {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.shape-heart14 {
+  width: 130px;
+  height: 130px;
+  bottom: 35%;
+  right: 3%;
+  color: $color-orange;
+  opacity: 0.16;
+  animation: float-drift 10s ease-in-out infinite reverse;
+
+  @media (min-width: $bp-md) {
+    width: 200px;
+    height: 200px;
   }
 }
 
 @keyframes float-drift {
-  0%, 100% { transform: translate(0, 0); }
-  25%  { transform: translate(12px, -18px); }
-  50%  { transform: translate(-8px, -30px); }
-  75%  { transform: translate(15px, -12px); }
-}
-
-@keyframes float-rotate {
-  0%   { transform: rotate(0deg) translate(0, 0); }
-  25%  { transform: rotate(90deg) translate(10px, -15px); }
-  50%  { transform: rotate(180deg) translate(-5px, -25px); }
-  75%  { transform: rotate(270deg) translate(8px, -10px); }
-  100% { transform: rotate(360deg) translate(0, 0); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(12px, -18px);
+  }
+  50% {
+    transform: translate(-8px, -30px);
+  }
+  75% {
+    transform: translate(15px, -12px);
+  }
 }
 
 .hero-content {
@@ -191,6 +359,24 @@ import { MapPin } from 'lucide-vue-next'
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      transparent 75%
+    );
+    pointer-events: none;
+    z-index: -1;
+  }
 }
 
 .hero-date {
@@ -208,11 +394,6 @@ import { MapPin } from 'lucide-vue-next'
   letter-spacing: -0.02em;
 }
 
-.hero-tagline {
-  @include heading-text("xl", "regular");
-  color: rgba(255, 255, 255, 0.9);
-}
-
 .hero-location {
   @include body-text("base", "medium");
   display: flex;
@@ -221,12 +402,12 @@ import { MapPin } from 'lucide-vue-next'
   color: rgba(255, 255, 255, 0.85);
 }
 
-.hero-cta {
-  display: flex;
-  gap: 16px;
-  margin-top: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
+.hero-cta-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .btn {
@@ -235,7 +416,10 @@ import { MapPin } from 'lucide-vue-next'
   align-items: center;
   padding: 14px 32px;
   border-radius: 50px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.3s ease;
 
   &:hover {
     transform: translateY(-2px);
@@ -250,10 +434,16 @@ import { MapPin } from 'lucide-vue-next'
   overflow: hidden;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, transparent, rgba($color-magenta, 0.08), rgba($color-purple, 0.12), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba($color-magenta, 0.08),
+      rgba($color-purple, 0.12),
+      transparent
+    );
     transform: translateX(-100%);
     transition: transform 0.5s ease;
   }
@@ -264,18 +454,6 @@ import { MapPin } from 'lucide-vue-next'
     &::before {
       transform: translateX(100%);
     }
-  }
-}
-
-.btn-outline {
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  color: $color-white;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, border-color 0.3s ease;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: $color-white;
-    transform: translateY(-2px) scale(1.03);
   }
 }
 

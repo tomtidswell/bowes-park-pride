@@ -28,7 +28,7 @@ const props = withDefaults(defineProps<{
   placeholder: false,
 })
 
-const eventDate = new Date('2026-07-05T12:00:00+01:00')
+const eventDate = new Date('2026-07-05T10:00:00+01:00')
 const { days, hours, minutes, seconds, isOver } = useCountdown(eventDate)
 </script>
 

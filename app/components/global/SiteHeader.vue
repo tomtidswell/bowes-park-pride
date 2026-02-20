@@ -1,5 +1,5 @@
 <template>
-  <header class="site-header" :class="{ scrolled }">
+  <header class="site-header" :class="{ scrolled, 'menu-open': mobileOpen }">
     <div class="container header-inner">
       <NuxtLink to="/" class="logo" aria-label="Bowes Park Pride home">
         <img src="/bp-logo.png" alt="Bowes Park Pride" class="logo-img" />
@@ -70,7 +70,8 @@ onMounted(() => {
   background: transparent;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 
-  &.scrolled {
+  &.scrolled,
+  &.menu-open {
     background: rgba($color-white, 0.95);
     backdrop-filter: blur(12px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
@@ -95,7 +96,8 @@ onMounted(() => {
   transform: translateY(72px);
   transition: height 0.3s ease, transform 0.3s ease;
 
-  .scrolled & {
+  .scrolled &,
+  .menu-open & {
     height: 44px;
     transform: translateY(0);
   }
@@ -111,15 +113,10 @@ onMounted(() => {
 
   a {
     @include body-text("sm", "medium");
-    color: $color-white;
+    color: $color-dark;
     text-decoration: none;
     position: relative;
     padding-bottom: 4px;
-    transition: color 0.3s ease;
-
-    .scrolled & {
-      color: $color-dark;
-    }
 
     &::after {
       content: '';
@@ -139,6 +136,8 @@ onMounted(() => {
 }
 
 .hamburger {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -152,12 +151,8 @@ onMounted(() => {
     display: block;
     width: 24px;
     height: 2px;
-    background: $color-white;
-    transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
-
-    .scrolled & {
-      background: $color-dark;
-    }
+    background: $color-dark;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   &.open {
