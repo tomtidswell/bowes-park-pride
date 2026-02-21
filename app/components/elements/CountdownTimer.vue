@@ -38,15 +38,11 @@ const { days, hours, minutes, seconds, isOver } = useCountdown(eventDate)
 <style lang="scss" scoped>
 .countdown-units {
   display: flex;
-  gap: 16px;
+  gap: 8px;
   justify-content: center;
 
   @media (min-width: $bp-md) {
     gap: 24px;
-  }
-  @media (max-width: $bp-sm) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -54,14 +50,15 @@ const { days, hours, minutes, seconds, isOver } = useCountdown(eventDate)
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 64px;
-  padding: 12px 16px;
-  border-radius: 12px;
+  min-width: 48px;
+  padding: 8px 10px;
+  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
   @media (min-width: $bp-md) {
     min-width: 80px;
     padding: 16px 20px;
+    border-radius: 12px;
   }
 }
 
@@ -79,8 +76,12 @@ const { days, hours, minutes, seconds, isOver } = useCountdown(eventDate)
 }
 
 .number {
-  @include heading-text("2xl", "extrabold");
+  @include heading-text("lg", "extrabold");
   color: $color-white;
+
+  @media (min-width: $bp-md) {
+    @include heading-text("2xl", "extrabold");
+  }
 }
 
 .label {
@@ -88,6 +89,11 @@ const { days, hours, minutes, seconds, isOver } = useCountdown(eventDate)
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  font-size: 0.65rem;
+
+  @media (min-width: $bp-md) {
+    font-size: unset;
+  }
 }
 
 .countdown-over {

@@ -28,8 +28,6 @@
         <MapPin :size="18" />
         Myddleton Road, Bowes Park, London
       </p>
-    </div>
-    <div class="hero-cta-bottom">
       <NuxtLink to="/#about" class="btn btn-primary">MORE</NuxtLink>
     </div>
     <div class="hero-wave">
@@ -55,7 +53,7 @@ import { MapPin } from "lucide-vue-next"
 .hero {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   min-height: 100vh;
   min-height: 100dvh;
@@ -329,7 +327,7 @@ import { MapPin } from "lucide-vue-next"
   z-index: 1;
   text-align: center;
   padding-top: calc($header-height + 40px);
-  padding-bottom: 80px;
+  padding-bottom: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -381,14 +379,6 @@ import { MapPin } from "lucide-vue-next"
   // background: #e6007e;
   // padding: 8px 24px;
   // border-radius: 50px;
-}
-
-.hero-cta-bottom {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
 }
 
 .btn {

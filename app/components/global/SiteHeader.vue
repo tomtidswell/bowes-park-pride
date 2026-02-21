@@ -90,28 +90,46 @@ onMounted(() => {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: $header-height;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 72px);
+  transition:
+    left 0.5s ease,
+    top 0.5s ease,
+    transform 0.5s ease;
+
+  .scrolled &,
+  .sponsors & {
+    left: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  .menu-open & {
+    left: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 
 .logo-img {
-  height: 180px;
-  width: auto;
-  transform: translateY(72px);
-  transition:
-    height 0.3s ease,
-    transform 0.3s ease;
+  height: auto;
+  width: min(280px, 50vw);
+  transition: width 0.5s ease;
 
   .scrolled &,
-  .menu-open &,
   .sponsors & {
-    height: 44px;
-    transform: translateY(0);
+    width: 80px;
+  }
+
+  .menu-open & {
+    width: 80px;
   }
 }
 
