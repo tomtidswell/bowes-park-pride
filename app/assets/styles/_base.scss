@@ -6,6 +6,7 @@ body {
   @include body-text("base", "regular");
   background-color: $color-off-white;
   color: $color-dark;
+  overflow-x: hidden;
 }
 
 h1 { @include heading-text("3xl", "extrabold"); }
