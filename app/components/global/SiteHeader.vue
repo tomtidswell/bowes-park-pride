@@ -88,6 +88,7 @@ onMounted(() => {
 }
 
 .header-inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;

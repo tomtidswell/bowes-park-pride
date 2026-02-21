@@ -53,26 +53,15 @@ const { days, hours, minutes, seconds, isOver } = useCountdown(eventDate)
   min-width: 48px;
   padding: 8px 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: rgba($color-magenta, 0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba($color-magenta, 0.2);
 
   @media (min-width: $bp-md) {
     min-width: 80px;
     padding: 16px 20px;
     border-radius: 12px;
   }
-}
-
-.unit-days {
-  background: $color-magenta;
-}
-.unit-hours {
-  background: $color-purple;
-}
-.unit-mins {
-  background: $color-teal;
-}
-.unit-secs {
-  background: $color-orange;
 }
 
 .number {

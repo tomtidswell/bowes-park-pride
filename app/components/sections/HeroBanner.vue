@@ -353,13 +353,19 @@ import { MapPin } from "lucide-vue-next"
 }
 
 .hero-date {
-  @include body-text("lg", "medium");
+  @include body-text("xs", "medium");
   color: $color-white;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  // background: #e6007e;
-  // padding: 8px 24px;
-  // border-radius: 50px;
+  background: rgba($color-magenta, 0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba($color-magenta, 0.2);
+  padding: 8px 24px;
+  border-radius: 50px;
+
+  @media (min-width: $bp-md) {
+    @include body-text("lg", "medium");
+  }
 }
 
 .hero-title {
@@ -371,14 +377,20 @@ import { MapPin } from "lucide-vue-next"
 }
 
 .hero-location {
-  @include body-text("base", "medium");
+  @include body-text("xs", "medium");
   display: flex;
   align-items: center;
   gap: 8px;
   color: rgba(255, 255, 255, 0.85);
-  // background: #e6007e;
-  // padding: 8px 24px;
-  // border-radius: 50px;
+  background: rgba($color-magenta, 0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba($color-magenta, 0.2);
+  padding: 8px 24px;
+  border-radius: 50px;
+
+  @media (min-width: $bp-md) {
+    @include body-text("base", "medium");
+  }
 }
 
 .btn {
