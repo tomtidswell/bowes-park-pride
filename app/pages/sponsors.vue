@@ -52,6 +52,10 @@
           Interested in sponsoring Bowes Park Pride 2026? We'd love to hear from you.
         </p>
         <div class="download-actions">
+          <a href="/bowes-park-pride-2026-sponsorship.pdf" target="_blank" class="contact-btn primary">
+            <Download :size="20" />
+            Download Sponsorship Pack
+          </a>
           <a href="mailto:hello@bowesparkpride.org" class="contact-btn">
             <Mail :size="20" />
             hello@bowesparkpride.org
@@ -63,7 +67,7 @@
 </template>
 
 <script setup lang="ts">
-import { Check, Mail } from 'lucide-vue-next'
+import { Check, Download, Mail } from 'lucide-vue-next'
 import { sponsorTiers } from '@/data/sponsorTiers'
 
 useHead({
@@ -238,6 +242,10 @@ useScrollReveal()
 
 .download-actions {
   margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .contact-btn {
@@ -255,6 +263,15 @@ useScrollReveal()
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     color: $color-teal;
+  }
+
+  &.primary {
+    background: $color-white;
+    color: $color-magenta;
+
+    &:hover {
+      color: $color-magenta;
+    }
   }
 }
 </style>
