@@ -3,8 +3,8 @@
     <section class="sponsors-hero">
       <div class="sponsors-hero-bg" />
       <div class="container sponsors-hero-content">
-        <h1>Become a Sponsor</h1>
-        <p>Support Bowes Park Pride and show your commitment to diversity and community.</p>
+        <h1>2026 Sponsorship Opportunities</h1>
+        <p>Support your local Pride and show your commitment to diversity and community.</p>
       </div>
       <div class="hero-wave">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,9 +17,11 @@
       <div class="tiers-intro reveal">
         <h2>Sponsorship Tiers</h2>
         <p>
-          Every contribution helps make Bowes Park Pride happen. Choose the tier that
-          works for your organisation and join us in celebrating love and community.
+          Bowes Park Pride is a community grassroots Pride event. We are so proud of the
+          local businesses, pubs, restaurants and cafes who are already supporting Bowes
+          Park Pride 2026 — we'd love you to be a part of your local Pride!
         </p>
+        <p>Here's how you can be involved…</p>
       </div>
 
       <div class="tiers-grid reveal">
@@ -45,20 +47,15 @@
 
     <SectionWrapper color="teal" wave wave-previous-color="#FFF8F0">
       <div class="download-section reveal">
-        <h2>Want More Details?</h2>
+        <h2>Get in Touch</h2>
         <p>
-          Download our sponsorship pack for full details on each tier, audience reach,
-          and how your brand will be showcased.
+          Interested in sponsoring Bowes Park Pride 2026? We'd love to hear from you.
         </p>
         <div class="download-actions">
-          <a class="download-btn disabled" aria-disabled="true">
-            <FileDown :size="20" />
-            Sponsorship Pack (Coming Soon)
+          <a href="mailto:hello@bowesparkpride.org" class="contact-btn">
+            <Mail :size="20" />
+            hello@bowesparkpride.org
           </a>
-          <p class="contact-note">
-            Or email us directly at
-            <a href="mailto:hello@bowesparkpride.org">hello@bowesparkpride.org</a>
-          </p>
         </div>
       </div>
     </SectionWrapper>
@@ -66,11 +63,11 @@
 </template>
 
 <script setup lang="ts">
-import { Check, FileDown } from 'lucide-vue-next'
+import { Check, Mail } from 'lucide-vue-next'
 import { sponsorTiers } from '@/data/sponsorTiers'
 
 useHead({
-  title: 'Become a Sponsor — Bowes Park Pride',
+  title: '2026 Sponsorship Opportunities — Bowes Park Pride',
   meta: [
     { name: 'description', content: 'Support Bowes Park Pride as a sponsor. View our sponsorship tiers and benefits.' },
   ],
@@ -148,6 +145,7 @@ useScrollReveal()
     max-width: 600px;
     margin-inline: auto;
     color: rgba($color-dark, 0.8);
+    margin-bottom: 12px;
   }
 }
 
@@ -242,30 +240,21 @@ useScrollReveal()
   margin-top: 32px;
 }
 
-.download-btn {
+.contact-btn {
   @include body-text("base", "semibold");
   display: inline-flex;
   align-items: center;
   gap: 10px;
   padding: 14px 32px;
   border-radius: 50px;
-  background: rgba($color-white, 0.3);
-  color: rgba($color-dark, 0.5);
-  cursor: default;
-  margin-bottom: 20px;
+  background: $color-white;
+  color: $color-teal;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  &.disabled {
-    opacity: 0.7;
-  }
-}
-
-.contact-note {
-  @include body-text("base", "regular");
-
-  a {
-    color: color.adjust($color-teal, $lightness: -15%);
-    font-weight: 600;
-    text-decoration: underline;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    color: $color-teal;
   }
 }
 </style>
