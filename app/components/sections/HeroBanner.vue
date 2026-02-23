@@ -340,7 +340,7 @@ import { MapPin } from "lucide-vue-next"
     left: 50%;
     transform: translate(-50%, -50%);
     width: 120%;
-    height: 120%;
+    height: 70%;
     background: radial-gradient(
       ellipse at center,
       rgba(0, 0, 0, 0.45) 0%,
