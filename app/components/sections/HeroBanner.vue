@@ -23,7 +23,7 @@
           <CountdownTimer :placeholder="true" />
         </template>
       </ClientOnly>
-      <p class="hero-date">Sunday 5th July 2026 &middot; 10:00–18:00</p>
+      <p class="hero-date">Sunday 5th July 2026 &middot; 12:00–18:00</p>
       <p class="hero-location">
         <MapPin :size="18" />
         Myddleton Road, Bowes Park, London

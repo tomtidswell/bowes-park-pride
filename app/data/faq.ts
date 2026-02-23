@@ -6,7 +6,7 @@ export interface FaqEntry {
 export const faqData: FaqEntry[] = [
   {
     question: 'When is Bowes Park Pride?',
-    answer: 'Sunday 5th July 2026. Gates open at 10am and the event runs until 6pm.',
+    answer: 'Sunday 5th July 2026. Myddleton Road Market opens at 12pm and the event runs until 6pm.',
   },
   {
     question: 'Where exactly is it?',

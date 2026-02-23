@@ -40,6 +40,15 @@ defineProps<{
   &.headline {
     grid-column: 1 / -1;
     padding: 24px 32px;
+    min-height: 200px;
+  }
+
+  &.gold {
+    grid-column: span 3;
+  }
+
+  &.silver {
+    grid-column: span 2;
   }
 
   img {
