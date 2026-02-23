@@ -15,7 +15,7 @@
             <Clock :size="24" />
           </div>
           <h4>Times</h4>
-          <p>Gates open at 10am. Event runs until 6pm.</p>
+          <p>Myddleton Road Market opens at 12pm. Event runs until 6pm.</p>
         </div>
         <div class="info-card">
           <div class="icon-circle icon-teal">

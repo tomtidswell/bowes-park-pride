@@ -30,9 +30,6 @@
             <a href="https://instagram.com/bowesandboundslgbtqia" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <Instagram :size="22" />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <Facebook :size="22" />
-            </a>
             <a href="mailto:hello@bowesparkpride.org" aria-label="Email us">
               <Mail :size="22" />
             </a>
@@ -59,7 +56,7 @@
 </template>
 
 <script setup lang="ts">
-import { Instagram, Facebook, Mail } from 'lucide-vue-next'
+import { Instagram, Mail } from 'lucide-vue-next'
 </script>
 
 <style lang="scss" scoped>

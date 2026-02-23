@@ -13,7 +13,7 @@
           <h4>Volunteer</h4>
           <p>Help us set up, run stalls, manage the stage, or keep the event safe and fun.</p>
           <a
-            href="https://forms.google.com"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdpt0DULJ5gwzbi6hcydO4_HZvtL4p_7U6YIwJpjgMyL5a_5g/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
             class="card-btn"

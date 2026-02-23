@@ -46,15 +46,11 @@ const featuredSponsors = sponsors.filter(s => ['headline', 'gold', 'silver'].inc
 
 .sponsor-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px;
   max-width: 800px;
   margin-inline: auto;
   margin-bottom: 40px;
-
-  @media (min-width: $bp-md) {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .sponsors-cta {
