@@ -27,7 +27,7 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <div class="socials">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://instagram.com/bowesandboundslgbtqia" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <Instagram :size="22" />
             </a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
