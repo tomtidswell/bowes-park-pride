@@ -39,7 +39,7 @@
           <Store :size="32" :stroke-width="1.5" />
           <h4>Run a Stall</h4>
           <p>
-            Local business or community group? Book a stall space at the event.
+            Proudly inclusive local business or community group? Join us as a stallholder.
           </p>
           <a href="mailto:hello@bowesparkpride.org" class="card-btn">
             Enquire About Stalls
