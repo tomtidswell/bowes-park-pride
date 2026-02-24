@@ -1,5 +1,11 @@
 <template>
-  <SectionWrapper id="info" color="blue" wave wave-previous-color="#FFFBEB">
+  <SectionWrapper
+    id="info"
+    color="blue"
+    wave
+    wave-previous-color="#f2eedc"
+    class="info-bg"
+  >
     <div class="info reveal">
       <h2>Info & FAQ</h2>
       <div class="info-grid">
@@ -22,7 +28,9 @@
             <Train :size="24" />
           </div>
           <h4>Getting There</h4>
-          <p>Bowes Park rail (2 min walk) or Bounds Green tube (10 min walk).</p>
+          <p>
+            Bowes Park rail (2 min walk) or Bounds Green tube (10 min walk).
+          </p>
         </div>
         <div class="info-card">
           <div class="icon-circle icon-orange">
@@ -49,11 +57,18 @@
 </template>
 
 <script setup lang="ts">
-import { MapPin, Clock, Train, Ticket } from 'lucide-vue-next'
-import { faqData } from '@/data/faq'
+import { MapPin, Clock, Train, Ticket } from "lucide-vue-next"
+import { faqData } from "@/data/faq"
 </script>
 
 <style lang="scss" scoped>
+.info-bg {
+  background-image: url("/street2.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+}
+
 .info {
   h2 {
     text-align: center;
@@ -110,10 +125,18 @@ import { faqData } from '@/data/faq'
   }
 }
 
-.icon-magenta { background: $color-magenta; }
-.icon-purple  { background: $color-purple; }
-.icon-teal    { background: $color-teal; }
-.icon-orange  { background: $color-orange; }
+.icon-magenta {
+  background: $color-magenta;
+}
+.icon-purple {
+  background: $color-purple;
+}
+.icon-teal {
+  background: $color-teal;
+}
+.icon-orange {
+  background: $color-orange;
+}
 
 .faq-section {
   max-width: 720px;

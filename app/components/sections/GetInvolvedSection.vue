@@ -1,17 +1,20 @@
 <template>
-  <SectionWrapper id="get-involved" color="purple">
+  <SectionWrapper id="get-involved" color="purple" class="involved-bg">
     <div class="involved reveal-right">
       <h2 class="gradient-text">Get Involved</h2>
       <p class="intro">
-        Bowes Park Pride is made possible by amazing volunteers from our community.
-        Whether you can spare a few hours on the day or want to help with planning,
-        we'd love to hear from you.
+        Bowes Park Pride is made possible by amazing volunteers from our
+        community. Whether you can spare a few hours on the day or want to help
+        with planning, we'd love to hear from you.
       </p>
       <div class="cards">
         <div class="card card-magenta">
           <HandHelping :size="32" :stroke-width="1.5" />
           <h4>Volunteer</h4>
-          <p>Help us set up, run stalls, manage the stage, or keep the event safe and fun.</p>
+          <p>
+            Help us set up, run stalls, manage the stage, or keep the event safe
+            and fun.
+          </p>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSdpt0DULJ5gwzbi6hcydO4_HZvtL4p_7U6YIwJpjgMyL5a_5g/viewform?usp=dialog"
             target="_blank"
@@ -24,7 +27,10 @@
         <div class="card card-teal">
           <Mic :size="32" :stroke-width="1.5" />
           <h4>Perform</h4>
-          <p>Musician, DJ, drag artist, or spoken word poet? We want to hear from you.</p>
+          <p>
+            Musician, DJ, drag artist, or spoken word poet? We want to hear from
+            you.
+          </p>
           <a href="mailto:hello@bowesparkpride.org" class="card-btn">
             Get in Touch
           </a>
@@ -32,7 +38,9 @@
         <div class="card card-orange">
           <Store :size="32" :stroke-width="1.5" />
           <h4>Run a Stall</h4>
-          <p>Local business or community group? Book a stall space at the event.</p>
+          <p>
+            Local business or community group? Book a stall space at the event.
+          </p>
           <a href="mailto:hello@bowesparkpride.org" class="card-btn">
             Enquire About Stalls
           </a>
@@ -43,10 +51,17 @@
 </template>
 
 <script setup lang="ts">
-import { HandHelping, Mic, Store } from 'lucide-vue-next'
+import { HandHelping, Mic, Store } from "lucide-vue-next"
 </script>
 
 <style lang="scss" scoped>
+.involved-bg {
+  background-image: url("/street2.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+}
+
 .involved {
   text-align: center;
 
@@ -101,17 +116,23 @@ import { HandHelping, Mic, Store } from 'lucide-vue-next'
 
 .card-magenta {
   border-left-color: $color-magenta;
-  svg { color: $color-magenta; }
+  svg {
+    color: $color-magenta;
+  }
 }
 
 .card-teal {
   border-left-color: $color-teal;
-  svg { color: $color-teal; }
+  svg {
+    color: $color-teal;
+  }
 }
 
 .card-orange {
   border-left-color: $color-orange;
-  svg { color: $color-orange; }
+  svg {
+    color: $color-orange;
+  }
 }
 
 .card-btn {
@@ -121,7 +142,9 @@ import { HandHelping, Mic, Store } from 'lucide-vue-next'
   background: $color-purple;
   color: $color-white;
   border-radius: 50px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);

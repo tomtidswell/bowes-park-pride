@@ -1,16 +1,27 @@
 <template>
-  <SectionWrapper id="lineup" color="dark-teal" wave wave-previous-color="#EBF8FF">
+  <SectionWrapper
+    id="lineup"
+    color="purple"
+    wave
+    wave-previous-color="#EBF8FF"
+    class="lineup-bg"
+  >
     <div class="lineup reveal-scale">
       <h2>Lineup</h2>
       <div class="lineup-tba">
         <Music :size="48" :stroke-width="1.5" />
         <h3>Watch This Space!</h3>
         <p>
-          Our lineup is being finalised. Expect live music, DJs, drag performances,
-          spoken word, and more. Sign up to our mailing list to be the first to know
-          when acts are announced.
+          Our lineup is being finalised. Expect live music, DJs, drag
+          performances, spoken word, and more. Sign up to our mailing list to be
+          the first to know when acts are announced.
         </p>
-        <a href="https://preview.mailerlite.io/forms/1823960/179647431588185955/share" target="_blank" rel="noopener noreferrer" class="cta-link">
+        <a
+          href="https://preview.mailerlite.io/forms/1823960/179647431588185955/share"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cta-link"
+        >
           <Mail :size="18" />
           Join the Mailing List
         </a>
@@ -20,10 +31,17 @@
 </template>
 
 <script setup lang="ts">
-import { Music, Mail } from 'lucide-vue-next'
+import { Music, Mail } from "lucide-vue-next"
 </script>
 
 <style lang="scss" scoped>
+.lineup-bg {
+  background-image: url("/street3.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+}
+
 .lineup {
   text-align: center;
 
@@ -68,7 +86,9 @@ import { Music, Mail } from 'lucide-vue-next'
   color: $color-white;
   border-radius: 50px;
   margin-top: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);

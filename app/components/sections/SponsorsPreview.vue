@@ -1,10 +1,16 @@
 <template>
-  <SectionWrapper id="sponsors" color="yellow" wave wave-previous-color="#F5F0F7">
+  <SectionWrapper
+    id="sponsors"
+    color="yellow"
+    wave
+    wave-previous-color="#F5F0F7"
+    class="sponsors-bg"
+  >
     <div class="sponsors-preview reveal">
       <h2>Our Sponsors</h2>
       <p class="intro">
-        Bowes Park Pride is supported by generous local businesses and organisations.
-        Want to join them?
+        Bowes Park Pride is supported by generous local businesses and
+        organisations. Want to join them?
       </p>
       <div class="sponsor-grid">
         <SponsorLogo
@@ -22,19 +28,28 @@
 </template>
 
 <script setup lang="ts">
-import { Heart } from 'lucide-vue-next'
-import { sponsors } from '@/data/sponsors'
+import { Heart } from "lucide-vue-next"
+import { sponsors } from "@/data/sponsors"
 
-const featuredSponsors = sponsors.filter(s => ['headline', 'gold', 'silver'].includes(s.tier))
+const featuredSponsors = sponsors.filter((s) =>
+  ["headline", "gold", "silver"].includes(s.tier),
+)
 </script>
 
 <style lang="scss" scoped>
+.sponsors-bg {
+  background-image: url("/street3.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+}
+
 .sponsors-preview {
   text-align: center;
 
   h2 {
     margin-bottom: 16px;
-    color: color.adjust(#F5A623, $lightness: -15%);
+    color: color.adjust(#f5a623, $lightness: -15%);
   }
 }
 
@@ -62,7 +77,9 @@ const featuredSponsors = sponsors.filter(s => ['headline', 'gold', 'silver'].inc
   background: $color-magenta;
   color: $color-white;
   border-radius: 50px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
