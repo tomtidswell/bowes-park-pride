@@ -56,9 +56,9 @@
             <Download :size="20" />
             Download Sponsorship Pack
           </a>
-          <a href="mailto:hello@bowesparkpride.org" class="contact-btn">
+          <a href="mailto:hello@bowesparkpride.org.uk" class="contact-btn">
             <Mail :size="20" />
-            hello@bowesparkpride.org
+            hello@bowesparkpride.org.uk
           </a>
         </div>
       </div>

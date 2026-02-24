@@ -45,13 +45,13 @@
             >
               <Instagram :size="22" />
             </a>
-            <a href="mailto:hello@bowesparkpride.org" aria-label="Email us">
+            <a href="mailto:hello@bowesparkpride.org.uk" aria-label="Email us">
               <Mail :size="22" />
             </a>
           </div>
           <p class="email-link">
-            <a href="mailto:hello@bowesparkpride.org"
-              >hello@bowesparkpride.org</a
+            <a href="mailto:hello@bowesparkpride.org.uk"
+              >hello@bowesparkpride.org.uk</a
             >
           </p>
         </div>

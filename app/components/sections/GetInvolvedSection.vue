@@ -31,7 +31,7 @@
             Musician, DJ, drag artist, or spoken word poet? We want to hear from
             you.
           </p>
-          <a href="mailto:hello@bowesparkpride.org" class="card-btn">
+          <a href="mailto:hello@bowesparkpride.org.uk" class="card-btn">
             Get in Touch
           </a>
         </div>
@@ -41,7 +41,7 @@
           <p>
             Proudly inclusive local business or community group? Join us as a stallholder.
           </p>
-          <a href="mailto:hello@bowesparkpride.org" class="card-btn">
+          <a href="mailto:hello@bowesparkpride.org.uk" class="card-btn">
             Enquire About Stalls
           </a>
         </div>
