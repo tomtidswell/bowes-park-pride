@@ -29,6 +29,11 @@ const props = withDefaults(defineProps<{
 .section-wrapper {
   position: relative;
   @include section-padding;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @each $name, $bg in $section-colors {
     &.bg-#{$name} {

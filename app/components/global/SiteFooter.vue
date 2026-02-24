@@ -67,8 +67,15 @@ import { Instagram, Mail } from 'lucide-vue-next'
 .footer-wave {
   color: $color-dark;
   line-height: 0;
+  position: relative;
+  margin-top: -48px;
+
+  @media (min-width: $bp-md) {
+    margin-top: -80px;
+  }
 
   svg {
+    display: block;
     width: 100%;
     height: 48px;
 
