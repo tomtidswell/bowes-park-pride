@@ -1,5 +1,5 @@
 <template>
-  <SectionWrapper id="lineup" color="dark-teal" wave wave-previous-color="#FFAFC7">
+  <SectionWrapper id="lineup" color="dark-teal" wave wave-previous-color="#EBF8FF">
     <div class="lineup reveal-scale">
       <h2>Lineup</h2>
       <div class="lineup-tba">

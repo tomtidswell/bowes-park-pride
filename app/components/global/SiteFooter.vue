@@ -1,8 +1,15 @@
 <template>
   <footer class="site-footer">
     <div class="footer-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 40 C360 0 720 80 1080 40 S1440 0 1440 0 V80 H0Z" fill="currentColor" />
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 40 C360 0 720 80 1080 40 S1440 0 1440 0 V80 H0Z"
+          fill="currentColor"
+        />
       </svg>
     </div>
 
@@ -10,24 +17,32 @@
       <div class="container footer-grid">
         <div class="footer-col">
           <img src="/bp-logo.png" alt="Bowes Park Pride" class="footer-logo" />
-          <p class="footer-tagline">A free community pride event celebrating love, diversity, and togetherness in Bowes Park.</p>
+          <p class="footer-tagline">
+            A free community pride event celebrating love, diversity, and
+            togetherness in Bowes Park.
+          </p>
         </div>
 
         <div class="footer-col">
           <h4>Quick Links</h4>
           <nav>
-            <NuxtLink to="/#about">About</NuxtLink>
-            <NuxtLink to="/#lineup">Lineup</NuxtLink>
-            <NuxtLink to="/#info">Info & FAQ</NuxtLink>
+            <NuxtLink to="/about">About</NuxtLink>
             <NuxtLink to="/#get-involved">Get Involved</NuxtLink>
             <NuxtLink to="/sponsors">Sponsors</NuxtLink>
+            <NuxtLink to="/#info">Info & FAQ</NuxtLink>
+            <NuxtLink to="/#lineup">Lineup</NuxtLink>
           </nav>
         </div>
 
         <div class="footer-col">
           <h4>Connect</h4>
           <div class="socials">
-            <a href="https://instagram.com/bowesandboundslgbtqia" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a
+              href="https://instagram.com/bowesandboundslgbtqia"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
               <Instagram :size="22" />
             </a>
             <a href="mailto:hello@bowesparkpride.org" aria-label="Email us">
@@ -35,28 +50,38 @@
             </a>
           </div>
           <p class="email-link">
-            <a href="mailto:hello@bowesparkpride.org">hello@bowesparkpride.org</a>
+            <a href="mailto:hello@bowesparkpride.org"
+              >hello@bowesparkpride.org</a
+            >
           </p>
         </div>
 
         <div class="footer-col">
           <h4>Newsletter</h4>
           <p>Sign up for event updates and announcements.</p>
-          <a href="https://preview.mailerlite.io/forms/1823960/179647431588185955/share" target="_blank" rel="noopener noreferrer" class="newsletter-link">
+          <a
+            href="https://preview.mailerlite.io/forms/1823960/179647431588185955/share"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="newsletter-link"
+          >
             Sign Up
           </a>
         </div>
       </div>
 
       <div class="container footer-bottom">
-        <p>&copy; {{ new Date().getFullYear() }} Bowes Park Pride. All rights reserved.</p>
+        <p>
+          &copy; {{ new Date().getFullYear() }} Bowes Park Pride. All rights
+          reserved.
+        </p>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-import { Instagram, Mail } from 'lucide-vue-next'
+import { Instagram, Mail } from "lucide-vue-next"
 </script>
 
 <style lang="scss" scoped>
@@ -121,7 +146,9 @@ import { Instagram, Mail } from 'lucide-vue-next'
       color: rgba($color-off-white, 0.8);
       transition: color 0.2s;
 
-      &:hover { color: $color-teal; }
+      &:hover {
+        color: $color-teal;
+      }
     }
   }
 }
@@ -154,7 +181,9 @@ import { Instagram, Mail } from 'lucide-vue-next'
     border-radius: 50%;
     background: rgba($color-off-white, 0.1);
     color: $color-off-white;
-    transition: background 0.2s, color 0.2s;
+    transition:
+      background 0.2s,
+      color 0.2s;
 
     &:hover {
       background: $color-magenta;
@@ -167,7 +196,9 @@ import { Instagram, Mail } from 'lucide-vue-next'
   @include body-text("sm", "regular");
   color: rgba($color-off-white, 0.8);
 
-  &:hover { color: $color-teal; }
+  &:hover {
+    color: $color-teal;
+  }
 }
 
 .newsletter-link {
@@ -178,7 +209,9 @@ import { Instagram, Mail } from 'lucide-vue-next'
   background: $color-magenta;
   color: $color-white;
   margin-top: 12px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);

@@ -4,7 +4,7 @@
     :class="{
       scrolled,
       'menu-open': mobileOpen,
-      sponsors: $route.name === 'sponsors',
+      sponsors: $route.name === 'sponsors' || $route.name === 'about',
     }"
   >
     <div class="container header-inner">
@@ -48,10 +48,10 @@
 
 <script setup lang="ts">
 const navLinks = [
-  { href: "/#about", label: "About" },
-  { href: "/#lineup", label: "Lineup" },
-  { href: "/#info", label: "Info" },
   { href: "/#get-involved", label: "Get Involved" },
+  { href: "/#info", label: "Info" },
+  { href: "/#lineup", label: "Lineup" },
+  { href: "/about", label: "About" },
   { href: "/sponsors", label: "Sponsors" },
 ]
 

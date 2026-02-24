@@ -28,7 +28,7 @@
         <MapPin :size="18" />
         Myddleton Road, Bowes Park, London
       </p>
-      <NuxtLink to="/#about" class="btn btn-primary">MORE</NuxtLink>
+      <NuxtLink to="/#get-involved" class="btn btn-primary">MORE</NuxtLink>
     </div>
     <div class="hero-wave">
       <svg
@@ -38,7 +38,7 @@
       >
         <path
           d="M0 40 C360 80 720 0 1080 40 S1440 80 1440 80 V80 H0Z"
-          fill="#FFAFC7"
+          fill="#F5F0F7"
         />
       </svg>
     </div>

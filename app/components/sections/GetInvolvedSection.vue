@@ -1,5 +1,5 @@
 <template>
-  <SectionWrapper id="get-involved" color="purple" wave wave-previous-color="#EBF8FF">
+  <SectionWrapper id="get-involved" color="purple">
     <div class="involved reveal-right">
       <h2 class="gradient-text">Get Involved</h2>
       <p class="intro">
