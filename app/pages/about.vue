@@ -3,9 +3,9 @@
     <section class="about-hero">
       <div class="about-hero-bg" />
       <div class="container about-hero-content">
-        <h1>About Bowes Park Pride</h1>
+        <h1>But who is she?!</h1>
         <p>
-          A free, community-led celebration of love, diversity, and
+          She's a free, community-led celebration of love, diversity, and
           togetherness.
         </p>
       </div>
@@ -34,7 +34,9 @@
               diversity, and togetherness right in the heart of our
               neighbourhood. On <strong>Sunday 5th July 2026</strong>, Myddleton
               Road transforms into a vibrant street festival with live music,
-              performances, local food, family activities, and so much more as part of Myddleton Road Market, but this time with a fabulous Pride twist.
+              performances, local food, family activities, and so much more as
+              part of Myddleton Road Market, but this time with a fabulous Pride
+              twist.
             </p>
             <p>
               We believe everyone deserves to feel welcome, seen, and
@@ -100,7 +102,7 @@
             </div>
             <h4>{{ member.name }}</h4>
             <span class="member-role">{{ member.role }}</span>
-            <p class="member-bio">Bio coming soon.</p>
+            <!-- <p class="member-bio">Bio coming soon.</p> -->
           </div>
         </div>
       </div>
@@ -113,10 +115,10 @@ import { Heart, Users, Sparkles, UserRound } from "lucide-vue-next"
 
 const committee = [
   { name: "Giulio Folino", role: "Co-Chair", image: "/gf.webp" },
-  { name: "Ben Twyman", role: "Co-Chair" },
+  { name: "Ben Twyman", role: "Co-Chair", image: "/bhb.webp" },
   { name: "Tom Tidswell", role: "Digital Lead", image: "/tt.webp" },
-  { name: "Tom Hayes Isaacs", role: "Community Lead", image: "/thi.webp" },
-  { name: "Daniel Jenkins", role: "Partnerships Lead" },
+  { name: "Tom Hayes Isaacs", role: "Community Lead", image: "/thi2.webp" },
+  { name: "Daniel Jenkins", role: "Partnerships Lead", image: "/dj.webp" },
 ]
 
 useHead({
@@ -325,7 +327,7 @@ useScrollReveal()
   @include body-text("sm", "medium");
   color: $color-purple;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
 }
 
 .member-bio {

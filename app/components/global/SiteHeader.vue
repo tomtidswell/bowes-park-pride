@@ -94,8 +94,10 @@ onMounted(() => {
   right: 0;
   z-index: 100;
   background: transparent;
+
   transition:
     background 0.3s ease,
+    filter 0.3s ease,
     box-shadow 0.3s ease;
 
   &.scrolled,
@@ -103,6 +105,9 @@ onMounted(() => {
     background: rgba($color-white, 0.95);
     backdrop-filter: blur(12px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    .logo {
+      filter: none;
+    }
   }
 }
 
@@ -118,8 +123,11 @@ onMounted(() => {
   position: absolute;
   left: 50%;
   top: 50%;
+  display: flex;
+  filter: brightness(0) invert(1);
   transform: translate(-50%, 150px);
   transition:
+    filter 0.5s ease,
     left 0.5s ease,
     top 0.5s ease,
     transform 0.5s ease;
@@ -141,15 +149,14 @@ onMounted(() => {
 .logo-img {
   height: auto;
   width: min(600px, 80vw);
+  max-width: initial;
   transition: width 0.5s ease;
 
   .scrolled &,
-  .sponsors & {
-    width: 200px;
-  }
-
+  .sponsors &,
   .menu-open & {
     width: 200px;
+    max-width: 40vw;
   }
 }
 

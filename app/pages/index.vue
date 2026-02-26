@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index">
     <HeroBanner />
     <GetInvolvedSection />
     <SponsorsPreview />
@@ -11,3 +11,9 @@
 <script setup lang="ts">
 useScrollReveal()
 </script>
+
+<style lang="scss">
+.logo {
+  filter: none !important;
+}
+</style>
