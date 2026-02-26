@@ -23,7 +23,12 @@
       </nav>
 
       <div class="mobile-actions">
-        <NuxtLink v-if="$route.name !== 'donate'" to="/donate" class="mobile-donate-btn">Donate</NuxtLink>
+        <NuxtLink
+          v-if="$route.name !== 'donate'"
+          to="/donate"
+          class="mobile-donate-btn"
+          >Donate</NuxtLink
+        >
         <button
           class="hamburger"
           :class="{ open: mobileOpen }"
@@ -66,7 +71,7 @@ const navLinks = [
   // { href: "/#info", label: "Info" },
   // { href: "/#lineup", label: "Lineup" },
   { href: "/about", label: "About" },
-  { href: "/sponsors", label: "Sponsors" },
+  // { href: "/sponsors", label: "Sponsors" },
 ]
 
 const mobileOpen = ref(false)
