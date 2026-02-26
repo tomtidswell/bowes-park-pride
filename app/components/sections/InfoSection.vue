@@ -63,7 +63,7 @@ import { faqData } from "@/data/faq"
 
 <style lang="scss" scoped>
 .info-bg {
-  background-image: url("/street2.png");
+  background-image: url("/street2.webp");
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;

@@ -36,7 +36,7 @@ import { Music, Mail } from "lucide-vue-next"
 
 <style lang="scss" scoped>
 .lineup-bg {
-  background-image: url("/street3.png");
+  background-image: url("/street3.webp");
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;

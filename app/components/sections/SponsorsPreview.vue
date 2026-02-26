@@ -38,7 +38,7 @@ const featuredSponsors = sponsors.filter((s) =>
 
 <style lang="scss" scoped>
 .sponsors-bg {
-  background-image: url("/street3.png");
+  background-image: url("/street3.webp");
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;

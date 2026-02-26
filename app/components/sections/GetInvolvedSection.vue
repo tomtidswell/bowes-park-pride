@@ -56,7 +56,7 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
 
 <style lang="scss" scoped>
 .involved-bg {
-  background-image: url("/street2.png");
+  background-image: url("/street2.webp");
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;

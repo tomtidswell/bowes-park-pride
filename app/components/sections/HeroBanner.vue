@@ -63,7 +63,7 @@ import { MapPin } from "lucide-vue-next"
 .hero-photo {
   position: absolute;
   inset: 0;
-  background: url("/street.png") center / cover no-repeat;
+  background: url("/street.webp") center / cover no-repeat;
 }
 
 .hero-bg {
