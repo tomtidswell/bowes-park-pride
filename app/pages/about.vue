@@ -34,7 +34,7 @@
               diversity, and togetherness right in the heart of our
               neighbourhood. On <strong>Sunday 5th July 2026</strong>, Myddleton
               Road transforms into a vibrant street festival with live music,
-              performances, local food, family activities, and so much more.
+              performances, local food, family activities, and so much more as part of Myddleton Road Market, but this time with a fabulous Pride twist.
             </p>
             <p>
               We believe everyone deserves to feel welcome, seen, and

@@ -28,8 +28,7 @@
           <Mic :size="32" :stroke-width="1.5" />
           <h4>Perform</h4>
           <p>
-            Musician, DJ, drag artist, or spoken word poet? We want to hear from
-            you.
+            Are you an LGBTQIA+ or queer performer based in North London? Musician, DJ, drag artist or spoken word poet — we want to hear from you.
           </p>
           <a href="mailto:hello@bowesparkpride.org.uk" class="card-btn">
             Get in Touch
