@@ -55,6 +55,12 @@ export default defineNuxtConfig({
     },
   },
 
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag: string) => tag === 'dbox-widget',
+    },
+  },
+
   components: [{ path: "@/components", pathPrefix: false }],
 
   modules: ["@nuxtjs/google-fonts", "nuxt-gtag"],

@@ -4,7 +4,10 @@
     :class="{
       scrolled,
       'menu-open': mobileOpen,
-      sponsors: $route.name === 'sponsors' || $route.name === 'about',
+      sponsors:
+        $route.name === 'sponsors' ||
+        $route.name === 'about' ||
+        $route.name === 'donate',
     }"
   >
     <div class="container header-inner">
@@ -16,6 +19,7 @@
         <NuxtLink v-for="link in navLinks" :key="link.href" :to="link.href">
           {{ link.label }}
         </NuxtLink>
+        <NuxtLink to="/donate" class="nav-donate-btn">Donate</NuxtLink>
       </nav>
 
       <button
@@ -41,6 +45,13 @@
         >
           {{ link.label }}
         </NuxtLink>
+        <NuxtLink
+          to="/donate"
+          class="nav-donate-btn"
+          @click="mobileOpen = false"
+        >
+          Donate
+        </NuxtLink>
       </nav>
     </Transition>
   </header>
@@ -48,9 +59,9 @@
 
 <script setup lang="ts">
 const navLinks = [
-  { href: "/#get-involved", label: "Get Involved" },
-  { href: "/#info", label: "Info" },
-  { href: "/#lineup", label: "Lineup" },
+  // { href: "/#get-involved", label: "Get Involved" },
+  // { href: "/#info", label: "Info" },
+  // { href: "/#lineup", label: "Lineup" },
   { href: "/about", label: "About" },
   { href: "/sponsors", label: "Sponsors" },
 ]
@@ -140,6 +151,7 @@ onMounted(() => {
 
   @media (min-width: $bp-md) {
     display: flex;
+    align-items: center;
   }
 
   a {
@@ -162,6 +174,27 @@ onMounted(() => {
 
     &:hover::after {
       width: 100%;
+    }
+  }
+
+  .nav-donate-btn {
+    @include body-text("sm", "semibold");
+    background: $color-magenta;
+    color: $color-white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      background: color.adjust($color-magenta, $lightness: -8%);
+      transform: translateY(-1px);
     }
   }
 }
@@ -221,6 +254,17 @@ onMounted(() => {
     &:last-child {
       border-bottom: none;
     }
+  }
+
+  .nav-donate-btn {
+    @include body-text("lg", "semibold");
+    margin-top: 8px;
+    padding: 12px 0;
+    text-align: center;
+    background: $color-magenta;
+    color: $color-white;
+    border-radius: 50px;
+    border-bottom: none;
   }
 }
 

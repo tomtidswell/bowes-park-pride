@@ -57,11 +57,41 @@
         </div>
       </div>
     </SectionWrapper>
+
+    <SectionWrapper color="purple" wave wave-previous-color="#FFF0F7">
+      <div class="who-we-are reveal">
+        <h2 class="gradient-text">Who We Are</h2>
+        <p class="who-intro">
+          Bowes Park Pride is a community-led celebration built by local LGBTQIA+ people
+          and allies in N22. We are here to create joyful, visible, inclusive space right
+          on our doorstep.
+        </p>
+
+        <div class="committee-grid">
+          <div v-for="member in committee" :key="member.name" class="member-card">
+            <div class="member-avatar">
+              <UserRound :size="32" :stroke-width="1.5" />
+            </div>
+            <h4>{{ member.name }}</h4>
+            <span class="member-role">{{ member.role }}</span>
+            <p class="member-bio">Bio coming soon.</p>
+          </div>
+        </div>
+      </div>
+    </SectionWrapper>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Heart, Users, Sparkles } from 'lucide-vue-next'
+import { Heart, Users, Sparkles, UserRound } from 'lucide-vue-next'
+
+const committee = [
+  { name: 'Giulio Folino', role: 'Co-Chair' },
+  { name: 'Ben Twyman', role: 'Co-Chair' },
+  { name: 'Tom Tidswell', role: 'Committee Member' },
+  { name: 'Tom Hayes Isaacs', role: 'Committee Member' },
+  { name: 'Daniel Jenkins', role: 'Committee Member' },
+]
 
 useHead({
   title: 'About — Bowes Park Pride',
@@ -183,5 +213,80 @@ useScrollReveal()
     @include body-text("sm", "regular");
     color: rgba($color-dark, 0.7);
   }
+}
+
+.who-we-are {
+  h2 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+.who-intro {
+  @include body-text("lg", "regular");
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: 48px;
+  color: rgba($color-dark, 0.85);
+}
+
+.committee-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin-inline: auto;
+
+  @media (min-width: $bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.member-card {
+  text-align: center;
+  padding: 32px 24px;
+  border-radius: 20px;
+  background: rgba($color-white, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  h4 {
+    color: $color-dark;
+    margin-bottom: 4px;
+  }
+}
+
+.member-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba($color-white, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: $color-purple;
+}
+
+.member-role {
+  @include body-text("sm", "medium");
+  color: $color-purple;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.member-bio {
+  @include body-text("sm", "regular");
+  color: rgba($color-dark, 0.6);
+  font-style: italic;
 }
 </style>
