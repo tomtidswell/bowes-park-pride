@@ -10,7 +10,7 @@ export const faqData: FaqEntry[] = [
   },
   {
     question: 'Where exactly is it?',
-    answer: 'On Myddleton Road in Bowes Park, London N22. The road will be closed to traffic for the event, creating a pedestrianised festival space.',
+    answer: 'On Myddleton Road in Bowes Park, London N22. The road will be closed to traffic for the event, creating a pedestrianised festival space alongside Myddleton Road Market.',
   },
   {
     question: 'How much does it cost?',
@@ -30,7 +30,7 @@ export const faqData: FaqEntry[] = [
   },
   {
     question: 'Will there be food and drink?',
-    answer: 'Yes! Local food vendors and bars will be serving throughout the day. Many of the cafes and restaurants on Myddleton Road will also be open.',
+    answer: 'Yes! Local food vendors and bars will be serving throughout the day as part of Myddleton Road Market. Many of the cafes and restaurants on Myddleton Road will also be open.',
   },
   {
     question: 'How can I get involved?',
