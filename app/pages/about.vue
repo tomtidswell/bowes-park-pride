@@ -4,11 +4,21 @@
       <div class="about-hero-bg" />
       <div class="container about-hero-content">
         <h1>About Bowes Park Pride</h1>
-        <p>A free, community-led celebration of love, diversity, and togetherness.</p>
+        <p>
+          A free, community-led celebration of love, diversity, and
+          togetherness.
+        </p>
       </div>
       <div class="hero-wave">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 40 C360 80 720 0 1080 40 S1440 80 1440 80 V80 H0Z" fill="#FFF0F7" />
+        <svg
+          viewBox="0 0 1440 80"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 40 C360 80 720 0 1080 40 S1440 80 1440 80 V80 H0Z"
+            fill="#FFF0F7"
+          />
         </svg>
       </div>
     </section>
@@ -20,15 +30,17 @@
         <div class="about-layout">
           <div class="about-body">
             <p>
-              Bowes Park Pride is a free, community-led celebration of love, diversity, and togetherness
-              right in the heart of our neighbourhood. On <strong>Sunday 5th July 2026</strong>, Myddleton Road
-              transforms into a vibrant street festival with live music, performances, local food,
-              family activities, and so much more.
+              Bowes Park Pride is a free, community-led celebration of love,
+              diversity, and togetherness right in the heart of our
+              neighbourhood. On <strong>Sunday 5th July 2026</strong>, Myddleton
+              Road transforms into a vibrant street festival with live music,
+              performances, local food, family activities, and so much more.
             </p>
             <p>
-              We believe everyone deserves to feel welcome, seen, and celebrated. Whether you're part
-              of the LGBTQ+ community, an ally, or simply someone who loves a great street party,
-              Bowes Park Pride is for you.
+              We believe everyone deserves to feel welcome, seen, and
+              celebrated. Whether you're part of the LGBTQ+ community, an ally,
+              or simply someone who loves a great street party, Bowes Park Pride
+              is for you.
             </p>
           </div>
           <div class="values">
@@ -36,21 +48,30 @@
               <Heart :size="28" :stroke-width="2" />
               <div>
                 <h4>Inclusive</h4>
-                <p>A safe and welcoming space for everyone, regardless of identity or background.</p>
+                <p>
+                  A safe and welcoming space for everyone, regardless of
+                  identity or background.
+                </p>
               </div>
             </div>
             <div class="value">
               <Users :size="28" :stroke-width="2" />
               <div>
                 <h4>Community-Led</h4>
-                <p>Organised by local volunteers who care deeply about Bowes Park and its people.</p>
+                <p>
+                  Organised by local volunteers who care deeply about Bowes Park
+                  and its people.
+                </p>
               </div>
             </div>
             <div class="value">
               <Sparkles :size="28" :stroke-width="2" />
               <div>
                 <h4>Free for All</h4>
-                <p>No tickets needed. Just turn up, bring your friends, and have a brilliant time.</p>
+                <p>
+                  No tickets needed. Just turn up, bring your friends, and have
+                  a brilliant time.
+                </p>
               </div>
             </div>
           </div>
@@ -62,15 +83,20 @@
       <div class="who-we-are reveal">
         <h2 class="gradient-text">Who We Are</h2>
         <p class="who-intro">
-          Bowes Park Pride is a community-led celebration built by local LGBTQIA+ people
-          and allies in N22. We are here to create joyful, visible, inclusive space right
-          on our doorstep.
+          Bowes Park Pride is a community-led celebration built by local
+          LGBTQIA+ people and allies in N22. We are here to create joyful,
+          visible, inclusive space right on our doorstep.
         </p>
 
         <div class="committee-grid">
-          <div v-for="member in committee" :key="member.name" class="member-card">
+          <div
+            v-for="member in committee"
+            :key="member.name"
+            class="member-card"
+          >
             <div class="member-avatar">
-              <UserRound :size="32" :stroke-width="1.5" />
+              <img v-if="member.image" :src="member.image" :alt="member.name" />
+              <UserRound v-else :size="32" :stroke-width="1.5" />
             </div>
             <h4>{{ member.name }}</h4>
             <span class="member-role">{{ member.role }}</span>
@@ -83,20 +109,24 @@
 </template>
 
 <script setup lang="ts">
-import { Heart, Users, Sparkles, UserRound } from 'lucide-vue-next'
+import { Heart, Users, Sparkles, UserRound } from "lucide-vue-next"
 
 const committee = [
-  { name: 'Giulio Folino', role: 'Co-Chair' },
-  { name: 'Ben Twyman', role: 'Co-Chair' },
-  { name: 'Tom Tidswell', role: 'Committee Member' },
-  { name: 'Tom Hayes Isaacs', role: 'Committee Member' },
-  { name: 'Daniel Jenkins', role: 'Committee Member' },
+  { name: "Giulio Folino", role: "Co-Chair", image: "/gf.webp" },
+  { name: "Ben Twyman", role: "Co-Chair" },
+  { name: "Tom Tidswell", role: "Committee Member", image: "/tt.webp" },
+  { name: "Tom Hayes Isaacs", role: "Committee Member" },
+  { name: "Daniel Jenkins", role: "Committee Member" },
 ]
 
 useHead({
-  title: 'About — Bowes Park Pride',
+  title: "About — Bowes Park Pride",
   meta: [
-    { name: 'description', content: 'Learn about Bowes Park Pride — a free, community-led celebration of love, diversity, and togetherness in Bowes Park, London N22.' },
+    {
+      name: "description",
+      content:
+        "Learn about Bowes Park Pride — a free, community-led celebration of love, diversity, and togetherness in Bowes Park, London N22.",
+    },
   ],
 })
 
@@ -116,7 +146,12 @@ useScrollReveal()
 .about-hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, $color-magenta, $color-purple, $color-blue);
+  background: linear-gradient(
+    135deg,
+    $color-magenta,
+    $color-purple,
+    $color-blue
+  );
   background-size: 200% 200%;
   animation: gradient-shift 12s ease infinite;
 }
@@ -252,7 +287,9 @@ useScrollReveal()
   padding: 32px 24px;
   border-radius: 20px;
   background: rgba($color-white, 0.45);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);
@@ -266,8 +303,8 @@ useScrollReveal()
 }
 
 .member-avatar {
-  width: 72px;
-  height: 72px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: rgba($color-white, 0.7);
   display: flex;
@@ -275,6 +312,13 @@ useScrollReveal()
   justify-content: center;
   margin: 0 auto 16px;
   color: $color-purple;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .member-role {
