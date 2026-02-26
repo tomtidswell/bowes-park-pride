@@ -57,7 +57,7 @@ export default defineNuxtConfig({
 
   components: [{ path: "@/components", pathPrefix: false }],
 
-  modules: ["@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/google-fonts", "nuxt-gtag"],
 
   googleFonts: {
     families: {
@@ -65,6 +65,10 @@ export default defineNuxtConfig({
       "DM Sans": [400, 500, 600],
     },
     display: "swap",
+  },
+
+  gtag: {
+    id: "G-JDNJVSG8SY",
   },
 
   css: ["@/assets/styles/global.scss"],
