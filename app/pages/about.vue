@@ -306,7 +306,7 @@ useScrollReveal()
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: rgba($color-white, 0.7);
+  background: $color-magenta-20;
   display: flex;
   align-items: center;
   justify-content: center;

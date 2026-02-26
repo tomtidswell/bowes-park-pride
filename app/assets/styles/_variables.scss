@@ -1,45 +1,47 @@
 // Pride-inspired colour palette (slightly softened)
-$color-magenta:   #E6007E;
-$color-orange:    #F5A623;
-$color-yellow:    #FFD166;
-$color-teal:      #06D6A0;
-$color-purple:    #7B2D8E;
-$color-blue:      #118AB2;
-$color-off-white: #FFF8F0;
-$color-dark:      #1D1D1D;
-$color-white:     #FFFFFF;
+$color-magenta: #e6007e;
+$color-magenta-20: #e6007e33; // 20% opacity for section background
+$color-orange: #f5a623;
+$color-yellow: #ffd166;
+$color-teal: #06d6a0;
+$color-purple: #7b2d8e;
+$color-purple-20: #7b2d8e33; // 20% opacity for section background
+$color-blue: #118ab2;
+$color-off-white: #fff8f0;
+$color-dark: #1d1d1d;
+$color-white: #ffffff;
 
 // Section background tints (pale washes of each pride colour)
-$tint-magenta:  #FFF0F7;
-$tint-orange:   #FFF5E6;
-$tint-yellow:   #f2eedc;
-$tint-teal:     #ECFDF5;
-$tint-purple:   #F5F0F7;
-$tint-blue:     #EBF8FF;
+$tint-magenta: #fff0f7;
+$tint-orange: #fff5e6;
+$tint-yellow: #f2eedc;
+$tint-teal: #ecfdf5;
+$tint-purple: #f5f0f7;
+$tint-blue: #ebf8ff;
 
 // Dark section backgrounds
-$dark-teal: #55CDFC;
-$dark-magenta: #FFAFC7;
+$dark-teal: #55cdfc;
+$dark-magenta: #ffafc7;
 
 // Section colour map for alternating backgrounds
 $section-colors: (
   "magenta": $tint-magenta,
-  "orange":  $tint-orange,
-  "yellow":  $tint-yellow,
-  "teal":    $tint-teal,
-  "purple":  $tint-purple,
-  "blue":    $tint-blue,
-  "white":   $color-white,
+  "orange": $tint-orange,
+  "yellow": $tint-yellow,
+  "teal": $tint-teal,
+  "purple": $tint-purple,
+  "blue": $tint-blue,
+  "white": $color-white,
   "off-white": $color-off-white,
   "dark-teal": $dark-teal,
   "dark-magenta": $dark-magenta,
 );
 
 // Breakpoints
-$bp-sm:  480px;
-$bp-md:  768px;
-$bp-lg:  1024px;
-$bp-xl:  1280px;
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
 
 // Layout
 $max-width: 1200px;
