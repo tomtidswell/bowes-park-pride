@@ -326,7 +326,7 @@ import { MapPin } from "lucide-vue-next"
   position: relative;
   z-index: 1;
   text-align: center;
-  padding-top: calc($header-height + 40px);
+  padding-top: calc($header-height + 260px);
   padding-bottom: 16px;
   display: flex;
   flex-direction: column;

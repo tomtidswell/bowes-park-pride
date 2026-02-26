@@ -12,7 +12,7 @@
   >
     <div class="container header-inner">
       <NuxtLink to="/" class="logo" aria-label="Bowes Park Pride home">
-        <img src="/bp-logo.png" alt="Bowes Park Pride" class="logo-img" />
+        <img src="/collab-logo.png" alt="Bowes Park Pride" class="logo-img" />
       </NuxtLink>
 
       <nav class="desktop-nav" aria-label="Main navigation">
@@ -118,7 +118,7 @@ onMounted(() => {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, 72px);
+  transform: translate(-50%, 150px);
   transition:
     left 0.5s ease,
     top 0.5s ease,
@@ -140,16 +140,16 @@ onMounted(() => {
 
 .logo-img {
   height: auto;
-  width: min(280px, 50vw);
+  width: min(600px, 80vw);
   transition: width 0.5s ease;
 
   .scrolled &,
   .sponsors & {
-    width: 80px;
+    width: 200px;
   }
 
   .menu-open & {
-    width: 80px;
+    width: 200px;
   }
 }
 
