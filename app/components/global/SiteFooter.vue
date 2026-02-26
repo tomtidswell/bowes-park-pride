@@ -31,6 +31,7 @@
             <NuxtLink to="/sponsors">Sponsors</NuxtLink>
             <NuxtLink to="/#info">Info & FAQ</NuxtLink>
             <NuxtLink to="/#lineup">Lineup</NuxtLink>
+            <NuxtLink to="/donate">Donate</NuxtLink>
           </nav>
         </div>
 

@@ -22,17 +22,20 @@
         <NuxtLink to="/donate" class="nav-donate-btn">Donate</NuxtLink>
       </nav>
 
-      <button
-        class="hamburger"
-        :class="{ open: mobileOpen }"
-        aria-label="Toggle menu"
-        :aria-expanded="mobileOpen"
-        @click="mobileOpen = !mobileOpen"
-      >
-        <span />
-        <span />
-        <span />
-      </button>
+      <div class="mobile-actions">
+        <NuxtLink v-if="$route.name !== 'donate'" to="/donate" class="mobile-donate-btn">Donate</NuxtLink>
+        <button
+          class="hamburger"
+          :class="{ open: mobileOpen }"
+          aria-label="Toggle menu"
+          :aria-expanded="mobileOpen"
+          @click="mobileOpen = !mobileOpen"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
     </div>
 
     <Transition name="slide">
@@ -199,6 +202,33 @@ onMounted(() => {
   }
 }
 
+.mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @media (min-width: $bp-md) {
+    display: none;
+  }
+}
+
+.mobile-donate-btn {
+  @include body-text("xs", "semibold");
+  background: $color-magenta;
+  color: $color-white;
+  padding: 6px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    background: color.adjust($color-magenta, $lightness: -8%);
+    transform: translateY(-1px);
+  }
+}
+
 .hamburger {
   position: relative;
   z-index: 2;
@@ -206,10 +236,6 @@ onMounted(() => {
   flex-direction: column;
   gap: 5px;
   padding: 8px;
-
-  @media (min-width: $bp-md) {
-    display: none;
-  }
 
   span {
     display: block;
