@@ -114,9 +114,9 @@ import { Heart, Users, Sparkles, UserRound } from "lucide-vue-next"
 const committee = [
   { name: "Giulio Folino", role: "Co-Chair", image: "/gf.webp" },
   { name: "Ben Twyman", role: "Co-Chair" },
-  { name: "Tom Tidswell", role: "Committee Member", image: "/tt.webp" },
-  { name: "Tom Hayes Isaacs", role: "Committee Member" },
-  { name: "Daniel Jenkins", role: "Committee Member" },
+  { name: "Tom Tidswell", role: "Digital Lead", image: "/tt.webp" },
+  { name: "Tom Hayes Isaacs", role: "Community Lead" },
+  { name: "Daniel Jenkins", role: "Partnerships Lead" },
 ]
 
 useHead({
