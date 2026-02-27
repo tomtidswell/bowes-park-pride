@@ -208,7 +208,7 @@ import { Instagram, Mail } from "lucide-vue-next"
   display: inline-block;
   padding: 10px 24px;
   border-radius: 50px;
-  background: $color-magenta;
+  background: $color-teal;
   color: $color-white;
   margin-top: 12px;
   transition:

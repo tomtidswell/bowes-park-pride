@@ -28,7 +28,7 @@
         <MapPin :size="18" />
         Myddleton Road, Bowes Park, London
       </p>
-      <NuxtLink to="/#get-involved" class="btn btn-primary">MORE</NuxtLink>
+      <NuxtLink to="/#get-involved" class="btn btn-primary">↓</NuxtLink>
     </div>
     <div class="hero-wave">
       <svg
@@ -357,9 +357,9 @@ import { MapPin } from "lucide-vue-next"
   color: $color-white;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: rgba($color-magenta, 0.15);
+  background: rgba($color-dark, 0.15);
   backdrop-filter: blur(4px);
-  border: 1px solid rgba($color-magenta, 0.2);
+  border: 1px solid rgba($color-dark, 0.2);
   padding: 8px 24px;
   border-radius: 50px;
 
@@ -382,9 +382,9 @@ import { MapPin } from "lucide-vue-next"
   align-items: center;
   gap: 8px;
   color: rgba(255, 255, 255, 0.85);
-  background: rgba($color-magenta, 0.15);
+  background: rgba($color-dark, 0.15);
   backdrop-filter: blur(4px);
-  border: 1px solid rgba($color-magenta, 0.2);
+  border: 1px solid rgba($color-dark, 0.2);
   padding: 8px 24px;
   border-radius: 50px;
 
@@ -412,9 +412,10 @@ import { MapPin } from "lucide-vue-next"
 .btn-primary {
   position: relative;
   background: $color-white;
-  color: $color-magenta;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: $color-dark;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
   overflow: hidden;
+  padding: 14px 22px;
 
   &::before {
     content: "";
@@ -432,10 +433,10 @@ import { MapPin } from "lucide-vue-next"
   }
 
   &:hover {
-    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.05);
 
     &::before {
-      transform: translateX(100%);
+      transform: translateX(4px);
     }
   }
 }

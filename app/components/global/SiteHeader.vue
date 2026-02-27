@@ -19,7 +19,12 @@
         <NuxtLink v-for="link in navLinks" :key="link.href" :to="link.href">
           {{ link.label }}
         </NuxtLink>
-        <NuxtLink to="/donate" class="nav-donate-btn">Donate</NuxtLink>
+        <NuxtLink
+          to="/donate"
+          class="nav-donate-btn"
+          :style="{ background: donateColor }"
+          >Donate</NuxtLink
+        >
       </nav>
 
       <div class="mobile-actions">
@@ -27,6 +32,7 @@
           v-if="$route.name !== 'donate'"
           to="/donate"
           class="mobile-donate-btn"
+          :style="{ background: donateColor }"
           >Donate</NuxtLink
         >
         <button
@@ -56,6 +62,7 @@
         <NuxtLink
           to="/donate"
           class="nav-donate-btn"
+          :style="{ background: donateColor }"
           @click="mobileOpen = false"
         >
           Donate
@@ -76,10 +83,35 @@ const navLinks = [
 
 const mobileOpen = ref(false)
 const scrolled = ref(false)
+const donateColor = ref("#000000")
+
+const colorStops: [number, number, number][] = [
+  [0, 0, 0], // black   (hero)
+  [230, 0, 126], // magenta #e6007e
+  [245, 166, 35], // orange  #f5a623
+  [17, 138, 178], // blue    #118ab2
+  [6, 214, 160], // teal    #06d6a0
+  [6, 214, 160], // teal    #06d6a0 (footer)
+]
+
+function lerpColor(t: number): string {
+  const segment = t * (colorStops.length - 1)
+  const i = Math.min(Math.floor(segment), colorStops.length - 2)
+  const f = segment - i
+  const a = colorStops[i]!
+  const b = colorStops[i + 1]!
+  const r = Math.round(a[0] + (b[0] - a[0]) * f)
+  const g = Math.round(a[1] + (b[1] - a[1]) * f)
+  const bl = Math.round(a[2] + (b[2] - a[2]) * f)
+  return `rgb(${r},${g},${bl})`
+}
 
 onMounted(() => {
   const onScroll = () => {
     scrolled.value = window.scrollY > 20
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight
+    const t = maxScroll > 0 ? Math.min(window.scrollY / maxScroll, 1) : 0
+    donateColor.value = lerpColor(t)
   }
   window.addEventListener("scroll", onScroll, { passive: true })
   onUnmounted(() => window.removeEventListener("scroll", onScroll))
@@ -194,13 +226,12 @@ onMounted(() => {
 
   .nav-donate-btn {
     @include body-text("sm", "semibold");
-    background: $color-magenta;
     color: $color-white;
     padding: 8px 20px;
     border-radius: 50px;
     text-decoration: none;
     transition:
-      background 0.2s ease,
+      filter 0.2s ease,
       transform 0.2s ease;
 
     &::after {
@@ -208,7 +239,7 @@ onMounted(() => {
     }
 
     &:hover {
-      background: color.adjust($color-magenta, $lightness: -8%);
+      filter: brightness(0.85);
       transform: translateY(-1px);
     }
   }
@@ -226,17 +257,16 @@ onMounted(() => {
 
 .mobile-donate-btn {
   @include body-text("xs", "semibold");
-  background: $color-magenta;
   color: $color-white;
   padding: 6px 16px;
   border-radius: 50px;
   text-decoration: none;
   transition:
-    background 0.2s ease,
+    filter 0.2s ease,
     transform 0.2s ease;
 
   &:hover {
-    background: color.adjust($color-magenta, $lightness: -8%);
+    filter: brightness(0.85);
     transform: translateY(-1px);
   }
 }
@@ -299,7 +329,6 @@ onMounted(() => {
     margin-top: 8px;
     padding: 12px 0;
     text-align: center;
-    background: $color-magenta;
     color: $color-white;
     border-radius: 50px;
     border-bottom: none;
