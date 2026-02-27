@@ -1,9 +1,9 @@
 <template>
   <SectionWrapper
     id="lineup"
-    color="purple"
+    color="none"
     wave
-    wave-previous-color="#EBF8FF"
+    wave-previous-color="#f2f2f2"
     class="lineup-bg"
   >
     <div class="lineup reveal-scale">
@@ -40,6 +40,7 @@ import { Music, Mail } from "lucide-vue-next"
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .lineup {

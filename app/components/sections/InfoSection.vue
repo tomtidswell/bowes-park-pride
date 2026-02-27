@@ -1,9 +1,9 @@
 <template>
   <SectionWrapper
     id="info"
-    color="blue"
+    color="none"
     wave
-    wave-previous-color="#f2eedc"
+    wave-previous-color="#f2f2f2"
     class="info-bg"
   >
     <div class="info reveal">
@@ -67,6 +67,7 @@ import { faqData } from "@/data/faq"
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .info {

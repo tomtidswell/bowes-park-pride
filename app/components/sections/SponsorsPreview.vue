@@ -1,9 +1,9 @@
 <template>
   <SectionWrapper
     id="sponsors"
-    color="yellow"
+    color="none"
     wave
-    wave-previous-color="#F5F0F7"
+    wave-previous-color="#f2f2f2"
     class="sponsors-bg"
   >
     <div class="sponsors-preview reveal">
@@ -42,8 +42,15 @@ const featuredSponsors = sponsors.filter((s) =>
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
+  background-color: rgba(255, 255, 255, 0.85);
 }
-
+:deep(.section-inner) {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    #ffc54ce3 0%,
+    transparent 50%
+  );
+}
 .sponsors-preview {
   text-align: center;
 

@@ -1,5 +1,5 @@
 <template>
-  <SectionWrapper id="get-involved" color="purple" class="involved-bg">
+  <SectionWrapper id="get-involved" color="none" class="involved-bg">
     <div class="involved reveal-right">
       <h2 class="gradient-text">Get Involved</h2>
       <p class="intro">
@@ -28,7 +28,9 @@
           <Mic :size="32" :stroke-width="1.5" />
           <h4>Perform</h4>
           <p>
-            Are you an LGBTQIA+ or queer performer based in North London? Musician, DJ, drag artist or spoken word poet — we want to hear from you.
+            Are you an LGBTQIA+ or queer performer based in North London?
+            Musician, DJ, drag artist or spoken word poet — we want to hear from
+            you.
           </p>
           <a href="mailto:hello@bowesparkpride.org.uk" class="card-btn">
             Get in Touch
@@ -38,7 +40,8 @@
           <Store :size="32" :stroke-width="1.5" />
           <h4>Run a Stall</h4>
           <p>
-            Proudly inclusive local business or community group? Join us as a stallholder.
+            Proudly inclusive local business or community group? Join us as a
+            stallholder.
           </p>
           <a href="mailto:hello@bowesparkpride.org.uk" class="card-btn">
             Enquire About Stalls
@@ -59,6 +62,7 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .involved {
