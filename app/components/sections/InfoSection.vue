@@ -72,9 +72,15 @@ import { faqData } from "@/data/faq"
 
 .info {
   h2 {
+    display: inline-block;
     text-align: center;
+    background: linear-gradient(135deg, #118ab2, #0a5a78, #118ab2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     margin-bottom: 40px;
-    color: $color-blue;
+    width: 100%;
   }
 }
 
@@ -126,17 +132,11 @@ import { faqData } from "@/data/faq"
   }
 }
 
-.icon-magenta {
-  background: $color-magenta;
-}
-.icon-purple {
-  background: $color-purple;
-}
-.icon-teal {
-  background: $color-teal;
-}
+.icon-magenta,
+.icon-purple,
+.icon-teal,
 .icon-orange {
-  background: $color-orange;
+  background: $color-blue;
 }
 
 .faq-section {
@@ -154,5 +154,9 @@ import { faqData } from "@/data/faq"
   background: rgba($color-white, 0.6);
   border-radius: 16px;
   padding: 8px 24px;
+
+  :deep(.faq-icon) {
+    color: $color-blue;
+  }
 }
 </style>

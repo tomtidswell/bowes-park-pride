@@ -47,8 +47,13 @@ import { Music, Mail } from "lucide-vue-next"
   text-align: center;
 
   h2 {
+    display: inline-block;
+    background: linear-gradient(135deg, #06d6a0, #048a68, #06d6a0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     margin-bottom: 40px;
-    color: $color-dark;
   }
 }
 
@@ -64,7 +69,7 @@ import { Music, Mail } from "lucide-vue-next"
   gap: 16px;
 
   svg:first-child {
-    color: $color-blue;
+    color: $color-teal;
   }
 
   h3 {
@@ -83,7 +88,7 @@ import { Music, Mail } from "lucide-vue-next"
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  background: $color-dark;
+  background: $color-teal;
   color: $color-white;
   border-radius: 50px;
   margin-top: 8px;
@@ -93,7 +98,7 @@ import { Music, Mail } from "lucide-vue-next"
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba($color-dark, 0.3);
+    box-shadow: 0 4px 16px rgba($color-teal, 0.3);
     color: $color-white;
   }
 }

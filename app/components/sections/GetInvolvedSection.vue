@@ -1,7 +1,7 @@
 <template>
   <SectionWrapper id="get-involved" color="none" class="involved-bg">
     <div class="involved reveal-right">
-      <h2 class="gradient-text">Get Involved</h2>
+      <h2>Get Involved</h2>
       <p class="intro">
         Bowes Park Pride is made possible by amazing volunteers from our
         community. Whether you can spare a few hours on the day or want to help
@@ -69,6 +69,12 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   text-align: center;
 
   h2 {
+    display: inline-block;
+    background: linear-gradient(135deg, #e6007e, #7b2d8e, #e6007e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     margin-bottom: 20px;
   }
 }
@@ -99,7 +105,7 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   padding: 32px 24px;
   border-radius: 20px;
   background: rgba($color-white, 0.65);
-  border-left: 5px solid transparent;
+  border-left: none;
   transition: transform 0.2s ease;
 
   &:hover {
@@ -117,24 +123,11 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   }
 }
 
-.card-magenta {
-  border-left-color: $color-magenta;
+.card-magenta,
+.card-teal,
+.card-orange {
   svg {
     color: $color-magenta;
-  }
-}
-
-.card-teal {
-  border-left-color: $color-teal;
-  svg {
-    color: $color-teal;
-  }
-}
-
-.card-orange {
-  border-left-color: $color-orange;
-  svg {
-    color: $color-orange;
   }
 }
 
@@ -142,7 +135,7 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   @include body-text("sm", "semibold");
   display: inline-flex;
   padding: 10px 24px;
-  background: $color-purple;
+  background: $color-magenta;
   color: $color-white;
   border-radius: 50px;
   transition:
@@ -151,7 +144,7 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba($color-purple, 0.3);
+    box-shadow: 0 4px 16px rgba($color-magenta, 0.3);
     color: $color-white;
   }
 }

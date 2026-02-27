@@ -47,7 +47,7 @@ const featuredSponsors = sponsors.filter((s) =>
 :deep(.section-inner) {
   background-image: radial-gradient(
     circle at 50% 50%,
-    #ffc54ce3 0%,
+    rgba(255, 197, 76, 0.5) 0%,
     transparent 50%
   );
 }
@@ -55,8 +55,13 @@ const featuredSponsors = sponsors.filter((s) =>
   text-align: center;
 
   h2 {
+    display: inline-block;
+    background: linear-gradient(135deg, #f5a623, #c47f00, #f5a623);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     margin-bottom: 16px;
-    color: color.adjust(#f5a623, $lightness: -15%);
   }
 }
 
@@ -81,7 +86,7 @@ const featuredSponsors = sponsors.filter((s) =>
   align-items: center;
   gap: 8px;
   padding: 14px 32px;
-  background: $color-magenta;
+  background: $color-orange;
   color: $color-white;
   border-radius: 50px;
   transition:
@@ -90,7 +95,7 @@ const featuredSponsors = sponsors.filter((s) =>
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba($color-magenta, 0.3);
+    box-shadow: 0 6px 24px rgba($color-orange, 0.3);
     color: $color-white;
   }
 }
