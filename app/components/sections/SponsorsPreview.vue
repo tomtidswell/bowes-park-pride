@@ -2,8 +2,7 @@
   <SectionWrapper
     id="sponsors"
     color="none"
-    wave
-    wave-previous-color="#f2f2f2"
+    divider
     class="sponsors-bg"
   >
     <div class="sponsors-preview reveal">

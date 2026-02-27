@@ -2,8 +2,7 @@
   <SectionWrapper
     id="lineup"
     color="none"
-    wave
-    wave-previous-color="#f2f2f2"
+    divider
     class="lineup-bg"
   >
     <div class="lineup reveal-scale">

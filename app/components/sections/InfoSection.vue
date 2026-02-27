@@ -2,8 +2,7 @@
   <SectionWrapper
     id="info"
     color="none"
-    wave
-    wave-previous-color="#f2f2f2"
+    divider
     class="info-bg"
   >
     <div class="info reveal">

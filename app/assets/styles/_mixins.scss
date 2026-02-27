@@ -12,10 +12,10 @@
 }
 
 @mixin section-padding {
-  padding-block: 64px;
+  padding-block: 25vh;
 
   @media (min-width: $bp-md) {
-    padding-block: 96px;
+    padding-block: 25vh;
   }
 }
 
