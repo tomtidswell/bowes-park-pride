@@ -26,9 +26,32 @@ export default defineNuxtConfig({
             "A free community pride event on Myddleton Road, Bowes Park, London.",
         },
         { property: "og:type", content: "website" },
+        { property: "og:url", content: "https://bowesparkpride.org.uk/" },
+        {
+          property: "og:image",
+          content: "https://bowesparkpride.org.uk/bp-logo.png",
+        },
+        { name: "twitter:card", content: "summary_large_image" },
+        {
+          name: "twitter:title",
+          content: "Bowes Park Pride — Sunday 5th July 2026",
+        },
+        {
+          name: "twitter:description",
+          content:
+            "A free community pride event on Myddleton Road, Bowes Park, London.",
+        },
+        {
+          name: "twitter:image",
+          content: "https://bowesparkpride.org.uk/bp-logo.png",
+        },
         { name: "theme-color", content: "#E6007E" },
       ],
       link: [
+        {
+          rel: "canonical",
+          href: "https://bowesparkpride.org.uk/",
+        },
         {
           rel: "icon",
           type: "image/x-icon",
@@ -63,7 +86,11 @@ export default defineNuxtConfig({
 
   components: [{ path: "@/components", pathPrefix: false }],
 
-  modules: ["@nuxtjs/google-fonts", "nuxt-gtag"],
+  modules: ["@nuxtjs/google-fonts", "nuxt-gtag", "@nuxtjs/sitemap"],
+
+  site: {
+    url: "https://bowesparkpride.org.uk",
+  },
 
   googleFonts: {
     families: {

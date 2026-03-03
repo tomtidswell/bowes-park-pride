@@ -141,6 +141,12 @@ onMounted(() => {
       filter: none;
     }
   }
+
+  &.sponsors {
+    .logo {
+      filter: brightness(0);
+    }
+  }
 }
 
 .header-inner {
@@ -156,7 +162,6 @@ onMounted(() => {
   left: 50%;
   top: 50%;
   display: flex;
-  filter: brightness(0) invert(1);
   transform: translate(-50%, 150px);
   transition:
     filter 0.5s ease,

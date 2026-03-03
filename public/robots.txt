@@ -1,2 +1,4 @@
 User-Agent: *
 Disallow:
+
+Sitemap: https://bowesparkpride.org.uk/sitemap.xml
