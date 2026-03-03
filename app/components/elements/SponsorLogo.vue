@@ -6,6 +6,7 @@
     :href="sponsor.url"
     :target="sponsor.url ? '_blank' : undefined"
     :rel="sponsor.url ? 'noopener noreferrer' : undefined"
+    :style="sponsor.bgColor ? { background: sponsor.bgColor } : undefined"
   >
     <img v-if="sponsor.logo" :src="sponsor.logo" :alt="sponsor.name" />
     <div v-else class="placeholder">
