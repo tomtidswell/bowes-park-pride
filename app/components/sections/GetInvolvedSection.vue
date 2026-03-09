@@ -58,33 +58,25 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
 
 <style lang="scss" scoped>
 .involved-bg {
-  background-image: url("/street2.webp");
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: soft-light;
-  background-color: var(--bg-overlay);
+  @include section-bg("/street2.webp");
 }
 
 .involved {
   text-align: center;
 
   h2 {
-    display: inline-block;
-    background: linear-gradient(135deg, #e6007e, #7b2d8e, #e6007e);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    @include gradient-heading($color-magenta);
     margin-bottom: 20px;
   }
 }
 
 .intro {
   @include body-text("lg", "regular");
+  text-align: center;
   max-width: 640px;
   margin-inline: auto;
-  margin-bottom: 48px;
-  color: var(--text-secondary);
+  margin-bottom: 40px;
+  color: var(--text-muted);
 }
 
 .cards {

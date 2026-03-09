@@ -44,27 +44,13 @@ const NuxtLink = resolveComponent("NuxtLink")
 
 <style lang="scss" scoped>
 .events-bg {
-  background-image: url("/street.webp");
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: soft-light;
-  background-color: var(--bg-overlay);
+  @include section-bg("/street.webp");
 }
 
 .events {
   h2 {
-    display: inline-block;
+    @include gradient-heading($color-orange);
     text-align: center;
-    background: linear-gradient(
-      135deg,
-      $color-orange,
-      color.adjust($color-orange, $lightness: -15%),
-      $color-orange
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
     margin-bottom: 16px;
     width: 100%;
   }

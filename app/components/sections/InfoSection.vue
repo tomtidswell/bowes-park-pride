@@ -9,21 +9,21 @@
       <h2>Info & FAQ</h2>
       <div class="info-grid">
         <div class="info-card">
-          <div class="icon-circle icon-magenta">
+          <div class="icon-circle">
             <MapPin :size="24" />
           </div>
           <h4>Location</h4>
           <p>Myddleton Road, Bowes Park, London N22</p>
         </div>
         <div class="info-card">
-          <div class="icon-circle icon-purple">
+          <div class="icon-circle">
             <Clock :size="24" />
           </div>
           <h4>Times</h4>
           <p>Myddleton Road Market opens at 12pm. Event runs until 6pm.</p>
         </div>
         <div class="info-card">
-          <div class="icon-circle icon-teal">
+          <div class="icon-circle">
             <Train :size="24" />
           </div>
           <h4>Getting There</h4>
@@ -32,7 +32,7 @@
           </p>
         </div>
         <div class="info-card">
-          <div class="icon-circle icon-orange">
+          <div class="icon-circle">
             <Ticket :size="24" />
           </div>
           <h4>Cost</h4>
@@ -62,22 +62,13 @@ import { faqData } from "@/data/faq"
 
 <style lang="scss" scoped>
 .info-bg {
-  background-image: url("/street2.webp");
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: soft-light;
-  background-color: var(--bg-overlay);
+  @include section-bg("/street2.webp");
 }
 
 .info {
   h2 {
-    display: inline-block;
+    @include gradient-heading($color-blue);
     text-align: center;
-    background: linear-gradient(135deg, #118ab2, #0a5a78, #118ab2);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
     margin-bottom: 40px;
     width: 100%;
   }
@@ -131,10 +122,7 @@ import { faqData } from "@/data/faq"
   }
 }
 
-.icon-magenta,
-.icon-purple,
-.icon-teal,
-.icon-orange {
+.icon-circle {
   background: $color-blue;
 }
 

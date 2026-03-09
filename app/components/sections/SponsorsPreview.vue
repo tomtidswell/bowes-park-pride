@@ -32,11 +32,7 @@ const featuredSponsors = sponsors.filter((s) =>
 
 <style lang="scss" scoped>
 .sponsors-bg {
-  background-image: url("/street3.webp");
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: soft-light;
-  background-color: var(--bg-overlay);
+  @include section-bg("/street3.webp");
 }
 :deep(.section-inner) {
   background-image: radial-gradient(
@@ -49,18 +45,14 @@ const featuredSponsors = sponsors.filter((s) =>
   text-align: center;
 
   h2 {
-    display: inline-block;
-    background: linear-gradient(135deg, $color-yellow, color.adjust($color-yellow, $lightness: -15%), $color-yellow);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    @include gradient-heading($color-yellow);
     margin-bottom: 16px;
   }
 }
 
 .intro {
   @include body-text("lg", "regular");
+  text-align: center;
   margin-bottom: 40px;
   color: var(--text-muted);
 }

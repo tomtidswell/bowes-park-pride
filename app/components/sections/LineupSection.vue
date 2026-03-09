@@ -35,23 +35,14 @@ import { Music, Mail } from "lucide-vue-next"
 
 <style lang="scss" scoped>
 .lineup-bg {
-  background-image: url("/street3.webp");
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: soft-light;
-  background-color: var(--bg-overlay);
+  @include section-bg("/street3.webp");
 }
 
 .lineup {
   text-align: center;
 
   h2 {
-    display: inline-block;
-    background: linear-gradient(135deg, #06d6a0, #048a68, #06d6a0);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    @include gradient-heading($color-teal);
     margin-bottom: 40px;
   }
 }
