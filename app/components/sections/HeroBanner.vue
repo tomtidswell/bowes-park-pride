@@ -1,7 +1,6 @@
 <template>
   <section class="hero">
     <div class="hero-photo" />
-    <!-- <div class="hero-bg" /> -->
     <div class="hero-shapes">
       <svg
         v-for="n in 14"
@@ -64,23 +63,6 @@ import { MapPin } from "lucide-vue-next"
   position: absolute;
   inset: 0;
   background: url("/street.webp") center / cover no-repeat;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  opacity: 0.25;
-  background: linear-gradient(
-    135deg,
-    $color-magenta,
-    $color-purple,
-    $color-blue,
-    $color-teal,
-    $color-orange,
-    $color-magenta
-  );
-  background-size: 300% 300%;
-  animation: gradient-shift 20s ease infinite;
 }
 
 // Floating decorative shapes

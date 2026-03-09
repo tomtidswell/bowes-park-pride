@@ -50,7 +50,7 @@ const featuredSponsors = sponsors.filter((s) =>
 
   h2 {
     display: inline-block;
-    background: linear-gradient(135deg, #f5a623, #c47f00, #f5a623);
+    background: linear-gradient(135deg, $color-yellow, color.adjust($color-yellow, $lightness: -15%), $color-yellow);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -81,8 +81,8 @@ const featuredSponsors = sponsors.filter((s) =>
   align-items: center;
   gap: 8px;
   padding: 14px 32px;
-  background: $color-orange;
-  color: $color-white;
+  background: $color-yellow;
+  color: $color-dark;
   border-radius: 50px;
   transition:
     transform 0.2s ease,
@@ -90,8 +90,8 @@ const featuredSponsors = sponsors.filter((s) =>
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba($color-orange, 0.3);
-    color: $color-white;
+    box-shadow: 0 6px 24px rgba($color-yellow, 0.3);
+    color: $color-dark;
   }
 }
 </style>

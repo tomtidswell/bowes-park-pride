@@ -88,10 +88,11 @@ const donateColor = ref("#000000")
 const colorStops: [number, number, number][] = [
   [0, 0, 0], // black   (hero)
   [230, 0, 126], // magenta #e6007e
-  [245, 166, 35], // orange  #f5a623
-  [17, 138, 178], // blue    #118ab2
+  [232, 120, 10], // orange  #e8780a
+  [255, 209, 102], // yellow  #ffd166
   [6, 214, 160], // teal    #06d6a0
-  [6, 214, 160], // teal    #06d6a0 (footer)
+  [17, 138, 178], // blue    #118ab2
+  [17, 138, 178], // blue    #118ab2 (footer)
 ]
 
 function lerpColor(t: number): string {

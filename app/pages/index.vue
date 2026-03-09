@@ -2,9 +2,10 @@
   <div class="index">
     <HeroBanner />
     <GetInvolvedSection />
+    <EventsSection />
     <SponsorsPreview />
-    <InfoSection />
     <LineupSection />
+    <InfoSection />
   </div>
 </template>
 
@@ -57,4 +58,3 @@ useHead({
 
 useScrollReveal()
 </script>
-

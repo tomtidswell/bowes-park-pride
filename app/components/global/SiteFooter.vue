@@ -209,7 +209,7 @@ import { Instagram, Mail } from "lucide-vue-next"
   display: inline-block;
   padding: 10px 24px;
   border-radius: 50px;
-  background: $color-teal;
+  background: $color-blue;
   color: $color-white;
   margin-top: 12px;
   transition:
@@ -218,7 +218,7 @@ import { Instagram, Mail } from "lucide-vue-next"
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba($color-magenta, 0.4);
+    box-shadow: 0 4px 16px rgba($color-blue, 0.4);
     color: $color-white;
   }
 }
