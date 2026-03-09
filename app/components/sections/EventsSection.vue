@@ -11,6 +11,8 @@
           v-for="(event, i) in eventsData"
           :key="i"
           :to="event.link"
+          :target="event.link?.startsWith('http') ? '_blank' : undefined"
+          :rel="event.link?.startsWith('http') ? 'noopener noreferrer' : undefined"
           class="event-card"
         >
           <span class="event-date">
@@ -18,9 +20,13 @@
             {{ event.date }}
           </span>
           <h4>{{ event.title }}</h4>
+          <span v-if="event.location" class="event-location">
+            <MapPin :size="16" />
+            {{ event.location }}
+          </span>
           <p>{{ event.description }}</p>
           <span v-if="event.link" class="read-more">
-            Read more
+            {{ event.linkLabel || 'Read more' }}
             <ArrowRight :size="16" />
           </span>
         </component>
@@ -30,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-import { CalendarDays, ArrowRight } from "lucide-vue-next"
+import { CalendarDays, ArrowRight, MapPin } from "lucide-vue-next"
 import { eventsData } from "@/data/events"
 
 const NuxtLink = resolveComponent("NuxtLink")
@@ -110,12 +116,17 @@ const NuxtLink = resolveComponent("NuxtLink")
   }
 }
 
-.event-date {
+.event-date,
+.event-location {
   @include body-text("xs", "medium");
   display: inline-flex;
   align-items: center;
   gap: 6px;
   color: $color-orange;
+
+  svg {
+    flex-shrink: 0;
+  }
 }
 
 .read-more {

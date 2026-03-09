@@ -2,7 +2,9 @@ export interface EventItem {
   title: string
   date: string
   description: string
+  location?: string
   link?: string
+  linkLabel?: string
 }
 
 export const eventsData: EventItem[] = [
@@ -11,12 +13,16 @@ export const eventsData: EventItem[] = [
     date: "12 April 2026",
     description:
       "Join us for a relaxed Sunday mixer — a chance to meet fellow LGBTQIA+ locals and allies in Bowes Park ahead of Pride this summer.",
+    location: "The Hillbilly Social",
   },
   {
     title: "Boybands vs Girlbands Quiz",
     date: "5 April 2026",
     description:
       "Think you know your Spice Girls from your Backstreet Boys? Grab your team and join us for a fun-filled quiz night celebrating the best of boybands and girlbands.",
+    location: "The Hillbilly Social",
+    link: "https://www.eventbrite.co.uk/e/boyband-vs-girlband-quiz-tickets-1982508818243",
+    linkLabel: "Buy tickets",
   },
   {
     title: "Bowes Park Pride 2026 — Date Announced!",
