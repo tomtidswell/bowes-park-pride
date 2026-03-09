@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Sponsor } from '@/data/sponsors'
+import type { Sponsor } from "@/data/sponsors"
 
 defineProps<{
   sponsor: Sponsor
@@ -31,7 +31,9 @@ defineProps<{
   padding: 16px;
   border-radius: 12px;
   background: var(--bg-solid);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
@@ -46,6 +48,11 @@ defineProps<{
 
   &.gold {
     grid-column: span 3;
+    padding: 32px 24px;
+
+    img {
+      max-height: 96px;
+    }
   }
 
   &.silver {
