@@ -41,7 +41,7 @@ const featuredSponsors = sponsors.filter((s) =>
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: var(--bg-overlay);
 }
 :deep(.section-inner) {
   background-image: radial-gradient(
@@ -67,7 +67,7 @@ const featuredSponsors = sponsors.filter((s) =>
 .intro {
   @include body-text("lg", "regular");
   margin-bottom: 40px;
-  color: rgba($color-dark, 0.8);
+  color: var(--text-muted);
 }
 
 .sponsor-grid {

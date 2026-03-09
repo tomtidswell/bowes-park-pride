@@ -4,8 +4,9 @@
 
 body {
   @include body-text("base", "regular");
-  background-color: $color-off-white;
-  color: $color-dark;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 { @include heading-text("3xl", "extrabold"); }
@@ -20,6 +21,10 @@ a {
   &:hover {
     color: color.adjust($color-teal, $lightness: -10%);
   }
+}
+
+html.dark-mode a:hover {
+  color: color.adjust($color-teal, $lightness: 10%);
 }
 
 button {

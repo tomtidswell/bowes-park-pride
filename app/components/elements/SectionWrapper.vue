@@ -42,7 +42,7 @@ const props = withDefaults(defineProps<{
     transform: translateX(-50%);
     width: min(80%, 600px);
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.12), transparent);
+    background: linear-gradient(90deg, transparent, var(--divider), transparent);
   }
 }
 

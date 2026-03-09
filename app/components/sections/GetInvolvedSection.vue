@@ -62,7 +62,7 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: var(--bg-overlay);
 }
 
 .involved {
@@ -84,7 +84,7 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   max-width: 640px;
   margin-inline: auto;
   margin-bottom: 48px;
-  color: rgba($color-dark, 0.85);
+  color: var(--text-secondary);
 }
 
 .cards {
@@ -104,7 +104,7 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   gap: 16px;
   padding: 32px 24px;
   border-radius: 20px;
-  background: rgba($color-white, 0.65);
+  background: var(--bg-surface);
   border-left: none;
   transition: transform 0.2s ease;
 
@@ -113,12 +113,12 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   }
 
   h4 {
-    color: $color-dark;
+    color: var(--text-primary);
   }
 
   p {
     @include body-text("sm", "regular");
-    color: rgba($color-dark, 0.75);
+    color: var(--text-faint);
     flex: 1;
   }
 }

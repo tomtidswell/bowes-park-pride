@@ -153,7 +153,7 @@ useScrollReveal()
 
 .donate-intro {
   @include body-text("lg", "regular");
-  color: rgba($color-dark, 0.85);
+  color: var(--text-secondary);
   margin-bottom: 48px;
 }
 
@@ -167,7 +167,7 @@ useScrollReveal()
   padding: 24px;
   border-radius: 12px;
   background: rgba($color-magenta, 0.08);
-  color: rgba($color-dark, 0.8);
+  color: var(--text-muted);
 
   a {
     color: $color-magenta;

@@ -30,12 +30,12 @@ defineProps<{
   justify-content: center;
   padding: 16px;
   border-radius: 12px;
-  background: $color-white;
+  background: var(--bg-solid);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px var(--shadow-md);
   }
 
   &.headline {
@@ -61,7 +61,7 @@ defineProps<{
 
 .placeholder {
   @include body-text("sm", "medium");
-  color: rgba($color-dark, 0.4);
+  color: var(--text-extra-faint);
   text-align: center;
   padding: 12px;
 }

@@ -86,7 +86,13 @@ export default defineNuxtConfig({
 
   components: [{ path: "@/components", pathPrefix: false }],
 
-  modules: ["@nuxtjs/google-fonts", "nuxt-gtag", "@nuxtjs/sitemap"],
+  modules: ["@nuxtjs/google-fonts", "nuxt-gtag", "@nuxtjs/sitemap", "@nuxtjs/color-mode"],
+
+  colorMode: {
+    preference: "system",
+    fallback: "light",
+    classSuffix: "-mode",
+  },
 
   site: {
     url: "https://bowesparkpride.org.uk",

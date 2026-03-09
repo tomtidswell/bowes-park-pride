@@ -148,7 +148,7 @@ useScrollReveal()
     @include body-text("lg", "regular");
     max-width: 600px;
     margin-inline: auto;
-    color: rgba($color-dark, 0.8);
+    color: var(--text-muted);
     margin-bottom: 12px;
   }
 }
@@ -170,15 +170,15 @@ useScrollReveal()
 }
 
 .tier-card {
-  background: $color-white;
+  background: var(--bg-solid);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px var(--shadow-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px var(--shadow-lg);
   }
 
   &:first-child {
@@ -214,7 +214,7 @@ useScrollReveal()
     align-items: flex-start;
     gap: 10px;
     padding: 8px 0;
-    color: rgba($color-dark, 0.8);
+    color: var(--text-muted);
 
     svg {
       flex-shrink: 0;
@@ -236,7 +236,7 @@ useScrollReveal()
 
   p {
     @include body-text("lg", "regular");
-    color: rgba($color-dark, 0.85);
+    color: var(--text-secondary);
   }
 }
 
@@ -255,13 +255,13 @@ useScrollReveal()
   gap: 10px;
   padding: 14px 32px;
   border-radius: 50px;
-  background: $color-white;
+  background: var(--bg-solid);
   color: $color-teal;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 16px var(--shadow-lg);
     color: $color-teal;
   }
 

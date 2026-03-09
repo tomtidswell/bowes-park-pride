@@ -39,7 +39,7 @@ import { Music, Mail } from "lucide-vue-next"
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: var(--bg-overlay);
 }
 
 .lineup {
@@ -61,7 +61,7 @@ import { Music, Mail } from "lucide-vue-next"
   margin-inline: auto;
   padding: 48px 32px;
   border-radius: 20px;
-  background: rgba($color-white, 0.45);
+  background: var(--bg-surface-alt);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,12 +72,12 @@ import { Music, Mail } from "lucide-vue-next"
   }
 
   h3 {
-    color: $color-dark;
+    color: var(--text-primary);
   }
 
   p {
     @include body-text("base", "regular");
-    color: rgba($color-dark, 0.8);
+    color: var(--text-muted);
   }
 }
 

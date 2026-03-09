@@ -134,9 +134,9 @@ onMounted(() => {
 
   &.scrolled,
   &.menu-open {
-    background: rgba($color-white, 0.95);
+    background: var(--bg-header);
     backdrop-filter: blur(12px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 20px var(--shadow-md);
     .logo {
       filter: none;
     }
@@ -208,7 +208,7 @@ onMounted(() => {
 
   a {
     @include body-text("sm", "medium");
-    color: $color-dark;
+    color: var(--text-primary);
     text-decoration: none;
     position: relative;
     padding-bottom: 4px;
@@ -288,7 +288,7 @@ onMounted(() => {
     display: block;
     width: 24px;
     height: 2px;
-    background: $color-dark;
+    background: var(--text-primary);
     transition:
       transform 0.3s ease,
       opacity 0.3s ease;
@@ -311,8 +311,8 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   padding: 16px 20px 24px;
-  background: $color-white;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background: var(--bg-solid);
+  box-shadow: 0 8px 24px var(--shadow-md);
 
   @media (min-width: $bp-md) {
     display: none;
@@ -321,8 +321,8 @@ onMounted(() => {
   a {
     @include body-text("lg", "medium");
     padding: 12px 0;
-    color: $color-dark;
-    border-bottom: 1px solid rgba($color-dark, 0.08);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-light);
 
     &:last-child {
       border-bottom: none;

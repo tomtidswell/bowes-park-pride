@@ -1,0 +1,69 @@
+@use "variables" as *;
+
+// Theme CSS custom properties
+:root {
+  // Backgrounds
+  --bg-body: #{$color-off-white};
+  --bg-overlay: rgba(255, 255, 255, 0.85);
+  --bg-surface: rgba(255, 255, 255, 0.6);
+  --bg-surface-alt: rgba(255, 255, 255, 0.45);
+  --bg-solid: #{$color-white};
+  --bg-header: rgba(255, 255, 255, 0.95);
+
+  // Text
+  --text-primary: #{$color-dark};
+  --text-secondary: rgba(29, 29, 29, 0.85);
+  --text-muted: rgba(29, 29, 29, 0.8);
+  --text-faint: rgba(29, 29, 29, 0.7);
+  --text-extra-faint: rgba(29, 29, 29, 0.4);
+
+  // Borders & shadows
+  --border-subtle: rgba(0, 0, 0, 0.1);
+  --border-light: rgba(0, 0, 0, 0.08);
+  --divider: rgba(0, 0, 0, 0.12);
+  --shadow-sm: rgba(0, 0, 0, 0.06);
+  --shadow-md: rgba(0, 0, 0, 0.08);
+  --shadow-lg: rgba(0, 0, 0, 0.1);
+}
+
+html.dark-mode {
+  // Backgrounds
+  --bg-body: #000000e3;
+  --bg-overlay: rgba(20, 20, 20, 0.85);
+  --bg-surface: rgba(255, 255, 255, 0.06);
+  --bg-surface-alt: rgba(255, 255, 255, 0.04);
+  --bg-solid: #1e1e1e;
+  --bg-header: rgba(20, 20, 20, 0.95);
+
+  // Text
+  --text-primary: #f0f0f0;
+  --text-secondary: rgba(240, 240, 240, 0.85);
+  --text-muted: rgba(240, 240, 240, 0.8);
+  --text-faint: rgba(240, 240, 240, 0.7);
+  --text-extra-faint: rgba(240, 240, 240, 0.4);
+
+  // Borders & shadows
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-light: rgba(255, 255, 255, 0.06);
+  --divider: rgba(255, 255, 255, 0.12);
+  --shadow-sm: rgba(0, 0, 0, 0.2);
+  --shadow-md: rgba(0, 0, 0, 0.3);
+  --shadow-lg: rgba(0, 0, 0, 0.4);
+
+  // Force all section backgrounds to uniform dark
+  .section-wrapper[class*="bg-"] {
+    background-color: var(--bg-body) !important;
+  }
+
+  // Override hero wave SVG fills
+  .hero-wave path {
+    fill: var(--bg-body) !important;
+  }
+
+  // Logo inversion for dark backgrounds
+  .site-header.scrolled .logo,
+  .site-header.menu-open .logo,
+  .site-header.sponsors .logo {
+    filter: brightness(0) invert(1) !important;
+  }
+}

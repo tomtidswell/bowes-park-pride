@@ -73,6 +73,7 @@
       </div>
 
       <div class="container footer-bottom">
+        <ColorModeToggle />
         <p>
           &copy; {{ new Date().getFullYear() }} Bowes Park Pride. All rights
           reserved.
@@ -225,10 +226,15 @@ import { Instagram, Mail } from "lucide-vue-next"
 .footer-bottom {
   padding-top: 24px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 
   p {
     @include body-text("xs", "regular");
     color: rgba($color-off-white, 0.5);
   }
 }
+
 </style>

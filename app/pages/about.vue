@@ -217,7 +217,7 @@ useScrollReveal()
   > p {
     @include body-text("lg", "regular");
     margin-bottom: 20px;
-    color: rgba($color-dark, 0.85);
+    color: var(--text-secondary);
   }
 }
 
@@ -233,7 +233,7 @@ useScrollReveal()
   gap: 16px;
   padding: 20px;
   border-radius: 16px;
-  background: rgba($color-white, 0.45);
+  background: var(--bg-surface-alt);
 
   svg {
     color: $color-magenta;
@@ -242,13 +242,13 @@ useScrollReveal()
   }
 
   h4 {
-    color: $color-dark;
+    color: var(--text-primary);
     margin-bottom: 4px;
   }
 
   p {
     @include body-text("sm", "regular");
-    color: rgba($color-dark, 0.7);
+    color: var(--text-faint);
   }
 }
 
@@ -265,7 +265,7 @@ useScrollReveal()
   max-width: 640px;
   margin-inline: auto;
   margin-bottom: 48px;
-  color: rgba($color-dark, 0.85);
+  color: var(--text-secondary);
 }
 
 .committee-grid {
@@ -288,18 +288,18 @@ useScrollReveal()
   text-align: center;
   padding: 32px 24px;
   border-radius: 20px;
-  background: rgba($color-white, 0.45);
+  background: var(--bg-surface-alt);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 32px var(--shadow-md);
   }
 
   h4 {
-    color: $color-dark;
+    color: var(--text-primary);
     margin-bottom: 4px;
   }
 }
@@ -332,7 +332,7 @@ useScrollReveal()
 
 .member-bio {
   @include body-text("sm", "regular");
-  color: rgba($color-dark, 0.6);
+  color: var(--text-extra-faint);
   font-style: italic;
 }
 </style>

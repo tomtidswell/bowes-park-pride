@@ -66,7 +66,7 @@ import { faqData } from "@/data/faq"
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: var(--bg-overlay);
 }
 
 .info {
@@ -106,15 +106,15 @@ import { faqData } from "@/data/faq"
   gap: 12px;
   padding: 28px 20px;
   border-radius: 16px;
-  background: rgba($color-white, 0.6);
+  background: var(--bg-surface);
 
   h4 {
-    color: $color-dark;
+    color: var(--text-primary);
   }
 
   p {
     @include body-text("sm", "regular");
-    color: rgba($color-dark, 0.8);
+    color: var(--text-muted);
   }
 }
 
@@ -145,12 +145,12 @@ import { faqData } from "@/data/faq"
   h3 {
     text-align: center;
     margin-bottom: 32px;
-    color: $color-dark;
+    color: var(--text-primary);
   }
 }
 
 .faq-list {
-  background: rgba($color-white, 0.6);
+  background: var(--bg-surface);
   border-radius: 16px;
   padding: 8px 24px;
 

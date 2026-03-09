@@ -25,7 +25,7 @@ const open = ref(false)
 
 <style lang="scss" scoped>
 .faq-item {
-  border-bottom: 1px solid rgba($color-dark, 0.1);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .faq-trigger {
@@ -40,6 +40,7 @@ const open = ref(false)
 
 .faq-question {
   @include body-text("lg", "semibold");
+  color: var(--text-primary);
 }
 
 .faq-icon {
@@ -58,7 +59,7 @@ const open = ref(false)
   p {
     @include body-text("base", "regular");
     padding-bottom: 20px;
-    color: rgba($color-dark, 0.8);
+    color: var(--text-muted);
   }
 }
 
