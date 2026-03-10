@@ -74,11 +74,7 @@
 
 <script setup lang="ts">
 const navLinks = [
-  // { href: "/#get-involved", label: "Get Involved" },
-  // { href: "/#info", label: "Info" },
-  // { href: "/#lineup", label: "Lineup" },
   { href: "/about", label: "About" },
-  // { href: "/sponsors", label: "Sponsors" },
 ]
 
 const mobileOpen = ref(false)

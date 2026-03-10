@@ -350,14 +350,6 @@ import { MapPin } from "lucide-vue-next"
   }
 }
 
-.hero-title {
-  @include heading-text("3xl", "extrabold");
-  color: $color-white;
-  font-size: clamp(3rem, 2.5rem + 4vw, 7rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-}
-
 .hero-location {
   @include body-text("xs", "medium");
   display: flex;

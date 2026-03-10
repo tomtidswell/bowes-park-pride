@@ -1,10 +1,5 @@
 <template>
-  <SectionWrapper
-    id="lineup"
-    color="none"
-    divider
-    class="lineup-bg"
-  >
+  <SectionWrapper id="lineup" color="none" divider class="lineup-bg">
     <div class="lineup reveal-scale">
       <h2>Lineup</h2>
       <div class="lineup-tba">
@@ -58,7 +53,7 @@ import { Music, Mail } from "lucide-vue-next"
   align-items: center;
   gap: 16px;
 
-  svg:first-child {
+  & > svg:first-child {
     color: $color-teal;
   }
 

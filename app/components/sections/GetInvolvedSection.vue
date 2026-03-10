@@ -24,7 +24,7 @@
             Sign Up to Volunteer
           </a>
         </div>
-        <div class="card card-teal">
+        <div class="card card-magenta">
           <Mic :size="32" :stroke-width="1.5" />
           <h4>Perform</h4>
           <p>
@@ -36,7 +36,7 @@
             Get in Touch
           </a>
         </div>
-        <div class="card card-orange">
+        <div class="card card-magenta">
           <Store :size="32" :stroke-width="1.5" />
           <h4>Run a Stall</h4>
           <p>
@@ -115,12 +115,8 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   }
 }
 
-.card-magenta,
-.card-teal,
-.card-orange {
-  svg {
-    color: $color-magenta;
-  }
+.card-magenta svg {
+  color: $color-magenta;
 }
 
 .card-btn {

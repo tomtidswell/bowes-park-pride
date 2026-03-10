@@ -14,10 +14,6 @@
 
 @mixin section-padding {
   padding-block: 25vh;
-
-  @media (min-width: $bp-md) {
-    padding-block: 25vh;
-  }
 }
 
 @mixin responsive($bp) {
@@ -35,7 +31,9 @@
 }
 
 @mixin gradient-heading($color, $color-dark: null) {
-  $dark: if($color-dark, $color-dark, color.adjust($color, $lightness: -15%));
+  $dark: if(
+    sass($color-dark): $color-dark; else: color.adjust($color, $lightness: -15%),
+  );
   display: inline-block;
   background: linear-gradient(135deg, $color, $dark, $color);
   background-clip: text;

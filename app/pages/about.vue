@@ -102,7 +102,6 @@
             </div>
             <h4>{{ member.name }}</h4>
             <span class="member-role">{{ member.role }}</span>
-            <!-- <p class="member-bio">Bio coming soon.</p> -->
           </div>
         </div>
       </div>
@@ -330,9 +329,5 @@ useScrollReveal()
   margin-bottom: 0px;
 }
 
-.member-bio {
-  @include body-text("sm", "regular");
-  color: var(--text-extra-faint);
-  font-style: italic;
-}
+
 </style>

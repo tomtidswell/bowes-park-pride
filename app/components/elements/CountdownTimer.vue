@@ -32,7 +32,7 @@ const props = withDefaults(
 )
 
 const eventDate = new Date("2026-07-05T12:00:00+01:00")
-const { days, hours, minutes, seconds, isOver } = useCountdown(eventDate)
+const { days, hours, minutes, seconds } = useCountdown(eventDate)
 </script>
 
 <style lang="scss" scoped>
@@ -83,11 +83,5 @@ const { days, hours, minutes, seconds, isOver } = useCountdown(eventDate)
   @media (min-width: $bp-md) {
     font-size: unset;
   }
-}
-
-.countdown-over {
-  @include heading-text("xl", "bold");
-  color: $color-white;
-  text-align: center;
 }
 </style>
