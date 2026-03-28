@@ -115,6 +115,7 @@ import { Heart, Users, Sparkles, UserRound } from "lucide-vue-next"
 const committee = [
   { name: "Giulio Folino", role: "Co-Chair", image: "/gf.webp" },
   { name: "Ben Twyman", role: "Co-Chair", image: "/bhb.webp" },
+  { name: "Lucy Whitehead", role: "Myddleton Road Market Founder", image: "/lucy_sticker.webp" },
   { name: "Tom Tidswell", role: "Digital Lead", image: "/tt.webp" },
   { name: "Tom Hayes Isaacs", role: "Community Lead", image: "/thi2.webp" },
   { name: "Daniel Jenkins", role: "Partnerships Lead", image: "/dj.webp" },
