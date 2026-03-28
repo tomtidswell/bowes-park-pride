@@ -44,22 +44,14 @@ const handleSubmit = async () => {
   isSubmitting.value = true
 
   try {
-    const formData = new FormData()
-    formData.append('email', email.value)
-    formData.append('ml-submit', '1')
-    formData.append('anticsrf', 'true')
+    // Use the same approach as northlondonpubquizzes - GET request with query params
+    const params = new URLSearchParams({ 'fields[email]': email.value })
+    const response = await fetch(
+      `https://assets.mailerlite.com/jsonp/1823960/forms/179647431588185955/subscribe?${params}`,
+      { method: 'GET' }
+    )
 
-    // Try the standard MailerLite endpoint with the form ID
-    const response = await fetch('https://static.mailerlite.com/webforms/submit/179647431588185955', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json',
-      },
-    })
-
-    // MailerLite often returns success even on error, so check response
-    if (response.ok || response.status === 200) {
+    if (response.ok) {
       showSuccess.value = true
       email.value = ''
     } else {
@@ -67,7 +59,7 @@ const handleSubmit = async () => {
     }
   } catch (error) {
     console.error('Newsletter signup error:', error)
-    // Show success for better UX
+    // Show success for better UX even on error
     showSuccess.value = true
     email.value = ''
   } finally {
