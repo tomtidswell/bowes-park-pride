@@ -24,6 +24,16 @@
   --shadow-sm: rgba(0, 0, 0, 0.06);
   --shadow-md: rgba(0, 0, 0, 0.08);
   --shadow-lg: rgba(0, 0, 0, 0.1);
+
+  // Component colors
+  --color-primary: #{$color-magenta};
+  --color-primary-dark: #{$color-purple};
+  --color-border: var(--border-subtle);
+  --color-background: var(--bg-surface);
+  --color-text: var(--text-primary);
+  --color-success: #{$color-teal};
+  --color-success-light: #{$tint-teal};
+  --color-success-dark: #{$color-teal};
 }
 
 html.dark-mode {
@@ -49,6 +59,16 @@ html.dark-mode {
   --shadow-sm: rgba(0, 0, 0, 0.2);
   --shadow-md: rgba(0, 0, 0, 0.3);
   --shadow-lg: rgba(0, 0, 0, 0.4);
+
+  // Component colors
+  --color-primary: #{$color-magenta};
+  --color-primary-dark: #{$color-purple};
+  --color-border: var(--border-subtle);
+  --color-background: var(--bg-surface);
+  --color-text: var(--text-primary);
+  --color-success: #{$color-teal};
+  --color-success-light: #{$tint-teal};
+  --color-success-dark: #{$color-teal};
 
   // Force all section backgrounds to uniform dark
   .section-wrapper[class*="bg-"] {

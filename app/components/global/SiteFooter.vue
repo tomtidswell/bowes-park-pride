@@ -61,14 +61,7 @@
         <div class="footer-col">
           <h4>Newsletter</h4>
           <p>Sign up for event updates and announcements.</p>
-          <a
-            href="https://preview.mailerlite.io/forms/1823960/179647431588185955/share"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="newsletter-link"
-          >
-            Sign Up
-          </a>
+          <NewsletterSignup />
         </div>
       </div>
 
@@ -85,6 +78,7 @@
 
 <script setup lang="ts">
 import { Instagram, Mail } from "lucide-vue-next"
+import NewsletterSignup from "~/components/elements/NewsletterSignup.vue"
 </script>
 
 <style lang="scss" scoped>
@@ -201,25 +195,6 @@ import { Instagram, Mail } from "lucide-vue-next"
 
   &:hover {
     color: $color-teal;
-  }
-}
-
-.newsletter-link {
-  @include body-text("sm", "semibold");
-  display: inline-block;
-  padding: 10px 24px;
-  border-radius: 50px;
-  background: $color-blue;
-  color: $color-white;
-  margin-top: 12px;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba($color-blue, 0.4);
-    color: $color-white;
   }
 }
 

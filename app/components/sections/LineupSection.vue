@@ -10,22 +10,15 @@
           performances, spoken word, and more. Sign up to our mailing list to be
           the first to know when acts are announced.
         </p>
-        <a
-          href="https://preview.mailerlite.io/forms/1823960/179647431588185955/share"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cta-link"
-        >
-          <Mail :size="18" />
-          Join the Mailing List
-        </a>
+        <NewsletterSignup />
       </div>
     </div>
   </SectionWrapper>
 </template>
 
 <script setup lang="ts">
-import { Music, Mail } from "lucide-vue-next"
+import { Music } from "lucide-vue-next"
+import NewsletterSignup from "~/components/elements/NewsletterSignup.vue"
 </script>
 
 <style lang="scss" scoped>
