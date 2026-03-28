@@ -40,7 +40,7 @@
           <h4>Connect</h4>
           <div class="socials">
             <a
-              href="https://instagram.com/bowesandboundslgbtqia"
+              href="https://instagram.com/bowesparkpride"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
