@@ -22,6 +22,9 @@
             togetherness in Bowes Park in collaboration with Myddleton Road
             Market.
           </p>
+          <p class="footer-address">
+            101 Myddleton Road, London N22 8NE
+          </p>
         </div>
 
         <div class="footer-col">
@@ -162,6 +165,12 @@ import NewsletterSignup from "~/components/elements/NewsletterSignup.vue"
   @include body-text("sm", "regular");
   color: rgba($color-off-white, 0.7);
   max-width: 300px;
+}
+
+.footer-address {
+  @include body-text("sm", "regular");
+  color: rgba($color-off-white, 0.7);
+  margin-top: 8px;
 }
 
 .socials {
