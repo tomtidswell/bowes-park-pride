@@ -24,8 +24,7 @@
         </button>
       </div>
       <div v-else class="success-message">
-        <p>Check your email! 📧</p>
-        <p>We've sent you a confirmation link. Click it to complete your subscription.</p>
+        <p>Thank you for signing up, you fabulous thing! 🎉</p>
       </div>
     </form>
   </div>
