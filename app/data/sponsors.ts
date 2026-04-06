@@ -16,6 +16,14 @@ export const sponsors: Sponsor[] = [
     bgColor: "#29440d",
     tier: "gold",
   },
+  {
+    name: "Wilkinson Byrne",
+    logo: "/sponsors/wilkinson-byrne-white.webp",
+    url: "https://www.wilkinsonbyrne.com/",
+    bgColor: "linear-gradient(to right, #DEE365, #7CBF6D)",
+    tier: "gold",
+  },
+  { name: "Gold Sponsor", tier: "gold" },
   { name: "Gold Sponsor", tier: "gold" },
   {
     name: "Ellis & Co",

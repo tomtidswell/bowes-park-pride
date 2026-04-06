@@ -1,6 +1,6 @@
 <template>
   <SectionWrapper id="events" color="none" divider class="events-bg">
-    <div class="events reveal">
+    <div class="events" v-reveal>
       <h2>Events & News</h2>
       <p class="intro">
         Stay up to date with the latest from Bowes Park Pride.

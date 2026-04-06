@@ -24,7 +24,7 @@
     </section>
 
     <SectionWrapper color="off-white">
-      <div class="donate-content reveal">
+      <div class="donate-content" v-reveal>
         <h2>Support Your Local Pride</h2>
         <p class="donate-intro">
           Bowes Park Pride is a free, community-led event — and we want to keep
@@ -77,7 +77,6 @@ useHead({
   ],
 })
 
-useScrollReveal()
 </script>
 
 <style lang="scss" scoped>

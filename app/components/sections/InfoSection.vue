@@ -5,7 +5,7 @@
     divider
     class="info-bg"
   >
-    <div class="info reveal">
+    <div class="info" v-reveal>
       <h2>Info & FAQ</h2>
       <div class="info-grid">
         <div class="info-card">

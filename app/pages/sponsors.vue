@@ -14,7 +14,7 @@
     </section>
 
     <SectionWrapper color="off-white">
-      <div class="tiers-intro reveal">
+      <div class="tiers-intro" v-reveal>
         <h2>Sponsorship Tiers</h2>
         <p>
           Bowes Park Pride is a community grassroots Pride event. We are so proud of the
@@ -24,7 +24,7 @@
         <p>Here's how you can be involved…</p>
       </div>
 
-      <div class="tiers-grid reveal">
+      <div class="tiers-grid" v-reveal>
         <div
           v-for="tier in sponsorTiers"
           :key="tier.id"
@@ -46,7 +46,7 @@
     </SectionWrapper>
 
     <SectionWrapper color="teal" wave wave-previous-color="#FFF8F0">
-      <div class="download-section reveal">
+      <div class="download-section" v-reveal>
         <h2>Get in Touch</h2>
         <p>
           Interested in sponsoring Bowes Park Pride 2026? We'd love to hear from you.
@@ -77,7 +77,6 @@ useHead({
   ],
 })
 
-useScrollReveal()
 </script>
 
 <style lang="scss" scoped>

@@ -24,7 +24,7 @@
     </section>
 
     <SectionWrapper color="magenta">
-      <div class="about reveal-left">
+      <div class="about" v-reveal>
         <h2 class="gradient-text">What is Bowes Park Pride?</h2>
 
         <div class="about-layout">
@@ -82,7 +82,7 @@
     </SectionWrapper>
 
     <SectionWrapper color="purple" wave wave-previous-color="#FFF0F7">
-      <div class="who-we-are reveal">
+      <div class="who-we-are" v-reveal>
         <h2 class="gradient-text">Who We Are</h2>
         <p class="who-intro">
           Bowes Park Pride is a community-led celebration built by local
@@ -132,7 +132,6 @@ useHead({
   ],
 })
 
-useScrollReveal()
 </script>
 
 <style lang="scss" scoped>

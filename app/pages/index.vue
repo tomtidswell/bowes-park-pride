@@ -55,6 +55,4 @@ useHead({
     },
   ],
 })
-
-useScrollReveal()
 </script>

@@ -1,6 +1,6 @@
 <template>
   <SectionWrapper id="get-involved" color="none" class="involved-bg">
-    <div class="involved reveal-right">
+    <div class="involved" v-reveal>
       <h2>Get Involved</h2>
       <p class="intro">
         Bowes Park Pride is made possible by amazing volunteers from our

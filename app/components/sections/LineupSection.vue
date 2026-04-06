@@ -1,6 +1,6 @@
 <template>
   <SectionWrapper id="lineup" color="none" divider class="lineup-bg">
-    <div class="lineup reveal-scale">
+    <div class="lineup" v-reveal>
       <h2>Lineup</h2>
       <div class="lineup-tba">
         <Music :size="48" :stroke-width="1.5" />
