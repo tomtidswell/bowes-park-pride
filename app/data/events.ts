@@ -9,20 +9,20 @@ export interface EventItem {
 
 export const eventsData: EventItem[] = [
   {
+    title: "Pride Divas Pub Quiz",
+    date: "4 June 2026",
+    description:
+      "How well do you know your Pride Divas? Join us for a fun pub quiz night celebrating the iconic women of pop and dance music. Grab your team and get your tickets now!",
+    location: "The Hillbilly Social",
+    link: "https://www.eventbrite.co.uk/e/pride-divas-pub-quiz-at-hillbilly-social-2026-tickets-1986421427964",
+    linkLabel: "Buy tickets",
+  },
+  {
     title: "LGBTQIA+ Mixer",
     date: "12 April 2026",
     description:
-      "Join us for a relaxed Sunday mixer — a chance to meet fellow LGBTQIA+ locals and allies in Bowes Park ahead of Pride this summer.",
+      "Join us for a relaxed Sunday mixer starting at 2pm — a chance to meet fellow LGBTQIA+ locals and allies in Bowes Park ahead of Pride this summer. If you would like to be a Pride Volunteer please come at 1pm.",
     location: "The Hillbilly Social",
-  },
-  {
-    title: "Boybands vs Girlbands Quiz",
-    date: "5 April 2026",
-    description:
-      "Think you know your Spice Girls from your Backstreet Boys? Grab your team and join us for a fun-filled quiz night celebrating the best of boybands and girlbands.",
-    location: "The Hillbilly Social",
-    link: "https://www.eventbrite.co.uk/e/boyband-vs-girlband-quiz-tickets-1982508818243",
-    linkLabel: "Buy tickets",
   },
   {
     title: "Bowes Park Pride 2026 — Date Announced!",
