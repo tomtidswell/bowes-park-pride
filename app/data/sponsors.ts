@@ -23,7 +23,13 @@ export const sponsors: Sponsor[] = [
     bgColor: "linear-gradient(to right, #DEE365, #7CBF6D)",
     tier: "gold",
   },
-  { name: "Gold Sponsor", tier: "gold" },
+  {
+    name: "Hillbilly Social",
+    logo: "/sponsors/hillbilly.webp",
+    url: "https://www.hillbillysocial.co.uk/",
+    bgColor: "hsl(47, 100%, 50%)",
+    tier: "gold",
+  },
   { name: "Gold Sponsor", tier: "gold" },
   {
     name: "Ellis & Co",
