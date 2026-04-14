@@ -120,6 +120,7 @@ const committee = [
   { name: "Tom Hayes Isaacs", role: "Community Lead", image: "/thi2.webp" },
   { name: "Sharn Rayment", role: "Director of Social Media and Content", image: "/sharn.webp" },
   { name: "Daniel Jenkins", role: "Partnerships Lead", image: "/dj.webp" },
+  { name: "Liz Garbutt", role: "Committee Member", image: "/liz.webp" },
 ]
 
 useHead({
