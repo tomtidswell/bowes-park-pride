@@ -7,26 +7,33 @@ export default defineNuxtConfig({
     baseURL: "/",
     head: {
       htmlAttrs: { lang: "en" },
-      title: "Bowes Park Pride — Sunday 5th July 2026",
+      title: "Bowes Park Pride — Free LGBTQ+ Festival, Sunday 5th July 2026",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
           name: "description",
           content:
-            "A free community pride event on Myddleton Road, Bowes Park, London. Sunday 5th July 2026.",
+            "Bowes Park Pride is a free LGBTQ+ community pride festival on Myddleton Road, London N22. Sunday 5th July 2026 — live music, performances, food, and family fun in the heart of North London, serving Haringey, Enfield, Wood Green, Palmers Green and beyond.",
         },
         {
+          name: "keywords",
+          content:
+            "Pride, LGBT, LGBTQ, LGBTQIA, Pride festival, Bowes Park Pride, Haringey Pride, Enfield Pride, North London Pride, Wood Green, Palmers Green, Muswell Hill, Alexandra Palace, Hertfordshire, N22, free festival, community pride, street festival, London Pride 2026, queer, inclusive, diversity",
+        },
+        { name: "robots", content: "index, follow" },
+        {
           property: "og:title",
-          content: "Bowes Park Pride — Sunday 5th July 2026",
+          content: "Bowes Park Pride — Free LGBTQ+ Festival, Sunday 5th July 2026",
         },
         {
           property: "og:description",
           content:
-            "A free community pride event on Myddleton Road, Bowes Park, London.",
+            "A free community pride festival on Myddleton Road, Bowes Park, London N22. Live music, performances, food and family activities. Sunday 5th July 2026.",
         },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://bowesparkpride.org.uk/" },
+        { property: "og:locale", content: "en_GB" },
         {
           property: "og:image",
           content: "https://bowesparkpride.org.uk/bp-logo.png",
@@ -34,12 +41,12 @@ export default defineNuxtConfig({
         { name: "twitter:card", content: "summary_large_image" },
         {
           name: "twitter:title",
-          content: "Bowes Park Pride — Sunday 5th July 2026",
+          content: "Bowes Park Pride — Free LGBTQ+ Festival, Sunday 5th July 2026",
         },
         {
           name: "twitter:description",
           content:
-            "A free community pride event on Myddleton Road, Bowes Park, London.",
+            "A free community pride festival on Myddleton Road, Bowes Park, London N22. Sunday 5th July 2026.",
         },
         {
           name: "twitter:image",

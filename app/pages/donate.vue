@@ -67,14 +67,15 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Donate — Bowes Park Pride",
+  title: "Donate — Bowes Park Pride | Support North London's Free Pride Festival",
   meta: [
     {
       name: "description",
       content:
-        "Donate to Bowes Park Pride and help us create a free, inclusive celebration for the community.",
+        "Donate to Bowes Park Pride and help us keep North London's free LGBTQ+ community festival alive. Every contribution helps us stage a safe, joyful, and inclusive celebration for Haringey, Enfield, and beyond.",
     },
   ],
+  link: [{ rel: "canonical", href: "https://bowesparkpride.org.uk/donate" }],
 })
 
 </script>

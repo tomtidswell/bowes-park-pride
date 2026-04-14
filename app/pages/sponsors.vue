@@ -71,10 +71,14 @@ import { Check, Download, Mail } from 'lucide-vue-next'
 import { sponsorTiers } from '@/data/sponsorTiers'
 
 useHead({
-  title: '2026 Sponsorship Opportunities — Bowes Park Pride',
+  title: 'Sponsor Bowes Park Pride 2026 — Support North London\'s Free LGBTQ+ Festival',
   meta: [
-    { name: 'description', content: 'Support Bowes Park Pride as a sponsor. View our sponsorship tiers and benefits.' },
+    {
+      name: 'description',
+      content: 'Become a sponsor of Bowes Park Pride 2026 — North London\'s free LGBTQ+ community festival. Reach thousands of people across Haringey, Enfield, Wood Green, Palmers Green and beyond. View sponsorship tiers and benefits.',
+    },
   ],
+  link: [{ rel: 'canonical', href: 'https://bowesparkpride.org.uk/sponsors' }],
 })
 
 </script>

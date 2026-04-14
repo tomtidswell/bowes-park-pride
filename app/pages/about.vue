@@ -123,14 +123,15 @@ const committee = [
 ]
 
 useHead({
-  title: "About — Bowes Park Pride",
+  title: "About — Bowes Park Pride | LGBTQ+ Community Festival N22",
   meta: [
     {
       name: "description",
       content:
-        "Learn about Bowes Park Pride — a free, community-led celebration of love, diversity, and togetherness in Bowes Park, London N22.",
+        "Learn about Bowes Park Pride — a free, community-led LGBTQ+ celebration of love, diversity, and togetherness in Bowes Park, London N22. Organised by local volunteers from Haringey and Enfield.",
     },
   ],
+  link: [{ rel: "canonical", href: "https://bowesparkpride.org.uk/about" }],
 })
 
 </script>
