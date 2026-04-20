@@ -5,6 +5,10 @@ export interface FaqEntry {
 
 export const faqData: FaqEntry[] = [
   {
+    question: 'I\'m straight, can I attend?',
+    answer: 'Absolutely! We believe everyone deserves to feel welcome, seen, and celebrated. Whether you\'re part of the LGBTQ+ community, an ally, or simply someone who loves a great street party, Bowes Park Pride is for you.',
+  },
+  {
     question: 'When is Bowes Park Pride?',
     answer: 'Sunday 5th July 2026. Myddleton Road Market opens at 12pm and the event runs until 6pm.',
   },
