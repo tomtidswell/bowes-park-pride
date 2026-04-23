@@ -45,7 +45,13 @@ export const sponsors: Sponsor[] = [
     bgColor: "#111d05",
     tier: "silver",
   },
-  { name: "Silver Sponsor", tier: "silver" },
+  {
+    name: "Something Different",
+    logo: "/sponsors/something-different.png",
+    url: "https://something-different.co.uk/",
+    bgColor: "rgb(20, 22, 23)",
+    tier: "silver",
+  },
   { name: "Bronze Sponsor", tier: "bronze" },
   { name: "Bronze Sponsor", tier: "bronze" },
 ]
