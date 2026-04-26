@@ -5,10 +5,6 @@ export interface FaqEntry {
 
 export const faqData: FaqEntry[] = [
   {
-    question: 'I\'m straight, can I attend?',
-    answer: 'Absolutely! We believe everyone deserves to feel welcome, seen, and celebrated. Whether you\'re part of the LGBTQ+ community, an ally, or simply someone who loves a great street party, Bowes Park Pride is for you.',
-  },
-  {
     question: 'When is Bowes Park Pride?',
     answer: 'Sunday 5th July 2026. Myddleton Road Market opens at 12pm and the event runs until 6pm.',
   },
@@ -17,16 +13,24 @@ export const faqData: FaqEntry[] = [
     answer: 'On Myddleton Road in Bowes Park, London N22. The road will be closed to traffic for the event, creating a pedestrianised festival space alongside Myddleton Road Market.',
   },
   {
+    question: 'Is it family friendly?',
+    answer: 'Yes! Bowes Park Pride is designed to be a community-focused, family-friendly event — a relaxed and welcoming celebration away from the big crowds of London Pride the day before.',
+  },
+  {
+    question: 'I\'m straight, can I attend?',
+    answer: 'Absolutely! We believe everyone deserves to feel welcome, seen, and celebrated. Whether you\'re part of the LGBTQ+ community, an ally, or simply someone who loves a great street party, Bowes Park Pride is for you.',
+  },
+  {
+    question: 'Is the event accessible?',
+    answer: 'Yes! The event takes place on a flat, paved street. We are committed to making the event as accessible as possible. If you have specific accessibility needs, please get in touch and we will do our best to accommodate you.',
+  },
+  {
     question: 'How much does it cost?',
     answer: "It's completely free! Bowes Park Pride is a community-funded event open to everyone.",
   },
   {
     question: 'How do I get there?',
     answer: 'Bowes Park railway station is a 2-minute walk away (Great Northern services from Moorgate/Finsbury Park). Bounds Green tube (Piccadilly line) is about a 10-minute walk. Multiple bus routes also serve the area.',
-  },
-  {
-    question: 'Is the event accessible?',
-    answer: 'Yes! The event takes place on a flat, paved street. We are committed to making the event as accessible as possible. If you have specific accessibility needs, please get in touch and we will do our best to accommodate you.',
   },
   {
     question: 'Can I bring my dog?',
