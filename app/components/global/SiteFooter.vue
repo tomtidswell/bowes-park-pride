@@ -50,6 +50,14 @@
             >
               <Instagram :size="22" />
             </a>
+            <a
+              href="https://facebook.com/bowesparkpride"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <Facebook :size="22" />
+            </a>
             <a href="mailto:hello@bowesparkpride.org.uk" aria-label="Email us">
               <Mail :size="22" />
             </a>
@@ -80,7 +88,7 @@
 </template>
 
 <script setup lang="ts">
-import { Instagram, Mail } from "lucide-vue-next"
+import { Instagram, Facebook, Mail } from "lucide-vue-next"
 import NewsletterSignup from "~/components/elements/NewsletterSignup.vue"
 </script>
 
