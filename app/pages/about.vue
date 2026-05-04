@@ -106,11 +106,52 @@
         </div>
       </div>
     </SectionWrapper>
+
+    <SectionWrapper color="teal">
+      <div class="cic-section" v-reveal>
+        <h2 class="gradient-text">Bowes Park Pride CIC</h2>
+        <p class="cic-intro">
+          Bowes Park Pride is a registered Community Interest Company — a not-for-profit structure that puts community benefit at the heart of everything we do.
+        </p>
+
+        <div class="cic-grid">
+          <div class="cic-card">
+            <MapPin :size="28" :stroke-width="2" />
+            <div>
+              <h4>Who We're Here For</h4>
+              <p>
+                Our primary focus is LGBTQIA+ people living in Bowes Park, Bounds Green and the surrounding areas of North London — particularly those who may experience social isolation, underrepresentation, or limited access to inclusive local spaces. We're also here for the whole neighbourhood: residents, local businesses and community organisations who share our belief in a more visible, connected and welcoming N22.
+              </p>
+            </div>
+          </div>
+
+          <div class="cic-card">
+            <CalendarDays :size="28" :stroke-width="2" />
+            <div>
+              <h4>Community Events &amp; Social Spaces</h4>
+              <p>
+                We organise and deliver inclusive LGBTQIA+ community events throughout the year — from social mixers, quiz nights and cultural gatherings to our flagship annual Pride celebration on Myddleton Road. These events create safe, welcoming spaces where people can connect, build relationships and feel a genuine sense of belonging in their own neighbourhood.
+              </p>
+            </div>
+          </div>
+
+          <div class="cic-card">
+            <Handshake :size="28" :stroke-width="2" />
+            <div>
+              <h4>Local Partnerships &amp; Community Development</h4>
+              <p>
+                We work hand in hand with local venues, businesses and community organisations to develop and sustain inclusive programmes and community-led initiatives. By strengthening local networks and fostering collaboration, we're building something that lasts well beyond one day a year.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </SectionWrapper>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Heart, Users, Sparkles, UserRound } from "lucide-vue-next"
+import { Heart, Users, Sparkles, UserRound, MapPin, CalendarDays, Handshake } from "lucide-vue-next"
 
 const committee = [
   { name: "Giulio Folino", role: "Director, Co-Founder & Co-Chair", image: "/gf.webp" },
@@ -333,5 +374,53 @@ useHead({
   margin-bottom: 0px;
 }
 
+.cic-section {
+  h2 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+.cic-intro {
+  @include body-text("lg", "regular");
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: 48px;
+  color: var(--text-secondary);
+}
+
+.cic-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+.cic-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px 24px;
+  border-radius: 16px;
+  background: var(--bg-surface-alt);
+
+  svg {
+    color: $color-teal;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  h4 {
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  p {
+    @include body-text("sm", "regular");
+    color: var(--text-faint);
+  }
+}
 
 </style>

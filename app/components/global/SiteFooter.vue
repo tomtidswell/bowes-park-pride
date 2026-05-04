@@ -79,7 +79,7 @@
       <div class="container footer-bottom">
         <ColorModeToggle />
         <p>
-          &copy; {{ new Date().getFullYear() }} Bowes Park Pride. All rights
+          &copy; {{ new Date().getFullYear() }} Bowes Park Pride CIC. All rights
           reserved.
         </p>
       </div>
