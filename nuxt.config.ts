@@ -22,6 +22,21 @@ export default defineNuxtConfig({
             "Pride, LGBT, LGBTQ, LGBTQIA, Pride festival, Bowes Park Pride, Haringey Pride, Enfield Pride, North London Pride, Wood Green, Palmers Green, Muswell Hill, Alexandra Palace, Hertfordshire, N22, free festival, community pride, street festival, London Pride 2026, queer, inclusive, diversity",
         },
         { name: "robots", content: "index, follow" },
+        { name: "referrer", content: "strict-origin-when-cross-origin" },
+        {
+          "http-equiv": "Content-Security-Policy",
+          content: [
+            "default-src 'self'",
+            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://donorbox.org",
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+            "font-src 'self' https://fonts.gstatic.com",
+            "img-src 'self' data:",
+            "frame-src https://donorbox.org",
+            "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://assets.mailerlite.com",
+            "object-src 'none'",
+            "base-uri 'self'",
+          ].join("; "),
+        },
         {
           property: "og:title",
           content: "Bowes Park Pride — Free LGBTQ+ Festival, Sunday 5th July 2026",
