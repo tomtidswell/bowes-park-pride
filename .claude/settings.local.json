@@ -5,7 +5,11 @@
       "WebFetch(domain:happyvalleypride.co.uk)",
       "WebFetch(domain:www.mightyhoopla.com)",
       "WebFetch(domain:www.happyvalleypride.co.uk)",
-      "Bash(git -C /Users/tomtidswell/dev/bowes-park-pride push)"
+      "Bash(git -C /Users/tomtidswell/dev/bowes-park-pride push)",
+      "Bash(pnpm dev *)",
+      "Bash(curl -s http://localhost:3001/donate)",
+      "Bash(curl -s https://donorbox.org/widgets.js)",
+      "Bash(curl -sv https://donorbox.org/widgets/donation_form/fundraising-for-bowes-park-pride -H 'Origin: http://localhost:3001')"
     ]
   }
 }

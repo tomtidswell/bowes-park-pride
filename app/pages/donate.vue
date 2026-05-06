@@ -33,32 +33,24 @@
         </p>
 
         <div class="donorbox-embed">
-          <ClientOnly>
-            <component
-              :is="'script'"
-              type="module"
-              src="https://donorbox.org/widgets.js"
-              async
-            />
-            <dbox-widget
-              campaign="fundraising-for-bowes-park-pride"
-              type="donation_form"
-              enable-auto-scroll="true"
-            />
-            <noscript>
-              <p class="noscript-message">
-                Please enable JavaScript to use the donation form, or visit
-                <a
-                  href="https://donorbox.org/fundraising-for-bowes-park-pride"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  our Donorbox page
-                </a>
-                directly.
-              </p>
-            </noscript>
-          </ClientOnly>
+          <dbox-widget
+            campaign="fundraising-for-bowes-park-pride"
+            type="donation_form"
+            enable-auto-scroll="true"
+          />
+          <noscript>
+            <p class="noscript-message">
+              Please enable JavaScript to use the donation form, or visit
+              <a
+                href="https://donorbox.org/fundraising-for-bowes-park-pride"
+                target="_blank"
+                rel="noopener"
+              >
+                our Donorbox page
+              </a>
+              directly.
+            </p>
+          </noscript>
         </div>
       </div>
     </SectionWrapper>
@@ -76,6 +68,13 @@ useHead({
     },
   ],
   link: [{ rel: "canonical", href: "https://bowesparkpride.org.uk/donate" }],
+  script: [
+    {
+      src: "https://donorbox.org/widgets.js",
+      type: "module",
+      async: true,
+    },
+  ],
 })
 
 </script>
