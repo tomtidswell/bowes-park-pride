@@ -52,6 +52,13 @@ export const sponsors: Sponsor[] = [
     bgColor: "rgb(20, 22, 23)",
     tier: "silver",
   },
+  {
+    name: "Cowshed",
+    logo: "/sponsors/cowshed.png",
+    url: "https://cowshedstudio.com/",
+    bgColor: "#000000",
+    tier: "silver",
+  },
   { name: "Bronze Sponsor", tier: "bronze" },
   { name: "Bronze Sponsor", tier: "bronze" },
 ]
