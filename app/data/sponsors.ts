@@ -74,6 +74,12 @@ export const sponsors: Sponsor[] = [
     bgColor: "#000000",
     tier: "silver",
   },
+  {
+    name: "Lyons Reformer Pilates",
+    logo: "/sponsors/lyons_.png",
+    url: "https://lyonsreformerpilates.com/",
+    tier: "silver",
+  },
   { name: "Bronze Sponsor", tier: "bronze" },
   { name: "Bronze Sponsor", tier: "bronze" },
 ]
