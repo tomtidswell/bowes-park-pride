@@ -8,7 +8,12 @@
     :rel="sponsor.url ? 'noopener noreferrer' : undefined"
     :style="sponsor.bgColor ? { background: sponsor.bgColor } : undefined"
   >
-    <img v-if="sponsor.logo" :src="sponsor.logo" :alt="sponsor.name" />
+    <img
+      v-if="sponsor.logo"
+      :src="sponsor.logo"
+      :alt="sponsor.name"
+      :style="sponsor.logoScale ? { transform: `scale(${sponsor.logoScale})` } : undefined"
+    />
     <div v-else class="placeholder">
       <span>{{ sponsor.name }}</span>
     </div>
@@ -28,6 +33,7 @@ defineProps<{
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   padding: 16px;
   border-radius: 12px;
   background: var(--bg-solid);
@@ -43,12 +49,20 @@ defineProps<{
   &.headline {
     grid-column: 1 / -1;
     padding: 24px 32px;
-    min-height: 200px;
+    min-height: 208px;
+
+    img {
+      max-height: 160px;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+    }
   }
 
   &.gold {
     grid-column: span 3;
     padding: 32px 24px;
+    min-height: 160px;
 
     img {
       max-height: 96px;
@@ -62,6 +76,7 @@ defineProps<{
   img {
     max-height: 48px;
     width: auto;
+    height: auto;
     object-fit: contain;
   }
 }

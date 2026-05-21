@@ -60,7 +60,6 @@ const featuredSponsors = sponsors.filter((s) =>
 .sponsor-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 3fr 2fr 2fr 1fr;
   gap: 16px;
   max-width: 800px;
   margin-inline: auto;

@@ -3,12 +3,19 @@ export interface Sponsor {
   logo?: string
   url?: string
   bgColor?: string
+  logoScale?: number
   tier: "headline" | "gold" | "silver" | "bronze"
 }
 
 export const sponsors: Sponsor[] = [
   // Placeholder sponsors — replace with real data
   { name: "Headline Sponsor", tier: "headline" },
+  {
+    name: "MRCBS",
+    logo: "/sponsors/mrcbs.png",
+    url: "https://mrcbs.org.uk",
+    tier: "headline",
+  },
   {
     name: "North London Box Sash",
     logo: "/sponsors/nlbs-white.webp",
@@ -30,7 +37,15 @@ export const sponsors: Sponsor[] = [
     bgColor: "hsl(47, 100%, 50%)",
     tier: "gold",
   },
-  { name: "Gold Sponsor", tier: "gold" },
+  {
+    name: "Grow22",
+    logo: "/sponsors/grown22.webp",
+    url: "https://grown22.com/",
+    bgColor: "#ffffff",
+    logoScale: 1.6,
+    tier: "gold",
+  },
+
   {
     name: "Ellis & Co",
     logo: "/sponsors/ellis-and-co.svg",
