@@ -24,16 +24,20 @@
       </ClientOnly>
 
       <div class="hero-info-images">
-        <img
-          src="/date.png"
-          alt="Sunday 5th July 2026, 12:00–18:00"
-          class="hero-info-img date"
-        />
-        <img
-          src="/myddleton.png"
-          alt="Myddleton Road, Bowes Park, London"
-          class="hero-info-img location"
-        />
+        <div class="info-sign">
+          <span class="sign-icon">📌</span>
+          <div class="sign-card">
+            <span>Sunday</span>
+            <span>5<sup>th</sup> July</span>
+          </div>
+        </div>
+        <div class="info-sign">
+          <span class="sign-icon">📍</span>
+          <div class="sign-card">
+            <span>Myddleton</span>
+            <span>Road, N22</span>
+          </div>
+        </div>
       </div>
       <NuxtLink to="/#get-involved" class="btn btn-primary">↓</NuxtLink>
     </div>
@@ -343,9 +347,8 @@
 .hero-info-images {
   display: flex;
   gap: 16px;
-  align-items: flex-start;
-  width: 50%;
   justify-content: space-evenly;
+  width: 50%;
 
   @media (max-width: 640px) {
     flex-direction: column;
@@ -353,14 +356,43 @@
   }
 }
 
-.hero-info-img {
-  max-width: 50%;
-  height: auto;
-  &.date {
-    max-width: 130px;
-  }
-  &.location {
-    max-width: 170px;
+.info-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.sign-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: -10px;
+  z-index: 1;
+}
+
+.sign-card {
+  background: #ffd000;
+  border-radius: 14px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+
+  span {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #111;
+    letter-spacing: 0.02em;
+
+    sup {
+      font-size: 0.55em;
+      font-weight: 800;
+      vertical-align: super;
+    }
   }
 }
 

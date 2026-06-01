@@ -124,6 +124,7 @@ export default defineNuxtConfig({
     families: {
       "Bricolage Grotesque": [400, 700, 800],
       "DM Sans": [400, 500, 600],
+      "Lilita One": [400],
     },
     display: "swap",
   },
