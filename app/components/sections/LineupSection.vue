@@ -1,16 +1,17 @@
 <template>
-  <SectionWrapper id="lineup" color="none" divider class="lineup-bg">
+  <SectionWrapper id="lineup" color="none" class="lineup-bg">
     <div class="lineup" v-reveal>
-      <h2>Lineup</h2>
-      <div class="lineup-tba">
-        <Music :size="48" :stroke-width="1.5" />
-        <h3>Watch This Space!</h3>
-        <p>
-          Our lineup is being finalised. Expect live music, DJs, drag
-          performances, spoken word, and more. Sign up to our mailing list to be
-          the first to know when acts are announced.
-        </p>
-        <NewsletterSignup />
+      <div class="lineup-images">
+        <img
+          src="/lineup-main.png"
+          alt="Aiden Sadler * Homoparody ✶ Bollyqueer ✶ Four Play ✶ Topsie Redfern   ✶ Tola Kuforiji ✶ The Mayor of Haringey"
+          class="lineup-img"
+        />
+        <img
+          src="/lineup-street.png"
+          alt="Barberfellas * Bluebell End ✶ Lily Lavin ✶ Issy Everett’s dance workshop ✶ Tottenham Community Choir ✶ R Voices"
+          class="lineup-img"
+        />
       </div>
     </div>
   </SectionWrapper>
@@ -33,6 +34,23 @@ import NewsletterSignup from "~/components/elements/NewsletterSignup.vue"
     @include gradient-heading($color-teal);
     margin-bottom: 40px;
   }
+}
+
+.lineup-images {
+  display: flex;
+  gap: 24px;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
+.lineup-img {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 .lineup-tba {

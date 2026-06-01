@@ -9,7 +9,7 @@ export interface Sponsor {
 
 export const sponsors: Sponsor[] = [
   // Placeholder sponsors — replace with real data
-  { name: "Headline Sponsor", tier: "headline" },
+  // { name: "Headline Sponsor", tier: "headline" },
   {
     name: "MRCBS",
     logo: "/sponsors/mrcbs.png",

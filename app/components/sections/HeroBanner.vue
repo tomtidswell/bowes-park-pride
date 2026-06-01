@@ -22,11 +22,19 @@
           <CountdownTimer :placeholder="true" />
         </template>
       </ClientOnly>
-      <p class="hero-date">Sunday 5th July 2026 &middot; 12:00–18:00</p>
-      <p class="hero-location">
-        <MapPin :size="18" />
-        Myddleton Road, Bowes Park, London
-      </p>
+
+      <div class="hero-info-images">
+        <img
+          src="/date.png"
+          alt="Sunday 5th July 2026, 12:00–18:00"
+          class="hero-info-img date"
+        />
+        <img
+          src="/myddleton.png"
+          alt="Myddleton Road, Bowes Park, London"
+          class="hero-info-img location"
+        />
+      </div>
       <NuxtLink to="/#get-involved" class="btn btn-primary">↓</NuxtLink>
     </div>
     <div class="hero-wave">
@@ -44,9 +52,7 @@
   </section>
 </template>
 
-<script setup lang="ts">
-import { MapPin } from "lucide-vue-next"
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 .hero {
@@ -331,6 +337,30 @@ import { MapPin } from "lucide-vue-next"
     );
     pointer-events: none;
     z-index: -1;
+  }
+}
+
+.hero-info-images {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  width: 50%;
+  justify-content: space-evenly;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hero-info-img {
+  max-width: 50%;
+  height: auto;
+  &.date {
+    max-width: 130px;
+  }
+  &.location {
+    max-width: 170px;
   }
 }
 

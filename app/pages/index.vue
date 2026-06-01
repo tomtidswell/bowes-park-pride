@@ -1,10 +1,10 @@
 <template>
   <div class="index">
     <HeroBanner />
+    <LineupSection />
     <GetInvolvedSection />
     <EventsSection />
     <SponsorsPreview />
-    <LineupSection />
     <InfoSection />
   </div>
 </template>
