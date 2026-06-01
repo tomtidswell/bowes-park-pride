@@ -19,6 +19,13 @@
         <NuxtLink v-for="link in navLinks" :key="link.href" :to="link.href">
           {{ link.label }}
         </NuxtLink>
+        <a
+          href="https://bowes-park-pride.sumupstore.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-shop-btn"
+          >Shop</a
+        >
         <NuxtLink
           to="/donate"
           class="nav-donate-btn"
@@ -59,6 +66,14 @@
         >
           {{ link.label }}
         </NuxtLink>
+        <a
+          href="https://bowes-park-pride.sumupstore.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          @click="mobileOpen = false"
+        >
+          Shop
+        </a>
         <NuxtLink
           to="/donate"
           class="nav-donate-btn"
@@ -73,9 +88,7 @@
 </template>
 
 <script setup lang="ts">
-const navLinks = [
-  { href: "/about", label: "About" },
-]
+const navLinks = [{ href: "/about", label: "About" }]
 
 const mobileOpen = ref(false)
 const scrolled = ref(false)
@@ -223,6 +236,28 @@ onMounted(() => {
 
     &:hover::after {
       width: 100%;
+    }
+  }
+
+  .nav-shop-btn {
+    @include body-text("sm", "semibold");
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 2px solid currentColor;
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      background: var(--color-primary);
+      color: var(--bg-surface);
+      transform: translateY(-1px);
     }
   }
 

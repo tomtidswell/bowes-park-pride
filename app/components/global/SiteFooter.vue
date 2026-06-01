@@ -36,6 +36,11 @@
             <NuxtLink to="/#info">Info & FAQ</NuxtLink>
             <NuxtLink to="/#lineup">Lineup</NuxtLink>
             <NuxtLink to="/donate">Donate</NuxtLink>
+            <a
+              href="https://bowes-park-pride.sumupstore.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Shop</a>
           </nav>
         </div>
 
