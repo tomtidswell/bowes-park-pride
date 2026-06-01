@@ -1,21 +1,31 @@
 <template>
   <div class="countdown">
-    <div class="countdown-units">
-      <div class="unit unit-days">
-        <span class="number">{{ placeholder ? "\u00A0" : days }}</span>
-        <span class="label">days</span>
-      </div>
-      <div class="unit unit-hours">
-        <span class="number">{{ placeholder ? "\u00A0" : hours }}</span>
-        <span class="label">hours</span>
-      </div>
-      <div class="unit unit-mins">
-        <span class="number">{{ placeholder ? "\u00A0" : minutes }}</span>
-        <span class="label">mins</span>
-      </div>
-      <div class="unit unit-secs">
-        <span class="number">{{ placeholder ? "\u00A0" : seconds }}</span>
-        <span class="label">secs</span>
+    <span class="countdown-icon">🎉</span>
+    <div class="countdown-card">
+      <div class="countdown-units">
+        <div class="unit">
+          <span class="number">{{ placeholder ? "\u00A0\u00A0" : days }}</span>
+          <span class="label">days</span>
+        </div>
+        <span class="separator">:</span>
+        <div class="unit">
+          <span class="number">{{ placeholder ? "\u00A0\u00A0" : hours }}</span>
+          <span class="label">hours</span>
+        </div>
+        <span class="separator">:</span>
+        <div class="unit">
+          <span class="number">{{
+            placeholder ? "\u00A0\u00A0" : minutes
+          }}</span>
+          <span class="label">mins</span>
+        </div>
+        <span class="separator">:</span>
+        <div class="unit">
+          <span class="number">{{
+            placeholder ? "\u00A0\u00A0" : seconds
+          }}</span>
+          <span class="label">secs</span>
+        </div>
       </div>
     </div>
   </div>
@@ -36,13 +46,34 @@ const { days, hours, minutes, seconds } = useCountdown(eventDate)
 </script>
 
 <style lang="scss" scoped>
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: -10px;
+  position: relative;
+  z-index: 1;
+}
+
+.countdown-card {
+  background: #ffd000;
+  border-radius: 14px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
 .countdown-units {
   display: flex;
-  gap: 8px;
-  justify-content: center;
+  align-items: center;
+  gap: 6px;
 
   @media (min-width: $bp-md) {
-    gap: 24px;
+    gap: 10px;
   }
 }
 
@@ -50,38 +81,37 @@ const { days, hours, minutes, seconds } = useCountdown(eventDate)
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 48px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  background: rgba($color-dark, 0.15);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba($color-dark, 0.2);
+  min-width: 44px;
+}
 
-  @media (min-width: $bp-md) {
-    min-width: 80px;
-    padding: 16px 20px;
-    border-radius: 12px;
-  }
+.separator {
+  font-family: "Lilita One", sans-serif;
+  font-size: 1.5rem;
+  color: #111;
+  line-height: 1;
+  margin-bottom: 14px;
 }
 
 .number {
-  @include heading-text("lg", "extrabold");
-  color: $color-white;
+  font-family: "Lilita One", sans-serif;
+  font-size: 2rem;
+  color: #111;
+  line-height: 1;
 
   @media (min-width: $bp-md) {
-    @include heading-text("2xl", "extrabold");
+    font-size: 2.5rem;
   }
 }
 
 .label {
-  @include body-text("xs", "medium");
-  color: rgba(255, 255, 255, 0.8);
+  font-family: "Lilita One", sans-serif;
+  font-size: 0.6rem;
+  color: #333;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 0.65rem;
 
   @media (min-width: $bp-md) {
-    font-size: unset;
+    font-size: 0.7rem;
   }
 }
 </style>
