@@ -158,7 +158,6 @@ const committee = [
   { name: "Ben Twyman", role: "Director, Co-Founder & Co-Chair", image: "/bhb.webp" },
   { name: "Lucy Whitehead", role: "Myddleton Road Market Founder", image: "/lucy_sticker.webp" },
   { name: "Tom Tidswell", role: "Head of Digital, Website & Flags", image: "/tt.webp" },
-  { name: "Tom Hayes Isaacs", role: "Head of Community", image: "/thi2.webp" },
   { name: "Sharn Rayment", role: "Head of Social Media & Content", image: "/sharn.webp" },
   { name: "Daniel Jenkins", role: "Head of Partnerships", image: "/dj.webp" },
   { name: "Peter Brennan", role: "Head of Volunteers", image: "/peter.webp" },
