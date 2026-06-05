@@ -7,7 +7,9 @@
       sponsors:
         $route.name === 'sponsors' ||
         $route.name === 'about' ||
-        $route.name === 'donate',
+        $route.name === 'donate' ||
+        $route.name === 'health-and-safety' ||
+        $route.name === 'privacy-policy',
     }"
   >
     <div class="container header-inner">

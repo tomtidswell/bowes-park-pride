@@ -41,6 +41,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >Shop</a>
+            <NuxtLink to="/health-and-safety">Health &amp; Safety</NuxtLink>
+            <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink>
           </nav>
         </div>
 
