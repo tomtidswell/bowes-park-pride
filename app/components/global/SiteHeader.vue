@@ -9,7 +9,8 @@
         $route.name === 'about' ||
         $route.name === 'donate' ||
         $route.name === 'health-and-safety' ||
-        $route.name === 'privacy-policy',
+        $route.name === 'privacy-policy' ||
+        $route.name === 'volunteer-code-of-conduct',
     }"
   >
     <div class="container header-inner">
