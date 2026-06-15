@@ -9,12 +9,12 @@ export interface EventItem {
 
 export const eventsData: EventItem[] = [
   {
-    title: "Pride Divas Pub Quiz",
-    date: "4 June 2026",
+    title: "Bring Your Baby Drag Bingo",
+    date: "5 July 2026",
     description:
-      "How well do you know your Pride Divas? Join us for a fun pub quiz night celebrating the iconic women of pop and dance music. Grab your team and get your tickets now!",
+      "Kick off Pride day with a special edition of Bring Your Baby Drag Bingo! Live drag, relaxed bingo, prizes, and a judgement-free, LGBTQ+ inclusive atmosphere for parents and babies alike.",
     location: "The Hillbilly Social",
-    link: "https://www.eventbrite.co.uk/e/pride-divas-pub-quiz-at-hillbilly-social-2026-tickets-1986421427964",
+    link: "https://cliptheatre.com/classes/location/h6nijj24tgp9/tag/dragbingo/",
     linkLabel: "Buy tickets",
   },
   {
