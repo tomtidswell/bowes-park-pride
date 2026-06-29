@@ -1,0 +1,19 @@
+app/components/sections/LineupSection.vue
+  s_39656afb04fd02::t_fd42e83ef7fd89 6-7,11-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "849d7c8434cfa3325f79db2633ff46e59369ef4d",
+  "prompts": {},
+  "sessions": {
+    "s_39656afb04fd02": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f637a4da-4191-4ed5-a438-9df52c19eb0f",
+        "model": "unknown"
+      },
+      "human_author": "Tom Tidswell <tomtidswell@gmail.com>"
+    }
+  }
+}
