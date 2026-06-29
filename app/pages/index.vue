@@ -2,6 +2,7 @@
   <div class="index">
     <HeroBanner />
     <LineupSection />
+    <LocationMapSection />
     <GetInvolvedSection />
     <EventsSection />
     <SponsorsPreview />

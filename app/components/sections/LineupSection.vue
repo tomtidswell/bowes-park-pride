@@ -3,24 +3,19 @@
     <div class="lineup" v-reveal>
       <div class="lineup-images">
         <img
-          src="/lineup-main.png"
-          alt="Aiden Sadler * Homoparody ✶ Bollyqueer ✶ Four Play ✶ Topsie Redfern   ✶ Tola Kuforiji ✶ The Mayor of Haringey"
+          src="/main-stage-times.png"
+          alt="Main Stage, Sunday 5th July, Myddleton Road N22. 12.00–12.10pm opening with Mayor of Haringey Dawn Barnes and founders Ben &amp; Giulio. 12.20–12.40pm Tola Sokota, singer. 1.00–1.30pm Bollyqueer, dance troupe. 1.45–2.00pm Chai T Grande, drag diva. 2.00–2.45pm Topsie Redfern, drag diva. 3.00–3.45pm Four Play, drag divas. 4.00–4.45pm Homoparody, dance troupe. 4.50–5.00pm Issy Everett, flash mob. 5.00–5.45pm Aidan Sadler, cabaret."
           class="lineup-img"
         />
         <img
-          src="/lineup-street.png"
-          alt="Barberfellas * Bluebell End ✶ Lily Lavin ✶ Issy Everett’s dance workshop ✶ Tottenham Community Choir ✶ R Voices"
+          src="/street-stage-times.png"
+          alt="Street Stage, Sunday 5th July, Myddleton Road N22. 12.20–12.40pm Issy Everett, flash mob tutorial. 12.40–1.00pm Bluebell End, drag diva. 1.40–2.00pm Lily Lavin, street performer. 2.30–3.00pm Tottenham Community Choir, choir. 3.30–3.50pm R Voices, choir. 4.30–4.50pm Barberfellas, acapella group."
           class="lineup-img"
         />
       </div>
     </div>
   </SectionWrapper>
 </template>
-
-<script setup lang="ts">
-import { Music } from "lucide-vue-next"
-import NewsletterSignup from "~/components/elements/NewsletterSignup.vue"
-</script>
 
 <style lang="scss" scoped>
 .lineup-bg {
@@ -29,11 +24,6 @@ import NewsletterSignup from "~/components/elements/NewsletterSignup.vue"
 
 .lineup {
   text-align: center;
-
-  h2 {
-    @include gradient-heading($color-teal);
-    margin-bottom: 40px;
-  }
 }
 
 .lineup-images {
@@ -51,51 +41,5 @@ import NewsletterSignup from "~/components/elements/NewsletterSignup.vue"
   width: 100%;
   height: auto;
   border-radius: 12px;
-}
-
-.lineup-tba {
-  max-width: 560px;
-  margin-inline: auto;
-  padding: 48px 32px;
-  border-radius: 20px;
-  background: var(--bg-surface-alt);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-
-  & > svg:first-child {
-    color: $color-teal;
-  }
-
-  h3 {
-    color: var(--text-primary);
-  }
-
-  p {
-    @include body-text("base", "regular");
-    color: var(--text-muted);
-  }
-}
-
-.cta-link {
-  @include body-text("base", "semibold");
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 28px;
-  background: $color-teal;
-  color: $color-white;
-  border-radius: 50px;
-  margin-top: 8px;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba($color-teal, 0.3);
-    color: $color-white;
-  }
 }
 </style>
