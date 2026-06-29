@@ -161,7 +161,7 @@ const committee = [
   { name: "Sharn Rayment", role: "Head of Social Media & Content", image: "/sharn.webp" },
   { name: "Daniel Jenkins", role: "Head of Partnerships", image: "/dj.webp" },
   { name: "Peter Brennan", role: "Head of Volunteers", image: "/peter.webp" },
-  { name: "Liz Garbutt", role: "Head of Physical Merchandising", image: "/liz.webp" },
+  { name: "Liz Garbutt", role: "Head of Physical Merchandising and Main Stage Manager", image: "/liz.webp" },
 ]
 
 useHead({
