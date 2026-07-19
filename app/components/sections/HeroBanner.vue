@@ -16,12 +16,13 @@
       </svg>
     </div>
     <div class="hero-content container">
-      <ClientOnly>
-        <CountdownTimer />
-        <template #fallback>
-          <CountdownTimer :placeholder="true" />
-        </template>
-      </ClientOnly>
+      <div class="thanks">
+        <span class="thanks-icon">🎉</span>
+        <div class="thanks-card">
+          <span class="thanks-title">Thank You</span>
+          <span class="thanks-subtitle">for coming along and making history</span>
+        </div>
+      </div>
 
       <div class="hero-info-images">
         <div class="info-sign">
@@ -341,6 +342,54 @@
     );
     pointer-events: none;
     z-index: -1;
+  }
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thanks-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: -10px;
+  position: relative;
+  z-index: 1;
+}
+
+.thanks-card {
+  background: #ffd000;
+  border-radius: 14px;
+  padding: 12px 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.thanks-title {
+  font-family: "Lilita One", sans-serif;
+  font-size: 1.75rem;
+  color: #111;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  @media (min-width: $bp-md) {
+    font-size: 2.25rem;
+  }
+}
+
+.thanks-subtitle {
+  @include body-text("sm", "semibold");
+  color: #222;
+
+  @media (min-width: $bp-md) {
+    @include body-text("base", "semibold");
   }
 }
 
