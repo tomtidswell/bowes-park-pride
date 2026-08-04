@@ -6,9 +6,23 @@
         Bowes Park Pride is supported by generous local businesses and
         organisations. Want to join them?
       </p>
-      <div class="sponsor-grid">
+      <div class="sponsor-grid" v-if="headlineSponsors.length">
         <SponsorLogo
-          v-for="(sponsor, i) in featuredSponsors"
+          v-for="(sponsor, i) in headlineSponsors"
+          :key="i"
+          :sponsor="sponsor"
+        />
+      </div>
+      <div class="sponsor-grid" v-if="goldSponsors.length">
+        <SponsorLogo
+          v-for="(sponsor, i) in goldSponsors"
+          :key="i"
+          :sponsor="sponsor"
+        />
+      </div>
+      <div class="sponsor-grid" v-if="silverSponsors.length">
+        <SponsorLogo
+          v-for="(sponsor, i) in silverSponsors"
           :key="i"
           :sponsor="sponsor"
         />
@@ -25,9 +39,9 @@
 import { Heart } from "lucide-vue-next"
 import { sponsors } from "@/data/sponsors"
 
-const featuredSponsors = sponsors.filter((s) =>
-  ["headline", "gold", "silver"].includes(s.tier),
-)
+const headlineSponsors = sponsors.filter((s) => s.tier === "headline")
+const goldSponsors = sponsors.filter((s) => s.tier === "gold")
+const silverSponsors = sponsors.filter((s) => s.tier === "silver")
 </script>
 
 <style lang="scss" scoped>

@@ -45,6 +45,13 @@ export const sponsors: Sponsor[] = [
     logoScale: 1.6,
     tier: "gold",
   },
+  {
+    name: "Equal Experts",
+    logo: "/sponsors/equal_experts.png",
+    url: "https://www.equalexperts.com/",
+    bgColor: "#ffffff",
+    tier: "gold",
+  },
 
   {
     name: "Ellis & Co",
