@@ -17,15 +17,6 @@ export const eventsData: EventItem[] = [
     linkLabel: "Download report",
   },
   {
-    title: "Bring Your Baby Drag Bingo",
-    date: "5 July 2026",
-    description:
-      "Kick off Pride day with a special edition of Bring Your Baby Drag Bingo! Live drag, relaxed bingo, prizes, and a judgement-free, LGBTQ+ inclusive atmosphere for parents and babies alike.",
-    location: "The Hillbilly Social",
-    link: "https://cliptheatre.com/classes/location/h6nijj24tgp9/tag/dragbingo/",
-    linkLabel: "Buy tickets",
-  },
-  {
     title: "LGBTQIA+ Mixer",
     date: "12 April 2026",
     description:
