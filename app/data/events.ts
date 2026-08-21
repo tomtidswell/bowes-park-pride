@@ -9,6 +9,14 @@ export interface EventItem {
 
 export const eventsData: EventItem[] = [
   {
+    title: "Our 2026 Impact Report Is Here",
+    date: "21 August 2026",
+    description:
+      "See the difference Bowes Park Pride 2026 made — from community impact and volunteering to our boost for the local economy. Read the full Impact Report.",
+    link: "/bowes-park-pride-2026-impact-report.pdf",
+    linkLabel: "Download report",
+  },
+  {
     title: "Bring Your Baby Drag Bingo",
     date: "5 July 2026",
     description:

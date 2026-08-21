@@ -11,8 +11,8 @@
           v-for="(event, i) in eventsData"
           :key="i"
           :to="event.link"
-          :target="event.link?.startsWith('http') ? '_blank' : undefined"
-          :rel="event.link?.startsWith('http') ? 'noopener noreferrer' : undefined"
+          :target="event.link?.startsWith('http') || event.link?.endsWith('.pdf') ? '_blank' : undefined"
+          :rel="event.link?.startsWith('http') || event.link?.endsWith('.pdf') ? 'noopener noreferrer' : undefined"
           class="event-card"
         >
           <span class="event-date">
