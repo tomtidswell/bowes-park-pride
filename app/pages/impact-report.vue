@@ -91,13 +91,6 @@
             color="#7b2d8e"
           />
         </div>
-
-        <div class="partner-strip">
-          <span class="partner-strip-label">Supported by local organisations & public services</span>
-          <div class="partner-pills">
-            <span v-for="org in partnerOrgs" :key="org" class="pill">{{ org }}</span>
-          </div>
-        </div>
       </div>
     </SectionWrapper>
 
@@ -185,6 +178,8 @@
         <ImpactStat
           :end="547000"
           :icon="Instagram"
+          icon-href="https://instagram.com/bowesparkpride"
+          icon-label="Bowes Park Pride on Instagram"
           large
           class="headline-stat"
           style="--impact-accent: #118ab2; --impact-accent-soft: #118ab226"
@@ -250,14 +245,20 @@
         <div class="outcomes-grid">
           <div class="outcomes-col">
             <h4><CheckCircle2 :size="20" /> We achieved</h4>
-            <ul class="check-list">
-              <li v-for="item in achieved" :key="item">{{ item }}</li>
+            <ul class="modern-list check-list">
+              <li v-for="item in achieved" :key="item">
+                <span class="bullet-icon"><Check :size="13" :stroke-width="3" /></span>
+                <span>{{ item }}</span>
+              </li>
             </ul>
           </div>
           <div class="outcomes-col">
             <h4><Rocket :size="20" /> Looking ahead</h4>
-            <ul class="arrow-list">
-              <li v-for="item in lookingAhead" :key="item">{{ item }}</li>
+            <ul class="modern-list arrow-list">
+              <li v-for="item in lookingAhead" :key="item">
+                <span class="bullet-icon"><ArrowUpRight :size="13" :stroke-width="3" /></span>
+                <span>{{ item }}</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -326,6 +327,8 @@ import {
   Utensils,
   Leaf,
   CheckCircle2,
+  Check,
+  ArrowUpRight,
   Rocket,
   Download,
 } from "lucide-vue-next"
@@ -361,17 +364,6 @@ const communityQuotes = [
     text: "It really was like Pride in the old days, which was joyful to experience. Bravo to the whole team.",
     author: "Bella, Local resident",
   },
-]
-
-const partnerOrgs = [
-  "Bowes Park Folk Club",
-  "Grow N22",
-  "London Metropolitan Police",
-  "Myddleton Road Community Benefit Society",
-  "Myddleton Road Market",
-  "North London Samaritans",
-  "R Voices Choir",
-  "Tottenham Community Choir",
 ]
 
 const economyQuotes = [
@@ -615,32 +607,6 @@ h2 {
   }
 }
 
-.partner-strip {
-  text-align: center;
-}
-
-.partner-strip-label {
-  @include body-text("sm", "semibold");
-  color: var(--text-muted);
-  display: block;
-  margin-bottom: 16px;
-}
-
-.partner-pills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.pill {
-  @include body-text("xs", "medium");
-  padding: 8px 16px;
-  border-radius: 50px;
-  background: var(--bg-surface);
-  color: var(--text-secondary);
-}
-
 // Economy
 .ring-grid {
   display: grid;
@@ -734,32 +700,42 @@ h2 {
   }
 }
 
-.check-list,
-.arrow-list {
+.modern-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 
   li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  span:last-child {
     @include body-text("sm", "regular");
     color: var(--text-muted);
-    padding-left: 24px;
-    position: relative;
-
-    &::before {
-      position: absolute;
-      left: 0;
-    }
+    padding-top: 2px;
   }
 }
 
-.check-list li::before {
-  content: "✔";
+.bullet-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-top: 1px;
+}
+
+.check-list .bullet-icon {
+  background: #06d6a026;
   color: $color-teal;
 }
 
-.arrow-list li::before {
-  content: "➤";
+.arrow-list .bullet-icon {
+  background: $color-purple-20;
   color: $color-purple;
 }
 

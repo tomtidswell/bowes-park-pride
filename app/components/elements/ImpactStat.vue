@@ -1,6 +1,16 @@
 <template>
   <div ref="el" class="impact-stat" :class="{ large }">
-    <div v-if="icon" class="impact-stat-icon">
+    <a
+      v-if="icon && iconHref"
+      :href="iconHref"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="impact-stat-icon is-link"
+      :aria-label="iconLabel"
+    >
+      <component :is="icon" :size="iconSize" :stroke-width="1.75" />
+    </a>
+    <div v-else-if="icon" class="impact-stat-icon">
       <component :is="icon" :size="iconSize" :stroke-width="1.75" />
     </div>
     <div class="impact-stat-value">{{ prefix }}{{ formatted }}{{ suffix }}</div>
@@ -13,6 +23,8 @@ const props = withDefaults(
   defineProps<{
     end: number
     icon?: unknown
+    iconHref?: string
+    iconLabel?: string
     prefix?: string
     suffix?: string
     decimals?: number
@@ -22,6 +34,8 @@ const props = withDefaults(
   }>(),
   {
     icon: undefined,
+    iconHref: undefined,
+    iconLabel: undefined,
     prefix: "",
     suffix: "",
     decimals: 0,
@@ -64,6 +78,16 @@ const formatted = computed(() =>
   background: var(--impact-accent-soft, rgba(0, 0, 0, 0.06));
   color: var(--impact-accent, currentColor);
   margin-bottom: 4px;
+
+  &.is-link {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-2px) scale(1.06);
+      box-shadow: 0 6px 18px var(--impact-accent-soft, rgba(0, 0, 0, 0.15));
+    }
+  }
 }
 
 .impact-stat-value {
