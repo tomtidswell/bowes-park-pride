@@ -33,6 +33,7 @@
             <NuxtLink to="/about">About</NuxtLink>
             <NuxtLink to="/#get-involved">Get Involved</NuxtLink>
             <NuxtLink to="/sponsors">Sponsors</NuxtLink>
+            <NuxtLink to="/impact-report">2026 Impact Report</NuxtLink>
             <NuxtLink to="/#info">Info & FAQ</NuxtLink>
             <NuxtLink to="/#lineup">Lineup</NuxtLink>
             <NuxtLink to="/donate">Donate</NuxtLink>

@@ -13,8 +13,8 @@ export const eventsData: EventItem[] = [
     date: "21 August 2026",
     description:
       "See the difference Bowes Park Pride 2026 made — from community impact and volunteering to our boost for the local economy. Read the full Impact Report.",
-    link: "/bowes-park-pride-2026-impact-report.pdf",
-    linkLabel: "Download report",
+    link: "/impact-report",
+    linkLabel: "Read the report",
   },
   {
     title: "LGBTQIA+ Mixer",
