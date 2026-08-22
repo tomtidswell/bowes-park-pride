@@ -18,9 +18,9 @@
         <div class="footer-col">
           <img src="/bp-logo.png" alt="Bowes Park Pride" class="footer-logo" />
           <p class="footer-tagline">
-            A free community pride event celebrating love, diversity, and
-            togetherness in Bowes Park in collaboration with Myddleton Road
-            Market.
+            Bowes Park Pride CIC champions a more visible, connected and
+            welcoming community for LGBTQIA+ people across the local area and
+            beyond.
           </p>
           <p class="footer-address">
             101 Myddleton Road, London N22 8NE
