@@ -12,6 +12,7 @@
         $route.name === 'privacy-policy' ||
         $route.name === 'volunteer-code-of-conduct' ||
         $route.name === 'impact-report',
+      'photo-hero': $route.name === 'impact-report',
     }"
   >
     <div class="container header-inner">
@@ -159,6 +160,19 @@ onMounted(() => {
   &.sponsors {
     .logo {
       filter: brightness(0);
+    }
+  }
+
+  &.photo-hero {
+    .logo {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &.scrolled.photo-hero,
+  &.menu-open.photo-hero {
+    .logo {
+      filter: none;
     }
   }
 }

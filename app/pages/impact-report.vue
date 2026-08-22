@@ -2,6 +2,7 @@
   <div class="impact-page">
     <section class="impact-hero">
       <div class="impact-hero-bg" />
+      <div class="impact-hero-overlay" />
       <div class="container impact-hero-content">
         <span class="eyebrow">Sunday 5 July 2026 · Myddleton Road</span>
         <h1>2026 Impact Report</h1>
@@ -435,9 +436,18 @@ useHead({
 .impact-hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, $color-magenta, $color-purple, $color-blue);
-  background-size: 200% 200%;
-  animation: gradient-shift 12s ease infinite;
+  background: url("/impact-hero.jpg") center / cover no-repeat;
+}
+
+.impact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 0, 15, 0.7) 0%,
+    rgba(50, 5, 50, 0.5) 45%,
+    rgba(15, 0, 15, 0.68) 100%
+  );
 }
 
 .impact-hero-content {
@@ -508,12 +518,6 @@ useHead({
       height: 80px;
     }
   }
-}
-
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 // Shared section heading/intro styles
