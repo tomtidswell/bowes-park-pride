@@ -167,12 +167,28 @@ onMounted(() => {
     .logo {
       filter: brightness(0) invert(1);
     }
+
+    .hamburger span {
+      background: $color-white;
+    }
+
+    .mobile-donate-btn {
+      border: 2px solid $color-white;
+    }
   }
 
   &.scrolled.photo-hero,
   &.menu-open.photo-hero {
     .logo {
       filter: none;
+    }
+
+    .hamburger span {
+      background: var(--text-primary);
+    }
+
+    .mobile-donate-btn {
+      border-color: transparent;
     }
   }
 }
@@ -315,10 +331,12 @@ onMounted(() => {
   color: $color-white;
   padding: 6px 16px;
   border-radius: 50px;
+  border: 2px solid transparent;
   text-decoration: none;
   transition:
     filter 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    border-color 0.3s ease;
 
   &:hover {
     filter: brightness(0.85);

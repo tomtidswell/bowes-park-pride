@@ -436,7 +436,7 @@ useHead({
 .impact-hero-bg {
   position: absolute;
   inset: 0;
-  background: url("/impact-hero.jpg") center / cover no-repeat;
+  background: url("/impact-hero.webp") center / cover no-repeat;
 }
 
 .impact-hero-overlay {
