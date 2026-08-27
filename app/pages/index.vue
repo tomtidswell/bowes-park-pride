@@ -1,7 +1,6 @@
 <template>
   <div class="index">
     <HeroBanner />
-    <LineupSection />
     <LocationMapSection />
     <GetInvolvedSection />
     <EventsSection />
@@ -12,12 +11,12 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Bowes Park Pride — Free LGBTQ+ Festival, Sunday 5th July 2026",
+  title: "Bowes Park Pride — Free LGBTQ+ Festival, Sunday 4th July 2027",
   meta: [
     {
       name: "description",
       content:
-        "Bowes Park Pride is a free LGBTQ+ community pride festival on Myddleton Road, London N22. Sunday 5th July 2026 — live music, performances, food, and family fun in the heart of North London, serving Haringey, Enfield, Wood Green, Palmers Green and beyond.",
+        "Bowes Park Pride is a free LGBTQ+ community pride festival on Myddleton Road, London N22. Sunday 4th July 2027 — live music, performances, food, and family fun in the heart of North London, serving Haringey, Enfield, Wood Green, Palmers Green and beyond.",
     },
   ],
   link: [{ rel: "canonical", href: "https://bowesparkpride.org.uk/" }],
@@ -27,13 +26,13 @@ useHead({
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Event",
-        name: "Bowes Park Pride 2026",
+        name: "Bowes Park Pride 2027",
         description:
           "A free LGBTQ+ community pride festival on Myddleton Road, Bowes Park, London N22. Live music, performances, local food, family activities, and more. Serving Haringey, Enfield, Wood Green, Palmers Green, Muswell Hill and surrounding areas.",
         keywords:
           "Pride, LGBT, LGBTQ, LGBTQIA, Haringey, Enfield, North London, Bowes Park, Wood Green, Palmers Green, N22, free festival, community pride, queer, inclusive",
-        startDate: "2026-07-05T10:00:00+01:00",
-        endDate: "2026-07-05T18:00:00+01:00",
+        startDate: "2027-07-04T10:00:00+01:00",
+        endDate: "2027-07-04T18:00:00+01:00",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         eventStatus: "https://schema.org/EventScheduled",
         location: {
@@ -66,7 +65,7 @@ useHead({
           priceCurrency: "GBP",
           availability: "https://schema.org/InStock",
           url: "https://bowesparkpride.org.uk",
-          validFrom: "2026-01-01",
+          validFrom: "2027-01-01",
         },
         isAccessibleForFree: true,
         audience: {

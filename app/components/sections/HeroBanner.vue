@@ -29,7 +29,7 @@
           <span class="sign-icon">📌</span>
           <div class="sign-card">
             <span>Sunday</span>
-            <span>5<sup>th</sup> July</span>
+            <span>4<sup>th</sup> July</span>
           </div>
         </div>
         <div class="info-sign">
@@ -74,6 +74,11 @@
   position: absolute;
   inset: 0;
   background: url("/street.webp") center / cover no-repeat;
+
+  @media (max-width: 640px) {
+    background-size: auto 130%;
+    background-position: center 90%;
+  }
 }
 
 // Floating decorative shapes

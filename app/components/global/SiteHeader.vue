@@ -71,6 +71,9 @@
         >
           {{ link.label }}
         </NuxtLink>
+        <NuxtLink to="/impact-report" @click="mobileOpen = false">
+          Impact Report
+        </NuxtLink>
         <a
           href="https://bowes-park-pride.sumupstore.com/"
           target="_blank"

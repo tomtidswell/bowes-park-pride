@@ -35,7 +35,7 @@
             <NuxtLink to="/sponsors">Sponsors</NuxtLink>
             <NuxtLink to="/impact-report">2026 Impact Report</NuxtLink>
             <NuxtLink to="/#info">Info & FAQ</NuxtLink>
-            <NuxtLink to="/#lineup">Lineup</NuxtLink>
+            <NuxtLink to="/impact-report#lineup">Lineup</NuxtLink>
             <NuxtLink to="/donate">Donate</NuxtLink>
             <a
               href="https://bowes-park-pride.sumupstore.com/"
