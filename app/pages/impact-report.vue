@@ -376,6 +376,10 @@ const economyQuotes = [
     text: "A really positive experience because it brought an influx of new customers to Myddleton Road unlike anything we had seen before.",
     author: "Daniela, Mexican street food stall holder",
   },
+  {
+    text: "I definitely had more interest and applications to trade at the market since the Pride event so it has certainly raised the profile which is amazing.",
+    author: "Lucy, Founder, Myddleton Road Market",
+  },
 ]
 
 const skills = [
