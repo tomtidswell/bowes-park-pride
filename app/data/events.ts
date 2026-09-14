@@ -22,6 +22,7 @@ export const eventsData: EventItem[] = [
     date: "29 October 2026",
     description:
       "Join us for a spooky pre-Pride fundraising quiz, bringing the local community together and raising money towards Bowes Park Pride 2027. Tickets available now.",
+    location: "The Hillbilly Social",
     link: "https://bowes-park-pride.sumupstore.com/",
     linkLabel: "Get tickets",
   },

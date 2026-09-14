@@ -1,10 +1,10 @@
 <template>
   <SectionWrapper id="sponsors" color="none" divider class="sponsors-bg">
     <div class="sponsors-preview" v-reveal>
-      <h2>Our Sponsors</h2>
+      <h2>2026 Sponsors</h2>
       <p class="intro">
-        Bowes Park Pride is supported by generous local businesses and
-        organisations. Want to join them?
+        Bowes Park Pride 2026 was supported by generous local businesses and
+        organisations. Want to join them for 2027?
       </p>
       <div class="sponsor-grid" v-if="headlineSponsors.length">
         <SponsorLogo
@@ -29,7 +29,7 @@
       </div>
       <NuxtLink to="/sponsors" class="sponsors-cta">
         <Heart :size="18" />
-        Become a Sponsor
+        Become a 2027 Sponsor
       </NuxtLink>
     </div>
   </SectionWrapper>
