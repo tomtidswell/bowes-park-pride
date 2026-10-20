@@ -19,8 +19,8 @@
       <div class="thanks">
         <span class="thanks-icon">🎉</span>
         <div class="thanks-card">
-          <span class="thanks-title">Thank You</span>
-          <span class="thanks-subtitle">for coming along and making history</span>
+          <span class="thanks-title">Plans Underway</span>
+          <span class="thanks-subtitle">for Bowes Park Pride 2027</span>
         </div>
       </div>
 
@@ -30,6 +30,7 @@
           <div class="sign-card">
             <span>Sunday</span>
             <span>4<sup>th</sup> July</span>
+            <span>2027</span>
           </div>
         </div>
         <div class="info-sign">

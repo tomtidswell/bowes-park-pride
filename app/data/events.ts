@@ -9,22 +9,20 @@ export interface EventItem {
 
 export const eventsData: EventItem[] = [
   {
-    title: "Big Gay Charity Cabaret",
-    date: "8 October 2026",
+    title: "Camp Christmas Quiz",
+    date: "10 December 2026",
     description:
-      "A star-studded cabaret fundraiser with circus, drag and variety artistes from around the world, with proceeds supporting Bowes Park Pride, Cabaret vs. Cancer, and Stonewall. Pay-what-you-can tickets from £1, up to £15.",
-    location: "The Black Cap, Camden",
-    link: "https://www.outsavvy.com/event/39257/big-gay-charity-cabaret",
+      "Deck the halls for our Camp Christmas fundraising quiz, raising money towards Bowes Park Pride 2027. Tickets available now.",
+    location: "The Hillbilly Social",
+    link: "https://bowes-park-pride.sumupstore.com/product/camp-christmas-quiz-tickets",
     linkLabel: "Get tickets",
   },
   {
-    title: "Halloween Quiz",
+    title: "Halloween Quiz — Sold Out!",
     date: "29 October 2026",
     description:
-      "Join us for a spooky pre-Pride fundraising quiz, bringing the local community together and raising money towards Bowes Park Pride 2027. Tickets available now.",
+      "Join us for a spooky pre-Pride fundraising quiz, bringing the local community together and raising money towards Bowes Park Pride 2027. Tickets are now sold out — thank you for the support!",
     location: "The Hillbilly Social",
-    link: "https://bowes-park-pride.sumupstore.com/",
-    linkLabel: "Get tickets",
   },
   {
     title: "Sponsor & Partner Applications Now Open",
