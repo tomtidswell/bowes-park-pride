@@ -1,6 +1,7 @@
 <template>
   <div class="index">
     <HeroBanner />
+    <FundraisingSection />
     <EventsSection />
     <SponsorsPreview />
     <LocationMapSection />

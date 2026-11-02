@@ -5,6 +5,7 @@ export interface EventItem {
   location?: string
   link?: string
   linkLabel?: string
+  tag?: string
 }
 
 export const eventsData: EventItem[] = [
@@ -16,6 +17,7 @@ export const eventsData: EventItem[] = [
     location: "The Hillbilly Social",
     link: "https://bowes-park-pride.sumupstore.com/product/camp-christmas-quiz-tickets",
     linkLabel: "Get tickets",
+    tag: "Fundraiser",
   },
   {
     title: "Halloween Quiz — Sold Out!",
@@ -23,6 +25,7 @@ export const eventsData: EventItem[] = [
     description:
       "Join us for a spooky pre-Pride fundraising quiz, bringing the local community together and raising money towards Bowes Park Pride 2027. Tickets are now sold out — thank you for the support!",
     location: "The Hillbilly Social",
+    tag: "Fundraiser",
   },
   {
     title: "Sponsor & Partner Applications Now Open",

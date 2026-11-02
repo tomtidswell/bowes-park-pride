@@ -19,6 +19,7 @@
             <CalendarDays :size="16" />
             {{ event.date }}
           </span>
+          <span v-if="event.tag" class="event-tag">{{ event.tag }}</span>
           <h4>{{ event.title }}</h4>
           <span v-if="event.location" class="event-location">
             <MapPin :size="16" />
@@ -113,6 +114,19 @@ const NuxtLink = resolveComponent("NuxtLink")
   svg {
     flex-shrink: 0;
   }
+}
+
+.event-tag {
+  @include body-text("xs", "semibold");
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: $color-teal;
+  color: $color-dark;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .read-more {

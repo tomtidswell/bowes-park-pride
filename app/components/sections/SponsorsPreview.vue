@@ -31,6 +31,10 @@
         <Heart :size="18" />
         Become a 2027 Sponsor
       </NuxtLink>
+      <p class="donate-note">
+        Not a business?
+        <NuxtLink to="/donate">You can still help — donate</NuxtLink>.
+      </p>
     </div>
   </SectionWrapper>
 </template>
@@ -97,6 +101,18 @@ const silverSponsors = sponsors.filter((s) => s.tier === "silver")
     transform: translateY(-2px);
     box-shadow: 0 6px 24px rgba($color-yellow, 0.3);
     color: $color-dark;
+  }
+}
+
+.donate-note {
+  @include body-text("sm", "regular");
+  color: var(--text-muted);
+  margin-top: 16px;
+
+  a {
+    font-weight: 600;
+    text-decoration: underline;
+    color: inherit;
   }
 }
 </style>

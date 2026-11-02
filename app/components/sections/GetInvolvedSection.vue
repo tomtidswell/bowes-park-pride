@@ -47,13 +47,22 @@
             Enquire About Stalls
           </a>
         </div>
+        <div class="card card-magenta">
+          <Heart :size="32" :stroke-width="1.5" />
+          <h4>Donate</h4>
+          <p>
+            Can't volunteer or sponsor? A donation of any size helps us bring
+            Pride back to Myddleton Road in 2027.
+          </p>
+          <NuxtLink to="/donate" class="card-btn"> Donate Now </NuxtLink>
+        </div>
       </div>
     </div>
   </SectionWrapper>
 </template>
 
 <script setup lang="ts">
-import { HandHelping, Mic, Store } from "lucide-vue-next"
+import { HandHelping, Heart, Mic, Store } from "lucide-vue-next"
 </script>
 
 <style lang="scss" scoped>
@@ -85,7 +94,11 @@ import { HandHelping, Mic, Store } from "lucide-vue-next"
   gap: 24px;
 
   @media (min-width: $bp-md) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
