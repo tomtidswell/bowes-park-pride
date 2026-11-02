@@ -10,20 +10,20 @@ export interface EventItem {
 
 export const eventsData: EventItem[] = [
   {
-    title: "Camp Christmas Quiz",
-    date: "10 December 2026",
+    title: "Traitors Quiz",
+    date: "21 January 2027",
     description:
-      "Deck the halls for our Camp Christmas fundraising quiz, raising money towards Bowes Park Pride 2027. Tickets available now.",
+      "Gather your most faithful friends for a Traitors Quiz raising money for Bowes Park Pride 2027. Devious questions, fabulous prizes and plenty of camp chaos. £12pp, max group of 6.",
     location: "The Hillbilly Social",
-    link: "https://bowes-park-pride.sumupstore.com/product/camp-christmas-quiz-tickets",
+    link: "https://bowes-park-pride.sumupstore.com/product/traitors-quiz",
     linkLabel: "Get tickets",
     tag: "Fundraiser",
   },
   {
-    title: "Halloween Quiz — Sold Out!",
-    date: "29 October 2026",
+    title: "Camp Christmas Quiz — Sold Out!",
+    date: "10 December 2026",
     description:
-      "Join us for a spooky pre-Pride fundraising quiz, bringing the local community together and raising money towards Bowes Park Pride 2027. Tickets are now sold out — thank you for the support!",
+      "Deck the halls for our Camp Christmas fundraising quiz, raising money towards Bowes Park Pride 2027. Tickets are now sold out — thank you for the support!",
     location: "The Hillbilly Social",
     tag: "Fundraiser",
   },
