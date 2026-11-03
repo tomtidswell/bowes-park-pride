@@ -19,7 +19,7 @@
       <div class="thanks">
         <span class="thanks-icon">🎉</span>
         <div class="thanks-card">
-          <span class="thanks-title">Plans Underway</span>
+          <span class="thanks-title">Fundraising Underway</span>
           <span class="thanks-subtitle">for Bowes Park Pride 2027</span>
         </div>
       </div>
