@@ -5,7 +5,7 @@
       <div class="container donate-hero-content">
         <h1>Donate</h1>
         <p>
-          Help us make Bowes Park Pride 2026 bigger, bolder, and more fabulous
+          Help us make Bowes Park Pride 2027 bigger, bolder, and more fabulous
           than ever.
         </p>
       </div>

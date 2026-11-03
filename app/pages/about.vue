@@ -32,7 +32,7 @@
             <p>
               Bowes Park Pride is a free, community-led celebration of love,
               diversity, and togetherness right in the heart of our
-              neighbourhood. On <strong>Sunday 5th July 2026</strong>, Myddleton
+              neighbourhood. On <strong>Sunday 4th July 2027</strong>, Myddleton
               Road transforms into a vibrant street festival with live music,
               performances, local food, family activities, and so much more as
               part of Myddleton Road Market, but this time with a fabulous Pride
