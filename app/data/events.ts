@@ -10,6 +10,33 @@ export interface EventItem {
 
 export const eventsData: EventItem[] = [
   {
+    title: "Football vs Homophobia",
+    date: "20 February 2027",
+    description:
+      "We'll be at Haringey Borough FC's Football vs Homophobia day, fundraising for Bowes Park Pride 2027 and celebrating inclusion in football. Come say hello and cheer on the team, kicking off against Ware at 3pm.",
+    location: "Coles Park, White Hart Lane, N17",
+    link: "https://www.haringeyboroughfc.net/event/11823/",
+    linkLabel: "Match details",
+    tag: "Fundraiser",
+  },
+  {
+    title: "Boybands vs Girlbands Quiz",
+    date: "11 February 2027",
+    description:
+      "Pick a side for our Boybands vs Girlbands fundraising quiz, raising money for Bowes Park Pride 2027. £12pp.",
+    location: "The Hillbilly Social",
+    link: "https://bowes-park-pride.sumupstore.com/product/boyband-vs-girlbands-quiz",
+    linkLabel: "Get tickets",
+    tag: "Fundraiser",
+  },
+  {
+    title: "Pride Volunteers Info Evening",
+    date: "10 February 2027",
+    description:
+      "Thinking about volunteering for Bowes Park Pride 2027? Come along for an informal evening to find out more about the roles available and how you can get involved.",
+    location: "The Hillbilly Social",
+  },
+  {
     title: "Traitors Quiz",
     date: "21 January 2027",
     description:
