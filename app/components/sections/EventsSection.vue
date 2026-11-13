@@ -34,40 +34,76 @@
       </div>
 
       <button
-        v-if="moreEvents.length"
+        v-if="moreEventsCount"
         class="more-toggle"
         @click="showMore = !showMore"
       >
-        {{ showMore ? "Show less" : `See ${moreEvents.length} more events & news` }}
+        {{ showMore ? "Show less" : `See ${moreEventsCount} more events & news` }}
         <ChevronDown :size="18" :class="{ rotated: showMore }" />
       </button>
 
-      <div v-if="showMore" class="more-list">
-        <component
-          :is="event.link ? NuxtLink : 'div'"
-          v-for="(event, i) in moreEvents"
-          :key="i"
-          :to="event.link"
-          :target="event.link?.startsWith('http') || event.link?.endsWith('.pdf') ? '_blank' : undefined"
-          :rel="event.link?.startsWith('http') || event.link?.endsWith('.pdf') ? 'noopener noreferrer' : undefined"
-          class="more-item"
-        >
-          <span class="more-date">
-            <CalendarDays :size="14" />
-            {{ event.date }}
-          </span>
-          <span class="more-body">
-            <span class="more-title">
-              {{ event.title }}
-              <span v-if="event.tag" class="event-tag">{{ event.tag }}</span>
-            </span>
-            <span v-if="event.location" class="more-location">
-              <MapPin :size="13" />
-              {{ event.location }}
-            </span>
-          </span>
-          <ArrowRight v-if="event.link" :size="16" class="more-arrow" />
-        </component>
+      <div v-if="showMore" class="more-groups">
+        <div v-if="moreUpcoming.length" class="more-group">
+          <h5 class="more-heading">More Upcoming</h5>
+          <div class="more-list">
+            <component
+              :is="event.link ? NuxtLink : 'div'"
+              v-for="(event, i) in moreUpcoming"
+              :key="i"
+              :to="event.link"
+              :target="event.link?.startsWith('http') || event.link?.endsWith('.pdf') ? '_blank' : undefined"
+              :rel="event.link?.startsWith('http') || event.link?.endsWith('.pdf') ? 'noopener noreferrer' : undefined"
+              class="more-item"
+            >
+              <span class="more-date">
+                <CalendarDays :size="14" />
+                {{ event.date }}
+              </span>
+              <span class="more-body">
+                <span class="more-title">
+                  {{ event.title }}
+                  <span v-if="event.tag" class="event-tag">{{ event.tag }}</span>
+                </span>
+                <span v-if="event.location" class="more-location">
+                  <MapPin :size="13" />
+                  {{ event.location }}
+                </span>
+              </span>
+              <ArrowRight v-if="event.link" :size="16" class="more-arrow" />
+            </component>
+          </div>
+        </div>
+
+        <div v-if="pastEvents.length" class="more-group">
+          <h5 class="more-heading">Past Events & News</h5>
+          <div class="more-list">
+            <component
+              :is="event.link ? NuxtLink : 'div'"
+              v-for="(event, i) in pastEvents"
+              :key="i"
+              :to="event.link"
+              :target="event.link?.startsWith('http') || event.link?.endsWith('.pdf') ? '_blank' : undefined"
+              :rel="event.link?.startsWith('http') || event.link?.endsWith('.pdf') ? 'noopener noreferrer' : undefined"
+              class="more-item is-past"
+            >
+              <span class="more-date">
+                <CalendarDays :size="14" />
+                {{ event.date }}
+              </span>
+              <span class="more-body">
+                <span class="more-title">
+                  {{ event.title }}
+                  <span v-if="event.tag" class="event-tag">{{ event.tag }}</span>
+                </span>
+                <span v-if="event.location" class="more-location">
+                  <MapPin :size="13" />
+                  {{ event.location }}
+                </span>
+              </span>
+              <ArrowRight v-if="event.link" :size="16" class="more-arrow" />
+            </component>
+          </div>
+        </div>
       </div>
     </div>
   </SectionWrapper>
@@ -87,19 +123,23 @@ const NuxtLink = resolveComponent("NuxtLink")
 
 const showMore = ref(false)
 
-const orderedEvents = computed(() => {
-  const now = new Date()
-  const upcoming = eventsData
-    .filter((e) => new Date(e.isoDate) >= now)
-    .sort((a, b) => new Date(a.isoDate).getTime() - new Date(b.isoDate).getTime())
-  const past = eventsData
-    .filter((e) => new Date(e.isoDate) < now)
-    .sort((a, b) => new Date(b.isoDate).getTime() - new Date(a.isoDate).getTime())
-  return [...upcoming, ...past]
-})
+const now = new Date()
 
-const featuredEvents = computed(() => orderedEvents.value.slice(0, 3))
-const moreEvents = computed(() => orderedEvents.value.slice(3))
+const upcomingEvents = computed(() =>
+  eventsData
+    .filter((e) => new Date(e.isoDate) >= now)
+    .sort((a, b) => new Date(a.isoDate).getTime() - new Date(b.isoDate).getTime()),
+)
+
+const pastEvents = computed(() =>
+  eventsData
+    .filter((e) => new Date(e.isoDate) < now)
+    .sort((a, b) => new Date(b.isoDate).getTime() - new Date(a.isoDate).getTime()),
+)
+
+const featuredEvents = computed(() => upcomingEvents.value.slice(0, 3))
+const moreUpcoming = computed(() => upcomingEvents.value.slice(3))
+const moreEventsCount = computed(() => moreUpcoming.value.length + pastEvents.value.length)
 </script>
 
 <style lang="scss" scoped>
@@ -218,13 +258,27 @@ const moreEvents = computed(() => orderedEvents.value.slice(3))
   }
 }
 
+.more-groups {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.more-group + .more-group {
+  margin-top: 28px;
+}
+
+.more-heading {
+  @include body-text("xs", "semibold");
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-faint);
+  margin-bottom: 12px;
+}
+
 .more-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-top: 20px;
-  max-width: 720px;
-  margin-inline: auto;
 }
 
 .more-item {
@@ -244,6 +298,14 @@ const moreEvents = computed(() => orderedEvents.value.slice(3))
   &:hover {
     opacity: 1;
     background: var(--bg-surface);
+  }
+
+  &.is-past {
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 0.85;
+    }
   }
 }
 
