@@ -356,13 +356,25 @@ const moreEventsCount = computed(() => moreUpcoming.value.length + pastEvents.va
   color: $color-orange;
 }
 
-@media (max-width: $bp-sm) {
+@media (max-width: 640px) {
   .more-item {
+    flex-direction: column;
     align-items: flex-start;
+    gap: 6px;
+    padding: 16px 18px;
   }
 
   .more-date {
     width: auto;
+  }
+
+  .more-title {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
+  .more-arrow {
+    display: none;
   }
 }
 </style>
