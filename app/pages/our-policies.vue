@@ -95,6 +95,14 @@
           </p>
         </PolicySection>
 
+        <PolicySection title="Health and safety">
+          <p>
+            We are committed to providing a safe and healthy environment for
+            everyone attending Bowes Park Pride. Read our
+            <NuxtLink to="/health-and-safety">health and safety policy</NuxtLink>.
+          </p>
+        </PolicySection>
+
         <PolicySection title="Privacy policy">
           <p>
             How we collect, use and protect personal information. Read our
