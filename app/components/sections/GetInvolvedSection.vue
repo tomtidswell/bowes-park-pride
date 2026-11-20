@@ -23,6 +23,12 @@
           >
             Sign Up to Volunteer
           </a>
+          <p class="card-note">
+            Read our
+            <NuxtLink to="/volunteer-code-of-conduct">volunteer code of conduct</NuxtLink>
+            and
+            <NuxtLink to="/our-policies">our policies</NuxtLink>
+          </p>
         </div>
         <div class="card card-magenta">
           <Mic :size="32" :stroke-width="1.5" />
@@ -125,6 +131,16 @@ import { HandHelping, Heart, Mic, Store } from "lucide-vue-next"
     @include body-text("sm", "regular");
     color: var(--text-faint);
     flex: 1;
+  }
+}
+
+.card .card-note {
+  @include body-text("xs", "regular");
+  flex: 0;
+
+  a {
+    color: $color-magenta;
+    text-decoration: underline;
   }
 }
 

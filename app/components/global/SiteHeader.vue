@@ -11,6 +11,7 @@
         $route.name === 'health-and-safety' ||
         $route.name === 'privacy-policy' ||
         $route.name === 'volunteer-code-of-conduct' ||
+        $route.name === 'our-policies' ||
         $route.name === 'impact-report',
       'photo-hero': $route.name === 'impact-report',
     }"

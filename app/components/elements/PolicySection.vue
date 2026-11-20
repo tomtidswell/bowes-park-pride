@@ -1,7 +1,7 @@
 <template>
-  <div class="policy-section" :class="{ open }">
+  <div class="policy-section" :class="{ open, unnumbered: !number }">
     <button class="policy-trigger" @click="open = !open" :aria-expanded="open">
-      <span class="policy-number">{{ number }}</span>
+      <span v-if="number" class="policy-number">{{ number }}</span>
       <span class="policy-title">{{ title }}</span>
       <ChevronDown class="policy-icon" :size="20" />
     </button>
@@ -17,7 +17,7 @@
 import { ChevronDown } from 'lucide-vue-next'
 
 defineProps<{
-  number: string
+  number?: string
   title: string
 }>()
 
@@ -65,6 +65,10 @@ const open = ref(false)
   overflow: hidden;
   padding-bottom: 24px;
   padding-left: 42px;
+
+  .unnumbered & {
+    padding-left: 0;
+  }
 
   :deep(p) {
     @include body-text("base", "regular");

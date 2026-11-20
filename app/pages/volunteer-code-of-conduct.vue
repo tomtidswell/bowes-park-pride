@@ -26,160 +26,129 @@
         <div class="policy-purpose">
           <p>
             Bowes Park Pride is committed to creating a safe, welcoming,
-            inclusive, and enjoyable event for everyone. Volunteers play a vital
-            role in achieving this aim and are expected to uphold the values of
-            the event at all times.
-          </p>
-          <p>
-            This Code of Conduct sets out the standards of behaviour expected of
-            all volunteers before, during, and after Bowes Park Pride activities.
+            inclusive and enjoyable event for everyone. This code applies to all
+            our volunteers whenever they're representing Bowes Park Pride,
+            before, during and after the event, including online. It forms part
+            of our Volunteer Handbook, which all volunteers receive when they're
+            selected.
           </p>
         </div>
 
         <PolicySection number="1" title="Our Values">
-          <p>As a Bowes Park Pride volunteer, I will:</p>
-          <ul>
-            <li>Treat all people with dignity, respect, and kindness.</li>
-            <li>Promote equality, diversity, and inclusion.</li>
-            <li>Help create a welcoming environment for all attendees.</li>
-            <li>Support the aims and values of Bowes Park Pride.</li>
-            <li>Act in a way that reflects positively on the event and the wider community.</li>
-          </ul>
+          <p>
+            Everything we do is guided by three values.
+            <strong>Visibility:</strong> we amplify LGBTQ+ voices and make sure
+            our community is seen, heard and represented.
+            <strong>Unity:</strong> we bring people together across different
+            backgrounds, identities and experiences.
+            <strong>Equality:</strong> we stand for equal rights and a society
+            where everyone can live authentically and without discrimination.
+          </p>
         </PolicySection>
 
         <PolicySection number="2" title="Respect and Inclusion">
-          <p>Volunteers must:</p>
-          <ul>
-            <li>Respect people regardless of age, disability, gender identity, race, religion, sexual orientation, nationality, or background.</li>
-            <li>Use inclusive and respectful language.</li>
-            <li>Respect individuals' names and pronouns.</li>
-            <li>Listen to and value different perspectives and experiences.</li>
-            <li>Challenge discrimination appropriately by reporting concerns to event management.</li>
-          </ul>
-          <p>The following behaviours will not be tolerated:</p>
-          <ul>
-            <li>Harassment or bullying.</li>
-            <li>Discrimination of any kind.</li>
-            <li>Hate speech or offensive comments.</li>
-            <li>Intimidation, threatening behaviour, or abuse.</li>
-            <li>Sexual harassment or unwanted attention.</li>
-          </ul>
+          <p>
+            Treat everyone you meet with courtesy and respect at all times.
+            Never take part in harassment, bullying, discrimination or
+            intimidation, including online and in group chats. Be mindful of
+            different perspectives, backgrounds and experiences, and challenge,
+            respectfully, any behaviour that goes against our values.
+          </p>
         </PolicySection>
 
         <PolicySection number="3" title="Professional Conduct">
-          <p>Volunteers are expected to:</p>
-          <ul>
-            <li>Arrive on time and fulfil agreed responsibilities.</li>
-            <li>Follow instructions from designated event organisers and team leaders.</li>
-            <li>Wear volunteer identification where provided.</li>
-            <li>Act honestly and responsibly.</li>
-            <li>Maintain a positive and cooperative attitude.</li>
-            <li>Communicate professionally with attendees, volunteers, contractors, performers, and partners.</li>
-          </ul>
-          <p>Volunteers should not:</p>
-          <ul>
-            <li>Represent themselves as speaking on behalf of Bowes Park Pride unless authorised.</li>
-            <li>Make commitments or promises on behalf of the organisation without approval.</li>
-            <li>Engage in arguments or confrontations with attendees.</li>
-          </ul>
+          <p>
+            Perform your role to the best of your ability, meet the commitments
+            you've agreed to, and give us notice when you're not available. Be
+            honest, never use your role for personal gain, and declare any
+            conflicts of interest. Don't enter into agreements on behalf of
+            Bowes Park Pride, accept gifts that could be seen as a bribe, or use
+            our name or logo without permission. Pass any donations to the
+            organising team so they can be recorded.
+          </p>
         </PolicySection>
 
         <PolicySection number="4" title="Health and Safety">
-          <p>Volunteers must:</p>
-          <ul>
-            <li>Follow all health and safety instructions.</li>
-            <li>Take reasonable care of their own safety and that of others.</li>
-            <li>Report hazards, accidents, incidents, and near misses promptly.</li>
-            <li>Use equipment only if authorised and trained.</li>
-            <li>Follow emergency procedures and instructions from event management.</li>
-          </ul>
-          <p>Volunteers must not:</p>
-          <ul>
-            <li>Undertake tasks they are not trained or authorised to perform.</li>
-            <li>Create unnecessary risks for themselves or others.</li>
-            <li>Attend volunteer duties while under the influence of alcohol or illegal drugs.</li>
-          </ul>
+          <p>
+            Take reasonable care of your own health and safety and that of
+            others. Follow the instructions in your event day briefing, use
+            equipment as you've been shown, and report any concern straight
+            away. In an emergency, anyone has the authority to call 999.
+          </p>
         </PolicySection>
 
         <PolicySection number="5" title="Safeguarding">
-          <p>Volunteers must:</p>
-          <ul>
-            <li>Help maintain a safe environment for children and vulnerable adults.</li>
-            <li>Report any safeguarding concerns immediately to the designated Safeguarding Lead or Event Manager.</li>
-            <li>Respect personal boundaries and privacy.</li>
-          </ul>
-          <p>Volunteers must not:</p>
-          <ul>
-            <li>Place themselves in situations that could compromise their safety or that of others.</li>
-            <li>Ignore safeguarding concerns or incidents.</li>
-          </ul>
+          <p>
+            We are committed to safeguarding children, young people and adults
+            at risk who come to our event. If you're worried about someone's
+            safety, or someone tells you about abuse or harm, report it straight
+            away to the organising team. If someone is in immediate danger, call
+            999 first. Never promise to keep a disclosure secret, and don't try
+            to investigate yourself.
+          </p>
         </PolicySection>
 
         <PolicySection number="6" title="Confidentiality and Privacy">
           <p>
-            Volunteers may become aware of personal information relating to
-            attendees, volunteers, performers, or partners.
+            Respect confidentiality and protect any personal information you see
+            in your role, even after your volunteering ends. Only use personal
+            data for the reason it was collected, keep it secure, and report any
+            data breach straight away. Read our
+            <NuxtLink to="/privacy-policy">privacy policy</NuxtLink>.
           </p>
-          <p>Volunteers must:</p>
-          <ul>
-            <li>Treat personal information confidentially.</li>
-            <li>Comply with applicable data protection requirements.</li>
-            <li>Share information only with authorised event personnel when necessary.</li>
-          </ul>
-          <p>Volunteers must not:</p>
-          <ul>
-            <li>Share personal information on social media or with third parties.</li>
-            <li>Take photographs of individuals in situations where privacy is expected without consent.</li>
-          </ul>
         </PolicySection>
 
         <PolicySection number="7" title="Social Media and Public Communications">
-          <p>Volunteers are encouraged to celebrate and promote Bowes Park Pride positively. When using social media, volunteers should:</p>
-          <ul>
-            <li>Be respectful and inclusive.</li>
-            <li>Avoid posting content that may damage the reputation of Bowes Park Pride.</li>
-            <li>Respect confidentiality and privacy.</li>
-            <li>Follow any photography and media guidance issued by organisers.</li>
-          </ul>
+          <p>
+            If you mention that you volunteer with us, make clear your views are
+            your own. Don't share confidential information, make disparaging
+            comments, or post photos of other volunteers or attendees without
+            their permission, and never post photos of children without their
+            parent or carer's permission. Send any media requests to
+            <a href="mailto:hello@bowesparkpride.org.uk">hello@bowesparkpride.org.uk</a>.
+          </p>
         </PolicySection>
 
         <PolicySection number="8" title="Substance Use">
-          <p>Volunteers must not:</p>
-          <ul>
-            <li>Consume alcohol while undertaking volunteer duties unless specifically authorised by event management.</li>
-            <li>Attend volunteer duties while impaired by alcohol, illegal drugs, or misuse of medication.</li>
-            <li>Possess or distribute illegal substances at any Bowes Park Pride activity.</li>
-          </ul>
+          <p>
+            Don't drink alcohol or take drugs before or during your volunteering
+            shift, and never volunteer while under the influence. If you take
+            medication that could affect your ability to do your role safely,
+            let us know in confidence. Once your shift has finished you're
+            welcome to enjoy the celebrations, but remember people may still
+            recognise you as part of the team.
+          </p>
         </PolicySection>
 
         <PolicySection number="9" title="Reporting Concerns">
-          <p>Volunteers should report:</p>
-          <ul>
-            <li>Health and safety concerns.</li>
-            <li>Discrimination, harassment, or bullying.</li>
-            <li>Safeguarding concerns.</li>
-            <li>Breaches of this Code of Conduct.</li>
-            <li>Any behaviour that may put people or the event at risk.</li>
-          </ul>
           <p>
-            Reports should be made to the Volunteer Coordinator, Event Manager,
-            or Safeguarding Lead.
+            If you have a concern about your role, someone's behaviour, safety
+            or anything else to do with volunteering, speak to your volunteer
+            lead or email
+            <a href="mailto:hello@bowesparkpride.org.uk">hello@bowesparkpride.org.uk</a>.
+            If your concern is about the organising team, you can ask for it to
+            go to our independent contact. Concerns are handled confidentially,
+            and no one who raises a genuine concern in good faith will be
+            treated unfavourably.
           </p>
         </PolicySection>
 
         <PolicySection number="10" title="Breaches of the Code">
-          <p>Failure to comply with this Code of Conduct may result in:</p>
-          <ul>
-            <li>Informal guidance or additional training.</li>
-            <li>Removal from volunteer duties.</li>
-            <li>Exclusion from future Bowes Park Pride volunteering opportunities.</li>
-            <li>Referral to relevant authorities where appropriate.</li>
-          </ul>
+          <p>
+            We'll usually talk to you informally first if there are concerns
+            about your behaviour. If concerns continue, or the behaviour is
+            serious, we may end your volunteering. Serious misconduct, such as
+            discrimination, harassment, bullying or a safeguarding breach, may
+            lead to your volunteering being ended immediately.
+          </p>
         </PolicySection>
 
         <div class="policy-declaration">
           <p>
-            <strong>Updated:</strong> 3 June 2026
+            <strong>Updated:</strong> 20 November 2026
+          </p>
+          <p>
+            <NuxtLink to="/our-policies">Read all our policies</NuxtLink>
           </p>
         </div>
 
@@ -190,7 +159,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "Volunteer Code of Conduct — Bowes Park Pride",
+  title: "Volunteer Code of Conduct | Bowes Park Pride",
   description:
     "The Volunteer Code of Conduct for Bowes Park Pride, setting out the standards of behaviour expected of all volunteers.",
 })
@@ -286,7 +255,20 @@ useSeoMeta({
   p {
     @include body-text("base", "regular");
     color: var(--text-muted);
-    margin-bottom: 0;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $color-magenta;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   strong {

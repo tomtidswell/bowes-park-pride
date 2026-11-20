@@ -42,6 +42,7 @@
               rel="noopener noreferrer"
             >Shop</a>
             <NuxtLink to="/health-and-safety">Health &amp; Safety</NuxtLink>
+            <NuxtLink to="/our-policies">Our Policies</NuxtLink>
             <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink>
             <NuxtLink to="/volunteer-code-of-conduct">Volunteer Code of Conduct</NuxtLink>
           </nav>
