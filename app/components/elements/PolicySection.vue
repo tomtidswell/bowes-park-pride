@@ -1,12 +1,17 @@
 <template>
-  <div class="policy-section" :class="{ open, unnumbered: !number }">
-    <button class="policy-trigger" @click="open = !open" :aria-expanded="open">
+  <div :id="id" ref="root" class="policy-section" :class="{ open, unnumbered: !number }">
+    <button
+      class="policy-trigger"
+      @click="open = !open"
+      :aria-expanded="open"
+      :aria-controls="id ? `${id}-body` : undefined"
+    >
       <span v-if="number" class="policy-number">{{ number }}</span>
       <span class="policy-title">{{ title }}</span>
       <ChevronDown class="policy-icon" :size="20" />
     </button>
     <Transition name="accordion">
-      <div v-if="open" class="policy-body">
+      <div v-if="open" :id="id ? `${id}-body` : undefined" class="policy-body">
         <slot />
       </div>
     </Transition>
@@ -16,17 +21,32 @@
 <script setup lang="ts">
 import { ChevronDown } from 'lucide-vue-next'
 
-defineProps<{
+const props = defineProps<{
   number?: string
   title: string
+  /** Anchor ID; the section opens automatically when the URL hash matches it */
+  id?: string
 }>()
 
 const open = ref(false)
+const root = ref<HTMLElement | null>(null)
+const route = useRoute()
+
+function openIfTargeted(hash: string) {
+  if (!props.id || hash !== `#${props.id}`) return
+  open.value = true
+  nextTick(() => root.value?.scrollIntoView({ block: 'start' }))
+}
+
+// Run on mount rather than during setup so server and client render the same markup
+onMounted(() => openIfTargeted(route.hash))
+watch(() => route.hash, openIfTargeted)
 </script>
 
 <style lang="scss" scoped>
 .policy-section {
   border-bottom: 1px solid var(--border-subtle);
+  scroll-margin-top: calc($header-height + 16px);
 }
 
 .policy-trigger {
@@ -129,7 +149,7 @@ const open = ref(false)
 .accordion-enter-active,
 .accordion-leave-active {
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  max-height: 1000px;
+  max-height: 6000px;
 }
 
 .accordion-enter-from,
