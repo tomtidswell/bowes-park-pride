@@ -84,8 +84,7 @@
             and the outcome you're hoping for.
           </p>
           <p>
-            We'll acknowledge your complaint within 10 working days. All
-            concerns are handled sensitively and confidentially.
+            All concerns are handled sensitively and confidentially.
           </p>
         </PolicySection>
 
