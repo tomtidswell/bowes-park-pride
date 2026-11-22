@@ -30,6 +30,7 @@
         <div class="footer-col">
           <h4>Quick Links</h4>
           <nav>
+            <NuxtLink to="/whats-on">What's On</NuxtLink>
             <NuxtLink to="/about">About</NuxtLink>
             <NuxtLink to="/#get-involved">Get Involved</NuxtLink>
             <NuxtLink to="/sponsors">Sponsors</NuxtLink>

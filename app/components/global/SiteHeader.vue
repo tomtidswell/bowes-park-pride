@@ -12,6 +12,7 @@
         $route.name === 'privacy-policy' ||
         $route.name === 'volunteer-code-of-conduct' ||
         $route.name === 'our-policies' ||
+        $route.name === 'whats-on' ||
         $route.name === 'impact-report',
       'photo-hero': $route.name === 'impact-report',
     }"
@@ -97,7 +98,10 @@
 </template>
 
 <script setup lang="ts">
-const navLinks = [{ href: "/about", label: "About" }]
+const navLinks = [
+  { href: "/whats-on", label: "What's On" },
+  { href: "/about", label: "About" },
+]
 
 const mobileOpen = ref(false)
 const scrolled = ref(false)
